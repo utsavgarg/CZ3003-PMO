@@ -24,7 +24,7 @@
       <img class="pmo_login_logo" src="./images/pmo_logo.png">
       <h3>Login</h3>
       <br/>
-        <form method="post" action="./templates/dashboard.html">
+        <form method="post" action="/dashboard">
           <input type="text" name="u" placeholder="Username" required="required" />
             <input type="password" name="p" placeholder="Password" required="required" />
             <button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
