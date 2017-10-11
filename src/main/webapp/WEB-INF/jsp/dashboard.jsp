@@ -34,12 +34,12 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Chat">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="/chat">
             <i class="fa fa-fw fa-edit"></i>
             <span class="nav-link-text">PMO Chat</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Contacts">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Internal Chat">
           <a class="nav-link" href="#">
             <i class="fa fa-fw fa-address-book"></i>
             <span class="nav-link-text">Contacts</span>
@@ -172,7 +172,7 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="/">Logout</a>
+            <a class="btn btn-primary" href="/login">Logout</a>
           </div>
         </div>
       </div>
