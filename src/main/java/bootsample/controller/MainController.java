@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class MainController {
 	
-	@GetMapping("/login")
+	@GetMapping("")
 	public String home() {
 		return "index";
 	}
 	
-	@PostMapping("/dashboard")
+	@GetMapping("/dashboard")
 	public String mainPage() {
 		return "dashboard";
 	}
