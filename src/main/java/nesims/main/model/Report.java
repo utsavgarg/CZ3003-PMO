@@ -1,95 +1,96 @@
 package nesims.main.model;
 
 public class Report {
-	 
+	
 	private long crisisID;
-	private String nameOfSender;
-    private String positionInPMO;
-    private String proposalFeedback;
-    private String proposalApproval;
-
+	private String positionInCMO;
+	private int threatLevel;
+	private String affectedAreas;
+	private int estimatedCasualties;
+	private String crisisDuration;
+	private String courseOfActions;
+	private String consequencesOfAction;
  
     public Report(){
         crisisID=0;
     }
     
-    public Report(long crisisID, String nameOfSender, String positionInPMO, String proposalFeedback,
-			String proposalApproval) {
+    public Report(long crisisID, String positionInCMO, int threatLevel, String affectedAreas, int estimatedCasualties,
+			String crisisDuration, String courseOfActions, String consequencesOfAction) {
 		this.crisisID = crisisID;
-		this.nameOfSender = nameOfSender;
-		this.positionInPMO = positionInPMO;
-		this.proposalFeedback = proposalFeedback;
-		this.proposalApproval = proposalApproval;
+		this.positionInCMO = positionInCMO;
+		this.threatLevel = threatLevel;
+		this.affectedAreas = affectedAreas;
+		this.estimatedCasualties = estimatedCasualties;
+		this.crisisDuration = crisisDuration;
+		this.courseOfActions = courseOfActions;
+		this.consequencesOfAction = consequencesOfAction;
 	}
 
-     
 	public long getCrisisID() {
 		return crisisID;
 	}
-
-
-
 
 	public void setCrisisID(long crisisID) {
 		this.crisisID = crisisID;
 	}
 
-
-
-
-	public String getNameOfSender() {
-		return nameOfSender;
+	public String getPositionInCMO() {
+		return positionInCMO;
 	}
 
-
-
-
-	public void setNameOfSender(String nameOfSender) {
-		this.nameOfSender = nameOfSender;
+	public void setPositionInCMO(String positionInCMO) {
+		this.positionInCMO = positionInCMO;
 	}
 
-
-
-
-	public String getPositionInPMO() {
-		return positionInPMO;
+	public int getThreatLevel() {
+		return threatLevel;
 	}
 
-
-
-
-	public void setPositionInPMO(String positionInPMO) {
-		this.positionInPMO = positionInPMO;
+	public void setThreatLevel(int threatLevel) {
+		this.threatLevel = threatLevel;
 	}
 
-
-
-
-	public String getProposalFeedback() {
-		return proposalFeedback;
+	public String getAffectedAreas() {
+		return affectedAreas;
 	}
 
-
-
-
-	public void setProposalFeedback(String proposalFeedback) {
-		this.proposalFeedback = proposalFeedback;
+	public void setAffectedAreas(String affectedAreas) {
+		this.affectedAreas = affectedAreas;
 	}
 
-
-
-
-	public String getProposalApproval() {
-		return proposalApproval;
+	public int getEstimatedCasualties() {
+		return estimatedCasualties;
 	}
 
-
-
-
-	public void setProposalApproval(String proposalApproval) {
-		this.proposalApproval = proposalApproval;
+	public void setEstimatedCasualties(int estimatedCasualties) {
+		this.estimatedCasualties = estimatedCasualties;
 	}
 
+	public String getCrisisDuration() {
+		return crisisDuration;
+	}
+
+	public void setCrisisDuration(String crisisDuration) {
+		this.crisisDuration = crisisDuration;
+	}
+
+	public String getCourseOfActions() {
+		return courseOfActions;
+	}
+
+	public void setCourseOfActions(String courseOfActions) {
+		this.courseOfActions = courseOfActions;
+	}
+
+	public String getConsequencesOfAction() {
+		return consequencesOfAction;
+	}
+
+	public void setConsequencesOfAction(String consequencesOfAction) {
+		this.consequencesOfAction = consequencesOfAction;
+	}
+	
    
  
     @Override
@@ -116,8 +117,10 @@ public class Report {
  
     @Override
 	public String toString() {
-		return "Report [crisisID=" + crisisID + ", nameOfSender=" + nameOfSender + ", positionInPMO=" + positionInPMO
-				+ ", proposalFeedback=" + proposalFeedback + ", proposalApproval=" + proposalApproval + "]";
+		return "Report [crisisID=" + crisisID + ", positionInCMO=" + positionInCMO + ", threatLevel=" + threatLevel
+				+ ", affectedAreas=" + affectedAreas + ", estimatedCasualties=" + estimatedCasualties
+				+ ", crisisDuration=" + crisisDuration + ", courseOfActions=" + courseOfActions
+				+ ", consequencesOfAction=" + consequencesOfAction + "]";
 	}
  
  

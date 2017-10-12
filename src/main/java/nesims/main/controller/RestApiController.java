@@ -1,4 +1,4 @@
-//This is for CMO to call our API
+//This is for CMO to call our API POST method
 package nesims.main.controller;
 
 import java.util.List;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
  
 import nesims.main.model.Report;
-import nesims.main.service.ReportService;
+import nesims.main.service.ReportRepository;
 import nesims.main.config.CustomErrorType;
  
 @RestController
@@ -27,13 +27,13 @@ public class RestApiController {
     public static final Logger logger = LoggerFactory.getLogger(RestApiController.class);
  
     @Autowired
-    ReportService reportService; //Service which will do all data retrieval/manipulation work
+    ReportRepository reportRepository; //Service which will do all data retrieval/manipulation work
  
     // -------------------Retrieve All Reports---------------------------------------------
  
     @RequestMapping(value = "/report/", method = RequestMethod.GET)
     public ResponseEntity<List<Report>> listAllReports() {
-        List<Report> reports = reportService.findAllReports();
+        List<Report> reports = reportRepository.findAllReports();
         if (reports.isEmpty()) {
             return new ResponseEntity(HttpStatus.NO_CONTENT);
             // You many decide to return HttpStatus.NOT_FOUND
@@ -46,7 +46,7 @@ public class RestApiController {
     @RequestMapping(value = "/report/{crisisID}", method = RequestMethod.GET)
     public ResponseEntity<?> getReport(@PathVariable("crisisID") long crisisID) {
         logger.info("Fetching Report with crisisID {}", crisisID);
-        Report report = reportService.findById(crisisID);
+        Report report = reportRepository.findById(crisisID);
         if (report == null) {
             logger.error("Report with crisisID {} not found.", crisisID);
             return new ResponseEntity(new CustomErrorType("Report with crisisID " + crisisID 
@@ -61,12 +61,12 @@ public class RestApiController {
     public ResponseEntity<?> createReport(@RequestBody Report report, UriComponentsBuilder ucBuilder) {
         logger.info("Creating Report : {}", report);
  
-        if (reportService.isReportExist(report)) {
-            logger.error("Unable to create. A report with name {} already exist", report.getNameOfSender());
-            return new ResponseEntity(new CustomErrorType("Unable to create. A Report with name " + 
-            report.getNameOfSender() + " already exist."),HttpStatus.CONFLICT);
+        if (reportRepository.isReportExist(report)) {
+            logger.error("Unable to create. A report with name {} already exist", report.getCrisisID());
+            return new ResponseEntity(new CustomErrorType("Unable to create. A Report with crisisID " + 
+            report.getCrisisID() + " already exist."),HttpStatus.CONFLICT);
         }
-        reportService.saveReport(report);
+        reportRepository.saveReport(report);
  
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(ucBuilder.path("/api/report/{crisisID}").buildAndExpand(report.getCrisisID()).toUri());
@@ -79,7 +79,7 @@ public class RestApiController {
     public ResponseEntity<?> updateReport(@PathVariable("crisisID") long crisisID, @RequestBody Report report) {
         logger.info("Updating Report with crisisID {}", crisisID);
  
-        Report currentReport = reportService.findById(crisisID);
+        Report currentReport = reportRepository.findById(crisisID);
  
         if (currentReport == null) {
             logger.error("Unable to update. Report with crisisID {} not found.", crisisID);
@@ -87,11 +87,16 @@ public class RestApiController {
                     HttpStatus.NOT_FOUND);
         }
  
-        currentReport.setNameOfSender(report.getNameOfSender());
-        currentReport.setPositionInPMO(report.getPositionInPMO());
-        currentReport.setProposalFeedback(report.getProposalFeedback());
-        currentReport.setProposalApproval(report.getProposalApproval());
-        reportService.updateReport(currentReport);
+        currentReport.setPositionInCMO(report.getPositionInCMO());
+        currentReport.setThreatLevel(report.getThreatLevel());
+        currentReport.setAffectedAreas(report.getAffectedAreas());
+        currentReport.setEstimatedCasualties(report.getEstimatedCasualties());
+        currentReport.setCrisisDuration(report.getCrisisDuration());
+        currentReport.setCourseOfActions(report.getCourseOfActions());
+        currentReport.setConsequencesOfAction(report.getConsequencesOfAction());
+      
+        
+        reportRepository.updateReport(currentReport);
         return new ResponseEntity<Report>(currentReport, HttpStatus.OK);
     }
  
@@ -101,13 +106,13 @@ public class RestApiController {
     public ResponseEntity<?> deleteReport(@PathVariable("crisisID") long crisisID) {
         logger.info("Fetching & Deleting Report with crisisID {}", crisisID);
  
-        Report report = reportService.findById(crisisID);
+        Report report = reportRepository.findById(crisisID);
         if (report == null) {
             logger.error("Unable to delete. Report with crisisID {} not found.", crisisID);
             return new ResponseEntity(new CustomErrorType("Unable to delete. Report with crisisID " + crisisID + " not found."),
                     HttpStatus.NOT_FOUND);
         }
-        reportService.deleteReportById(crisisID);
+        reportRepository.deleteReportById(crisisID);
         return new ResponseEntity<Report>(HttpStatus.NO_CONTENT);
     }
  
@@ -117,7 +122,7 @@ public class RestApiController {
     public ResponseEntity<Report> deleteAllReports() {
         logger.info("Deleting All Reports");
  
-        reportService.deleteAllReports();
+        reportRepository.deleteAllReports();
         return new ResponseEntity<Report>(HttpStatus.NO_CONTENT);
     }
  

@@ -26,20 +26,21 @@ public class SpringBootRestClient {
 			for (LinkedHashMap<String, Object> map : reportsMap) {
 				if (i++ == reportsMap.size()) {
 					// end
+					
 					System.out.println("crisisID=" + map.get("crisisID") + "," + " positionInCMO="
 							+ map.get("positionInCMO") + "," + " threatLevel=" + map.get("threatLevel") + ","
 							+ " crisisType=" + map.get("crisisType") + "," + " affectedAreas="
 							+ map.get("affectedAreas") + "," + " estimatedCasualties=" + map.get("estimatedCasualties")
 							+ "," + " crisisDuration=" + map.get("crisisDuration") + "," + " crisisDetails="
 							+ map.get("crisisDetails") + "," + " courseOfActions=" + map.get("courseOfActions") + ","
-							+ " consequencesOfAction=" + map.get("nameOfSender"));
+							+ " consequencesOfAction=" + map.get("consequencesOfAction"));
 				}
 			}
 		} else {
 			System.out.println("No report exist----------");
 		}
 	}
-/*
+
 	// Examples
 	private static void listAllReports() {
 		System.out.println("Testing receiving Action Report API-----------");
@@ -74,7 +75,7 @@ public class SpringBootRestClient {
 	System.out.println("Testing create Report API----------");
 
 	RestTemplate restTemplate = new RestTemplate();
-	Report report = new Report(0, "Miss A","Secretary", "feedback1", "APPROVED");
+	Report report = new Report(20, "General", 4, "AA1",10000, "1 hour", "COA1", "COA1");
 	URI uri = restTemplate.postForLocation(REST_SERVICE_URI + "/report/", report,
 			Report.class);System.out.println("Location : "+uri.toASCIIString());
 	}
@@ -83,7 +84,7 @@ public class SpringBootRestClient {
 	private static void updateReport() {
 		System.out.println("Testing update Report API----------");
 		RestTemplate restTemplate = new RestTemplate();
-		Report report = new Report(1, "Miss A","Secretary", "feedback1", "APPROVED");
+		Report report = new Report(1, "General", 4, "AA1",10000, "1 hour", "COA1", "COA1");
 		restTemplate.put(REST_SERVICE_URI + "/report/1", report);
 		System.out.println(report);
 	}
@@ -102,8 +103,8 @@ public class SpringBootRestClient {
 		RestTemplate restTemplate = new RestTemplate();
 		restTemplate.delete(REST_SERVICE_URI + "/report/");
 	}
-*/
+
 	public static void main(String args[]) {
-		listLatestReport();
+		createReport();
 	}
 }
