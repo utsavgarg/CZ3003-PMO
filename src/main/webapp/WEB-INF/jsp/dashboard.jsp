@@ -16,6 +16,9 @@
   <link href="../css/sb-admin.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="../css/style.css" rel="stylesheet">
+  <!-- Chat page css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -94,61 +97,84 @@
             <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>
       </div>
+      
       <div class="col-lg-4">
-        <div class="card mb-3">
+        <div class="card mb-3 ">
             <div class="card-header">
               <i class="fa fa-bell-o"></i> CMO Live Feed</div>
+                <div class="card-body" style="height:450px; overflow: scroll; overflow-x:hidden;">
+              
             <div class="list-group list-group-flush small">
-              <a class="list-group-item">
-                <div class="media">
-                  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
-                  <div class="media-body">
-                    <strong>John Doe</strong>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor
-                  </div>
+             
+                
+                
+                
+<!--CHAT CONNECT BUTTON-->
+
+                <form id="usernameForm" name="usernameForm">
+              
+                <div class="form-group" style="display: flex; align-items: center; justify-content: center;">
+                    <button type="submit" class="accent username-submit btn btn-success">Start Chat</button>
                 </div>
-              </a>
-              <a class="list-group-item">
-                <div class="media">
-                  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
-                  <div class="media-body">
-                    <strong>John Doe</strong>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor
-                  </div>
-                </div>
-              </a>
-              <a class="list-group-item">
-                <div class="media">
-                  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
-                  <div class="media-body">
-                    <strong>John Doe</strong>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor
-                  </div>
-                </div>
-              </a>
-              <a class="list-group-item">
-                <div class="media">
-                  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
-                  <div class="media-body">
-                    <strong>John Doe</strong>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor
-                  </div>
-                </div>
-              </a>
-              <a class="list-group-item">
-                <form class="form-inline my-2 my-lg-0 mr-lg-2">
+            </form>
+                
+<!--CHAT MESSAGE CONTAINER-->  
+              
+ 	  <div id="chat-page">
+        <div class="chat-container">
+    
+          
+            <ul id="messageArea">
+
+
+                       
+            </ul>
+            
+       </div>
+            </div>      
+            
+           </div>
+            </div>      
+            
+             
+<!--CHAT INPUT FORM --> 
+         
+                      
+          <div class="card-body">
+                           
+                <a class="list-group-item">
+                <form id="messageForm" name="messageForm">
                   <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Send a message...">
+                    <input class="form-control" type="text" placeholder="Send a message..." id="message"/>
                     <span class="input-group-btn">
-                      <button class="btn btn-success" type="button">
+                      <button class="btn btn-success" type="submit">
                         <i class="fa fa-send"></i>
                       </button>
                     </span>
                   </div>
                 </form>
               </a>
-            </div>
-          </div>
+                 </div>
+                
+                <%-- Comment 
+
+            	<a class="list-group-item">
+              	  <div class="media">
+                  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
+                  <div class="media-body">
+                       
+                    <strong>John Doe</strong>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor
+                  </div>
+                </div>
+              </a>
+          
+            
+                 --%>
+                 
+                 
+            
+          
         </div>
       </div>
     </div>
@@ -187,6 +213,10 @@
     <script src="../vendor/chart.js/Chart.min.js"></script>
     <script src="../vendor/datatables/jquery.dataTables.js"></script>
     <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Chat JavaScript-->
+    <script src="/js/sockjs.min.js"></script>
+    <script src="/js/stomp.min.js"></script>
+    <script src="/js/main.js"></script>
   </div>
 </body>
 

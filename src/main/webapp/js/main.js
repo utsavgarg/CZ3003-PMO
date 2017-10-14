@@ -17,7 +17,7 @@ var colors = [
 ];
 
 function connect(event) {
-    username = document.querySelector('#name').value.trim();
+    username = "Poh Keong";
 
     if(username) {
 
@@ -27,6 +27,15 @@ function connect(event) {
         stompClient.connect({}, onConnected, onError);
     }
     event.preventDefault();
+    
+    //hide start chat button
+    var x = document.getElementById("usernameForm");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+    
 }
 
 
@@ -72,6 +81,7 @@ function onMessageReceived(payload) {
 
     var messageElement = document.createElement('li');
 
+/*    CHECK MESSAGE TAG RECEIVED (JOIN,LEAVE,CHAT)*/
     if(message.type === 'JOIN') {
         messageElement.classList.add('event-message');
         message.content = message.sender + ' joined!';
@@ -79,8 +89,10 @@ function onMessageReceived(payload) {
         messageElement.classList.add('event-message');
         message.content = message.sender + ' left!';
     } else {
-        messageElement.classList.add('chat-message');
+    	
+    	messageElement.classList.add('chat-message');
 
+    	//chat picture
         var avatarElement = document.createElement('i');
         var avatarText = document.createTextNode(message.sender[0]);
         avatarElement.appendChild(avatarText);
@@ -88,12 +100,22 @@ function onMessageReceived(payload) {
 
         messageElement.appendChild(avatarElement);
 
+       
+        //chat sender name
         var usernameElement = document.createElement('span');
         var usernameText = document.createTextNode(message.sender);
         usernameElement.appendChild(usernameText);
         messageElement.appendChild(usernameElement);
+        
+        //chat time
+        var time = document.createElement('span');
+        time.classList.add("time-right");
+        var text = document.createTextNode(new Date(new Date().getTime()).toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'}));
+        time.appendChild(text);
+        messageElement.appendChild(time);
     }
 
+    //chat message
     var textElement = document.createElement('p');
     var messageText = document.createTextNode(message.content);
     textElement.appendChild(messageText);
@@ -103,6 +125,7 @@ function onMessageReceived(payload) {
     messageArea.appendChild(messageElement);
     messageArea.scrollTop = messageArea.scrollHeight;
 }
+
 
 
 function getAvatarColor(messageSender) {
