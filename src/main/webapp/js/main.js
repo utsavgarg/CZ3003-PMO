@@ -27,15 +27,6 @@ function connect(event) {
         stompClient.connect({}, onConnected, onError);
     }
     event.preventDefault();
-    
-    //hide start chat button
-    var x = document.getElementById("usernameForm");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-    
 }
 
 
@@ -137,6 +128,6 @@ function getAvatarColor(messageSender) {
     var index = Math.abs(hash % colors.length);
     return colors[index];
 }
-
-usernameForm.addEventListener('submit', connect, true)
+//usernameForm.addEventListener('submit', connect, true)
+window.addEventListener("load", connect, true)
 messageForm.addEventListener('submit', sendMessage, true)
