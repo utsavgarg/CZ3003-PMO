@@ -21,8 +21,9 @@ function connect(event) {
 
     if(username) {
 
-        var socket = new SockJS('/ws');
-        stompClient = Stomp.over(socket);
+        //var socket = new SockJS('/ws');
+        //stompClient = Stomp.over(socket);
+    	stompClient = Stomp.client('ws://localhost:8080/chatservice');
 
         stompClient.connect({}, onConnected, onError);
     }
