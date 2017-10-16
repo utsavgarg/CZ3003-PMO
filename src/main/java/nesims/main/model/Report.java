@@ -7,6 +7,7 @@ public class Report {
 	private int threatLevel;
 	private String affectedAreas;
 	private int estimatedCasualties;
+	private String crisisDetails;
 	private String crisisDuration;
 	private String courseOfActions;
 	private String consequencesOfAction;
@@ -15,17 +16,23 @@ public class Report {
         crisisID=0;
     }
     
-    public Report(long crisisID, String positionInCMO, int threatLevel, String affectedAreas, int estimatedCasualties,
-			String crisisDuration, String courseOfActions, String consequencesOfAction) {
+   
+
+	public Report(long crisisID, String positionInCMO, int threatLevel, String affectedAreas, int estimatedCasualties,
+			String crisisDetails, String crisisDuration, String courseOfActions, String consequencesOfAction) {
+		super();
 		this.crisisID = crisisID;
 		this.positionInCMO = positionInCMO;
 		this.threatLevel = threatLevel;
 		this.affectedAreas = affectedAreas;
 		this.estimatedCasualties = estimatedCasualties;
+		this.crisisDetails = crisisDetails;
 		this.crisisDuration = crisisDuration;
 		this.courseOfActions = courseOfActions;
 		this.consequencesOfAction = consequencesOfAction;
 	}
+
+
 
 	public long getCrisisID() {
 		return crisisID;
@@ -90,10 +97,16 @@ public class Report {
 	public void setConsequencesOfAction(String consequencesOfAction) {
 		this.consequencesOfAction = consequencesOfAction;
 	}
-	
-   
  
-    @Override
+    public String getCrisisDetails() {
+		return crisisDetails;
+	}
+
+	public void setCrisisDetails(String crisisDetails) {
+		this.crisisDetails = crisisDetails;
+	}
+
+	@Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
@@ -114,14 +127,16 @@ public class Report {
             return false;
         return true;
     }
- 
-    @Override
+
+	@Override
 	public String toString() {
 		return "Report [crisisID=" + crisisID + ", positionInCMO=" + positionInCMO + ", threatLevel=" + threatLevel
 				+ ", affectedAreas=" + affectedAreas + ", estimatedCasualties=" + estimatedCasualties
-				+ ", crisisDuration=" + crisisDuration + ", courseOfActions=" + courseOfActions
-				+ ", consequencesOfAction=" + consequencesOfAction + "]";
+				+ ", crisisDetails=" + crisisDetails + ", crisisDuration=" + crisisDuration + ", courseOfActions="
+				+ courseOfActions + ", consequencesOfAction=" + consequencesOfAction + "]";
 	}
+ 
+   
  
  
 }

@@ -75,7 +75,7 @@ public class SpringBootRestClient {
 	System.out.println("Testing create Report API----------");
 
 	RestTemplate restTemplate = new RestTemplate();
-	Report report = new Report(20, "General", 4, "AA1",10000, "1 hour", "COA1", "COA1");
+	Report report = new Report(20, "General", 4, "AA1",10000,"crisis details", "1 hour", "COA1", "COA1");
 	URI uri = restTemplate.postForLocation(REST_SERVICE_URI + "/report/", report,
 			Report.class);System.out.println("Location : "+uri.toASCIIString());
 	}
@@ -84,7 +84,7 @@ public class SpringBootRestClient {
 	private static void updateReport() {
 		System.out.println("Testing update Report API----------");
 		RestTemplate restTemplate = new RestTemplate();
-		Report report = new Report(1, "General", 4, "AA1",10000, "1 hour", "COA1", "COA1");
+		Report report = new Report(1, "General", 4, "AA1",10000,"crisis details", "1 hour", "COA1", "COA1");
 		restTemplate.put(REST_SERVICE_URI + "/report/1", report);
 		System.out.println(report);
 	}

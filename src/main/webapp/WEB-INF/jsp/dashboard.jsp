@@ -71,26 +71,31 @@
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="card mb-3">
-						<div class="card-header">Crisis Overview</div>
+						<div class="card-header">Crisis ID: ${crisisID}</div>
 						<div class="card-body">
 							<div class="row">
-								<div class="col-sm-8 my-auto">Lorem ipsum dolor sit amet,
-									consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-									Aenean massa. Cum sociis natoque penatibus et magnis dis
-									parturient montes, nascetur ridiculus mus. Donec quam felis,
-									ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-									consequat massa quis enim. Donec pede justo, fringilla vel,
-									aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-									imperdiet a, venenatis vitae, justo.</div>
+								<div class="col-sm-8 my-auto">${crisisDetails}</div>
 								<div class="col-sm-4 text-center my-auto">
-									<div class="h4 mb-0 text-danger">1000</div>
-									<div class="small text-muted">Expected Casualties</div>
+								<div class="h4 mb-0 text-danger">${positionInCMO}</div>
+									<div class="small text-muted">Sender</div>
 									<hr>
-									<div class="h4 mb-0 text-warning">100,000</div>
-									<div class="small text-muted">People Affected</div>
+									<div class="h4 mb-0 text-danger">${threatLevel}</div>
+									<div class="small text-muted">Threat Level</div>
 									<hr>
-									<div class="h4 mb-0 text-success">$1M</div>
-									<div class="small text-muted">Budget</div>
+									<div class="h4 mb-0 text-danger">${estimatedCasualties}</div>
+									<div class="small text-muted">Estimated Casualties</div>
+									<hr>
+									<div class="h4 mb-0 text-warning">${affectedAreas}</div>
+									<div class="small text-muted">Affected Areas</div>
+									<hr>
+									<div class="h4 mb-0 text-warning">${crisisDuration}</div>
+									<div class="small text-muted">Crisis Duration</div>
+									<hr>
+									<div class="h4 mb-0 text-warning">${courseOfActions}</div>
+									<div class="small text-muted">Course of Actions</div>
+									<hr>
+									<div class="h4 mb-0 text-success">${consequencesOfAction}</div>
+									<div class="small text-muted">Consequences of Action</div>
 								</div>
 							</div>
 						</div>

@@ -1,11 +1,18 @@
 package nesims.main.controller;
 
+import java.util.LinkedHashMap;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.client.RestTemplate;
 
 @Controller
 public class MainController {
+	
+	public static final String REST_SERVICE_URI = "http://localhost:8080/api";
 	
 	@GetMapping("/login")
 	public String home() {
@@ -13,7 +20,32 @@ public class MainController {
 	}
 	
 	@GetMapping("/dashboard")
-	public String mainPage() {
+	public String mainPage(ModelMap model) {
+		
+		int i = 1;
+
+		RestTemplate restTemplate = new RestTemplate();
+		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/report/",
+				List.class);
+
+		if (reportsMap != null) {
+			for (LinkedHashMap<String, Object> map : reportsMap) {
+				if (i++ == reportsMap.size()) {
+					// end	
+					model.addAttribute("crisisID", map.get("crisisID"));
+					model.addAttribute("positionInCMO", map.get("positionInCMO"));
+					model.addAttribute("threatLevel", map.get("threatLevel"));
+					model.addAttribute("affectedAreas", map.get("affectedAreas"));
+					model.addAttribute("estimatedCasualties", map.get("estimatedCasualties"));
+					model.addAttribute("crisisDuration", map.get("crisisDuration"));
+					model.addAttribute("crisisDetails", map.get("crisisDetails"));
+					model.addAttribute("courseOfActions", map.get("courseOfActions"));
+					model.addAttribute("consequencesOfAction", map.get("consequencesOfAction"));
+				}
+			}
+		} else {
+			System.out.println("No report exist----------");
+		}
 		return "dashboard";
 	}
 	

@@ -75,10 +75,10 @@ public class ReportService implements ReportRepository{
  
     private static List<Report> populateDummyReports(){
         List<Report> reports = new ArrayList<Report>();
-        reports.add(new Report(counter.incrementAndGet(),"General", 4, "AA1",10000, "1 hour", "COA1", "COA1"));
-        reports.add(new Report(counter.incrementAndGet(),"General", 1, "AA2",10000, "2 hour", "COA2", "COA2"));
-        reports.add(new Report(counter.incrementAndGet(),"General", 3, "AA3",10000, "2 hour", "COA3", "COA3"));
-        reports.add(new Report(counter.incrementAndGet(),"General", 2, "AA4",10000, "1 hour", "COA4", "COA4"));
+        reports.add(new Report(counter.incrementAndGet(),"General", 4, "AA1",10000,"crisis details", "1 hour", "COA1", "COA1"));
+        reports.add(new Report(counter.incrementAndGet(),"General", 1, "AA2",10000, "crisis details", "2 hour", "COA2", "COA2"));
+        reports.add(new Report(counter.incrementAndGet(),"General", 3, "AA3",10000, "crisis details", "2 hour", "COA3", "COA3"));
+        reports.add(new Report(counter.incrementAndGet(),"General", 2, "AA4",10000, "The takeover takes place; the government, military, police, and public are overwhelmed by the robots", "1 hour", "COA4", "COA4"));
         return reports;
     }
 
