@@ -65,6 +65,7 @@
 			</ul>
 		</div>
 	</nav>
+	
 	<div class="content-wrapper">
 		<div class="container-fluid">
 			<br />
@@ -76,26 +77,36 @@
 							<div class="row">
 								<div class="col-sm-8 my-auto">${crisisDetails}</div>
 								<div class="col-sm-4 text-center my-auto">
+								<div class="h4 mb-0 text-danger">${name}</div>
+									<div class="small text-muted">Name</div>
+									<hr>
 								<div class="h4 mb-0 text-danger">${positionInCMO}</div>
-									<div class="small text-muted">Sender</div>
+									<div class="small text-muted">Position</div>
 									<hr>
 									<div class="h4 mb-0 text-danger">${threatLevel}</div>
 									<div class="small text-muted">Threat Level</div>
 									<hr>
-									<div class="h4 mb-0 text-danger">${estimatedCasualties}</div>
-									<div class="small text-muted">Estimated Casualties</div>
+									<div class="h4 mb-0 text-danger">${crisisType}</div>
+									<div class="small text-muted">Crisis Type</div>
 									<hr>
-									<div class="h4 mb-0 text-warning">${affectedAreas}</div>
-									<div class="small text-muted">Affected Areas</div>
+									<div class="h4 mb-0 text-warning">${affectedArea}</div>
+									<div class="small text-muted">Affected Area</div>
+									<hr>
+									<div class="h4 mb-0 text-warning">${estimatedCasualties}</div>
+									<div class="small text-muted">Estimated Casualties</div>
 									<hr>
 									<div class="h4 mb-0 text-warning">${crisisDuration}</div>
 									<div class="small text-muted">Crisis Duration</div>
 									<hr>
-									<div class="h4 mb-0 text-warning">${courseOfActions}</div>
-									<div class="small text-muted">Course of Actions</div>
+									<div class="h4 mb-0 text-success">${courseOfAction}</div>
+									<div class="small text-muted">Course of Action</div>
 									<hr>
-									<div class="h4 mb-0 text-success">${consequencesOfAction}</div>
+									<div class="h4 mb-0 text-warning">${consequencesOfAction}</div>
 									<div class="small text-muted">Consequences of Action</div>
+									<hr>
+									<div class="h4 mb-0 text-warning">${cleanUpAction}</div>
+									<div class="small text-muted">Clean Up Action</div>
+									<hr>
 								</div>
 							</div>
 						</div>

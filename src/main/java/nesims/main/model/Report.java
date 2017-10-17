@@ -3,36 +3,40 @@ package nesims.main.model;
 public class Report {
 	
 	private long crisisID;
+	private String name;
 	private String positionInCMO;
 	private int threatLevel;
-	private String affectedAreas;
+	private String crisisType;
+	private String affectedArea;
 	private int estimatedCasualties;
-	private String crisisDetails;
 	private String crisisDuration;
-	private String courseOfActions;
+	private String crisisDetails;
+	private String courseOfAction;
 	private String consequencesOfAction;
+	private String cleanUpAction;
  
     public Report(){
         crisisID=0;
     }
     
-   
-
-	public Report(long crisisID, String positionInCMO, int threatLevel, String affectedAreas, int estimatedCasualties,
-			String crisisDetails, String crisisDuration, String courseOfActions, String consequencesOfAction) {
-		super();
+    public Report(long crisisID, String name, String positionInCMO, int threatLevel, String crisisType,
+			String affectedArea, int estimatedCasualties, String crisisDuration, String crisisDetails,
+			String courseOfAction, String consequencesOfAction, String cleanUpAction) {
 		this.crisisID = crisisID;
+		this.name = name;
 		this.positionInCMO = positionInCMO;
 		this.threatLevel = threatLevel;
-		this.affectedAreas = affectedAreas;
+		this.crisisType = crisisType;
+		this.affectedArea = affectedArea;
 		this.estimatedCasualties = estimatedCasualties;
-		this.crisisDetails = crisisDetails;
 		this.crisisDuration = crisisDuration;
-		this.courseOfActions = courseOfActions;
+		this.crisisDetails = crisisDetails;
+		this.courseOfAction = courseOfAction;
 		this.consequencesOfAction = consequencesOfAction;
+		this.cleanUpAction = cleanUpAction;
 	}
 
-
+	
 
 	public long getCrisisID() {
 		return crisisID;
@@ -40,6 +44,14 @@ public class Report {
 
 	public void setCrisisID(long crisisID) {
 		this.crisisID = crisisID;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getPositionInCMO() {
@@ -58,12 +70,20 @@ public class Report {
 		this.threatLevel = threatLevel;
 	}
 
-	public String getAffectedAreas() {
-		return affectedAreas;
+	public String getCrisisType() {
+		return crisisType;
 	}
 
-	public void setAffectedAreas(String affectedAreas) {
-		this.affectedAreas = affectedAreas;
+	public void setCrisisType(String crisisType) {
+		this.crisisType = crisisType;
+	}
+
+	public String getAffectedArea() {
+		return affectedArea;
+	}
+
+	public void setAffectedArea(String affectedArea) {
+		this.affectedArea = affectedArea;
 	}
 
 	public int getEstimatedCasualties() {
@@ -82,12 +102,20 @@ public class Report {
 		this.crisisDuration = crisisDuration;
 	}
 
-	public String getCourseOfActions() {
-		return courseOfActions;
+	public String getCrisisDetails() {
+		return crisisDetails;
 	}
 
-	public void setCourseOfActions(String courseOfActions) {
-		this.courseOfActions = courseOfActions;
+	public void setCrisisDetails(String crisisDetails) {
+		this.crisisDetails = crisisDetails;
+	}
+
+	public String getCourseOfAction() {
+		return courseOfAction;
+	}
+
+	public void setCourseOfAction(String courseOfAction) {
+		this.courseOfAction = courseOfAction;
 	}
 
 	public String getConsequencesOfAction() {
@@ -97,13 +125,13 @@ public class Report {
 	public void setConsequencesOfAction(String consequencesOfAction) {
 		this.consequencesOfAction = consequencesOfAction;
 	}
- 
-    public String getCrisisDetails() {
-		return crisisDetails;
+
+	public String getCleanUpAction() {
+		return cleanUpAction;
 	}
 
-	public void setCrisisDetails(String crisisDetails) {
-		this.crisisDetails = crisisDetails;
+	public void setCleanUpAction(String cleanUpAction) {
+		this.cleanUpAction = cleanUpAction;
 	}
 
 	@Override
@@ -130,12 +158,14 @@ public class Report {
 
 	@Override
 	public String toString() {
-		return "Report [crisisID=" + crisisID + ", positionInCMO=" + positionInCMO + ", threatLevel=" + threatLevel
-				+ ", affectedAreas=" + affectedAreas + ", estimatedCasualties=" + estimatedCasualties
-				+ ", crisisDetails=" + crisisDetails + ", crisisDuration=" + crisisDuration + ", courseOfActions="
-				+ courseOfActions + ", consequencesOfAction=" + consequencesOfAction + "]";
+		return "Report [crisisID=" + crisisID + ", name=" + name + ", positionInCMO=" + positionInCMO + ", threatLevel="
+				+ threatLevel + ", crisisType=" + crisisType + ", affectedArea=" + affectedArea
+				+ ", estimatedCasualties=" + estimatedCasualties + ", crisisDuration=" + crisisDuration
+				+ ", crisisDetails=" + crisisDetails + ", courseOfAction=" + courseOfAction + ", consequencesOfAction="
+				+ consequencesOfAction + ", cleanUpAction=" + cleanUpAction + "]";
 	}
- 
+
+
    
  
  

@@ -33,14 +33,17 @@ public class MainController {
 				if (i++ == reportsMap.size()) {
 					// end	
 					model.addAttribute("crisisID", map.get("crisisID"));
+					model.addAttribute("name", map.get("name"));
 					model.addAttribute("positionInCMO", map.get("positionInCMO"));
 					model.addAttribute("threatLevel", map.get("threatLevel"));
-					model.addAttribute("affectedAreas", map.get("affectedAreas"));
+					model.addAttribute("crisisType", map.get("crisisType"));
+					model.addAttribute("affectedArea", map.get("affectedArea"));
 					model.addAttribute("estimatedCasualties", map.get("estimatedCasualties"));
 					model.addAttribute("crisisDuration", map.get("crisisDuration"));
 					model.addAttribute("crisisDetails", map.get("crisisDetails"));
-					model.addAttribute("courseOfActions", map.get("courseOfActions"));
+					model.addAttribute("courseOfAction", map.get("courseOfAction"));
 					model.addAttribute("consequencesOfAction", map.get("consequencesOfAction"));
+					model.addAttribute("cleanUpAction", map.get("cleanUpAction"));
 				}
 			}
 		} else {

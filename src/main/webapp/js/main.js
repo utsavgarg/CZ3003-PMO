@@ -21,9 +21,8 @@ function connect(event) {
 
     if(username) {
 
-        //var socket = new SockJS('/ws');
-        //stompClient = Stomp.over(socket);
-    	stompClient = Stomp.client('ws://localhost:8080/chatservice');
+        var socket = new SockJS('/ws');
+        stompClient = Stomp.over(socket);
 
         stompClient.connect({}, onConnected, onError);
     }
@@ -132,3 +131,6 @@ function getAvatarColor(messageSender) {
 //usernameForm.addEventListener('submit', connect, true)
 window.addEventListener("load", connect, true)
 messageForm.addEventListener('submit', sendMessage, true)
+
+
+
