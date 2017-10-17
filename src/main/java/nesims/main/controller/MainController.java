@@ -53,5 +53,35 @@ public class MainController {
 	public String chatPage() {
 		return "chat";
 	}
+	
+	@GetMapping("/generate")
+	public String generatePage(ModelMap model) {
+		
+		int i = 1;
+
+		RestTemplate restTemplate = new RestTemplate();
+		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/report/",
+				List.class);
+
+		if (reportsMap != null) {
+			for (LinkedHashMap<String, Object> map : reportsMap) {
+				if (i++ == reportsMap.size()) {
+					// end	
+					model.addAttribute("crisisID", map.get("crisisID"));
+					model.addAttribute("positionInCMO", map.get("positionInCMO"));
+					model.addAttribute("threatLevel", map.get("threatLevel"));
+					model.addAttribute("affectedAreas", map.get("affectedAreas"));
+					model.addAttribute("estimatedCasualties", map.get("estimatedCasualties"));
+					model.addAttribute("crisisDuration", map.get("crisisDuration"));
+					model.addAttribute("crisisDetails", map.get("crisisDetails"));
+					model.addAttribute("courseOfActions", map.get("courseOfActions"));
+					model.addAttribute("consequencesOfAction", map.get("consequencesOfAction"));
+				}
+			}
+		} else {
+			System.out.println("No report exist----------");
+		}
+		return "generate";
+	}
 
 }

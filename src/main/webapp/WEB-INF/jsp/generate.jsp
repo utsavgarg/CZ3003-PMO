@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>PMO| Dashboard</title>
+<title>PMO| Generate</title>
 <!-- Bootstrap core CSS-->
 <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom fonts for this template-->
@@ -18,9 +18,7 @@
 <!-- Custom styles for this template-->
 <link href="/css/sb-admin.css" rel="stylesheet">
 <!-- Custom styles for this template-->
-<link href="/css/style.css" rel="stylesheet">
-<!-- Chat page css -->
-<link rel="stylesheet" href="/css/main.css" />
+<link href="css/style.css" rel="stylesheet">
 
 </head>
 
@@ -69,7 +67,7 @@
 		<div class="container-fluid">
 			<br />
 			<div class="row">
-				<div class="col-lg-8">
+				<div class="col-lg-6">
 					<div class="card mb-3">
 						<div class="card-header">Crisis ID: ${crisisID}</div>
 						<div class="card-body">
@@ -102,44 +100,27 @@
 						<div class="card-footer small text-muted">Updated yesterday
 							at 11:59 PM</div>
 					</div>
-					<div class="card mb-3">
-						<div class="card-header">Live Map</div>
-						<a href="#"> <img class="card-img-top img-fluid w-100"
-							src="../images/map_screenshot.png" alt="">
-						</a>
-						<div class="card-footer small text-muted">Updated yesterday
-							at 11:59 PM</div>
-					</div>
 				</div>
 
-				<div class="col-lg-4">
-					<div class="card mb-3 " style="height: 500px;">
+				<div class="col-lg-6 text-center">
+					<div class="card mb-3 ">
 						<div class="card-header">
-							<i class="fa fa-bell-o"></i> CMO Live Feed
+							<i class="fa fa-bell-o"></i> Action Response
 						</div>
 
-						<!--CHAT MESSAGE CONTAINER-->
-
-						<div id="chat-page" style="height: 580px;">
-							<div class="connecting"></div>
-							<ul id="messageArea"
-								style="overflow-y: scroll; overflow-x: hidden;">
-							</ul>
-							<!--CHAT INPUT FORM -->
-							<form id="messageForm" name="messageForm" action="">
-								<div class="input-group">
-									<input class="form-control" type="text"
-										placeholder="Send a message..." id="message" /> <span
-										class="input-group-btn">
-										<button class="btn btn-success" type="submit"
-											style="width: 50px;">
-											<i class="fa fa-send"></i>
-										</button>
-									</span>
+						<div id="generate-page">
+							<form id="reportText" name="reportText" action="">
+								<div class="form-group" style="margin: 0px;">
+    								<textarea class="form-control" id="actionReportText" placeholder="Start typing here..." style="border-radius: 0px;"rows="10"></textarea>
 								</div>
 							</form>
 						</div>
 					</div>
+					<button class="btn btn-success text-center" type="submit" id="reportButton" style="width: 200px;">
+											<i
+						class="fa fa-fw fa-file-pdf-o"></i> <span class="nav-link-text">Generate
+							Report</span>
+					</button>
 				</div>
 			</div>
 		</div>

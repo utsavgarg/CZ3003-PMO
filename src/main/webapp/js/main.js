@@ -7,6 +7,8 @@ var messageForm = document.querySelector('#messageForm');
 var messageInput = document.querySelector('#message');
 var messageArea = document.querySelector('#messageArea');
 var connectingElement = document.querySelector('.connecting');
+var reportText = document.querySelector('#reportText');
+var actionReportText = document.querySelector('#actionReportText');
 
 var stompClient = null;
 var username = null;
@@ -28,7 +30,6 @@ function connect(event) {
     }
     event.preventDefault();
 }
-
 
 function onConnected() {
     // Subscribe to the Public Channel
@@ -62,6 +63,39 @@ function sendMessage(event) {
 
         stompClient.send("/app/chat.sendMessage", {}, JSON.stringify(chatMessage));
         messageInput.value = '';
+    }
+    event.preventDefault();
+}
+
+$("#reportButton").click(function() {
+    var reportContent = actionReportText.value.trim();
+    console.log(reportContent);
+
+    if(reportContent && stompClient) {
+        var report = {
+            sender: username,
+            content: reportContent
+        };
+
+        stompClient.send("/app/report.generateReport", {}, JSON.stringify(report));
+        reportContent = '';
+    }
+    event.preventDefault();
+})
+
+function generateReport(event) {
+    var reportContent = actionReportText.value.trim();
+    console.log(reportContent);
+
+    if(reportContent && stompClient) {
+        var report = {
+            sender: username,
+            content: reportContent.value,
+            type: 'REPORT'
+        };
+
+        stompClient.send("/app/report.generateReport", {}, JSON.stringify(report));
+        reportContent.value = '';
     }
     event.preventDefault();
 }
