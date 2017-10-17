@@ -52,8 +52,8 @@
 						class="fa fa-fw fa-address-book"></i> <span class="nav-link-text">Contacts</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Generate Report"><a class="nav-link" href="/generate"> <i
-						class="fa fa-fw fa-file-pdf-o"></i> <span class="nav-link-text">Generate
+					title="Generate Report"><a class="nav-link" href="/generate">
+						<i class="fa fa-fw fa-file-pdf-o"></i> <span class="nav-link-text">Generate
 							Report</span>
 				</a></li>
 			</ul>
@@ -68,7 +68,7 @@
 	<div class="content-wrapper">
 		<div class="container-fluid ">
 			<br />
-<div class ="card-deck">
+			<div class="card-deck">
 				<div class="row mb-4 ">
 					<!-- .col -->
 					<div class="col-md-4 col-sm-4">
@@ -214,12 +214,12 @@
 					<!-- /.col -->
 				</div>
 
-</div>
-
-
 			</div>
+
+
 		</div>
-	
+	</div>
+
 	<!-- /.container-fluid-->
 	<!-- /.content-wrapper-->
 	<footer class="sticky-footer ">

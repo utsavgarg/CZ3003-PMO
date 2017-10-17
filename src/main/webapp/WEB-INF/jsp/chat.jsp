@@ -53,8 +53,8 @@
 						class="fa fa-fw fa-address-book"></i> <span class="nav-link-text">Contacts</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Generate Report"><a class="nav-link" href="/generate"> <i
-						class="fa fa-fw fa-file-pdf-o"></i> <span class="nav-link-text">Generate
+					title="Generate Report"><a class="nav-link" href="/generate">
+						<i class="fa fa-fw fa-file-pdf-o"></i> <span class="nav-link-text">Generate
 							Report</span>
 				</a></li>
 			</ul>
@@ -78,8 +78,7 @@
 				<!--CHAT MESSAGE CONTAINER-->
 
 				<div id="chat-page" style="height: 500px;">
-				<div class="connecting">
-            </div>
+					<div class="connecting"></div>
 					<ul id="internalmessageArea"
 						style="overflow-y: scroll; overflow-x: hidden;">
 					</ul>
