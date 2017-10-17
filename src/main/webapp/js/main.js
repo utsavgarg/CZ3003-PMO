@@ -1,8 +1,5 @@
 'use strict';
 
-var usernamePage = document.querySelector('#username-page');
-var chatPage = document.querySelector('#chat-page');
-var usernameForm = document.querySelector('#usernameForm');
 var messageForm = document.querySelector('#messageForm');
 var messageInput = document.querySelector('#message');
 var messageArea = document.querySelector('#messageArea');
@@ -46,12 +43,13 @@ function onConnected() {
 
 
 function onError(error) {
-    connectingElement.textContent = 'Could not connect to WebSocket server. Please refresh this page to try again!';
+    connectingElement.textContent = 'Could not connect to WebSocket server (External Chat). Please refresh this page to try again!';
     connectingElement.style.color = 'red';
 }
 
 
 function sendMessage(event) {
+	
     var messageContent = messageInput.value.trim();
 
     if(messageContent && stompClient) {
@@ -162,6 +160,5 @@ function getAvatarColor(messageSender) {
     var index = Math.abs(hash % colors.length);
     return colors[index];
 }
-//usernameForm.addEventListener('submit', connect, true)
 window.addEventListener("load", connect, true)
 messageForm.addEventListener('submit', sendMessage, true)

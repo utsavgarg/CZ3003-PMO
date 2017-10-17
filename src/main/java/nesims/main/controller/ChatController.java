@@ -25,5 +25,20 @@ public class ChatController {
         headerAccessor.getSessionAttributes().put("username", chatMessage.getSender());
         return chatMessage;
     }
+    
+    @MessageMapping("/chat.sendInternalMessage")
+    @SendTo("/channel/private")
+    public ChatMessage sendInternalMessage(@Payload ChatMessage chatMessage) {
+        return chatMessage;
+    }
+
+    @MessageMapping("/chat.addInternalUser")
+    @SendTo("/channel/private")
+    public ChatMessage addInternalUser(@Payload ChatMessage chatMessage, 
+                               SimpMessageHeaderAccessor headerAccessor) {
+        // Add username in web socket session
+        headerAccessor.getSessionAttributes().put("username", chatMessage.getSender());
+        return chatMessage;
+    }
 
 }

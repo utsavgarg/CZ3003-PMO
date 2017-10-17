@@ -80,14 +80,14 @@
 				<div id="chat-page" style="height: 500px;">
 				<div class="connecting">
             </div>
-					<ul id="messageArea"
+					<ul id="internalmessageArea"
 						style="overflow-y: scroll; overflow-x: hidden;">
 					</ul>
 					<!--CHAT INPUT FORM -->
-					<form id="messageForm" name="messageForm" action="">
+					<form id="internalmessageForm" name="messageForm" action="">
 						<div class="input-group">
 							<input class="form-control" type="text"
-								placeholder="Send a message..." id="message" /> <span
+								placeholder="Send a message..." id="internalmessage" /> <span
 								class="input-group-btn">
 								<button class="btn btn-success" type="submit">
 									<i class="fa fa-send"></i>
@@ -146,7 +146,7 @@
 	<!-- Chat JavaScript-->
 	<script src="/js/sockjs.min.js" type="text/javascript"></script>
 	<script src="/js/stomp.min.js" type="text/javascript"></script>
-	<script src="/js/main.js" type="text/javascript"></script>
+	<script src="/js/internalchat.js" type="text/javascript"></script>
 	</div>
 </body>
 
