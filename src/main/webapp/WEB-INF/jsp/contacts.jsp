@@ -64,100 +64,165 @@
 			</ul>
 		</div>
 	</nav>
-	
+
 	<div class="content-wrapper">
-		<div class="container-fluid">
+		<div class="container-fluid ">
 			<br />
-			<div class="row">
-				<div class="col-lg-8">
-					<div class="card mb-3">
-						<div class="card-header">Crisis ID: ${crisisID}</div>
-						<div class="card-body">
+<div class ="card-deck">
+				<div class="row mb-4 ">
+					<!-- .col -->
+					<div class="col-md-4 col-sm-4">
+						<div class="card">
 							<div class="row">
-								<div class="col-sm-8 my-auto">${crisisDetails}</div>
-								<div class="col-sm-4 text-center my-auto">
-								<div class="h4 mb-0 text-danger">${name}</div>
-									<div class="small text-muted">Name</div>
-									<hr>
-								<div class="h4 mb-0 text-danger">${positionInCMO}</div>
-									<div class="small text-muted">Position</div>
-									<hr>
-									<div class="h4 mb-0 text-danger">${threatLevel}</div>
-									<div class="small text-muted">Threat Level</div>
-									<hr>
-									<div class="h4 mb-0 text-danger">${crisisType}</div>
-									<div class="small text-muted">Crisis Type</div>
-									<hr>
-									<div class="h4 mb-0 text-warning">${affectedArea}</div>
-									<div class="small text-muted">Affected Area</div>
-									<hr>
-									<div class="h4 mb-0 text-warning">${estimatedCasualties}</div>
-									<div class="small text-muted">Estimated Casualties</div>
-									<hr>
-									<div class="h4 mb-0 text-warning">${crisisDuration}</div>
-									<div class="small text-muted">Crisis Duration</div>
-									<hr>
-									<div class="h4 mb-0 text-success">${courseOfAction}</div>
-									<div class="small text-muted">Course of Action</div>
-									<hr>
-									<div class="h4 mb-0 text-warning">${consequencesOfAction}</div>
-									<div class="small text-muted">Consequences of Action</div>
-									<hr>
-									<div class="h4 mb-0 text-warning">${cleanUpAction}</div>
-									<div class="small text-muted">Clean Up Action</div>
-									<hr>
+								<div class="col-md-4 col-sm-4  text-center">
+									<a href="contact-detail.html"><img
+										src="../plugins/images/users/genu.jpg" alt="user"
+										class="img-circle img-responsive"></a>
+								</div>
+								<div class="col-md-8 col-sm-8">
+									<h5 class="box-title m-b-0">Johnathan Doe</h5>
+									<small>Web Designer</small>
+									<p></p>
+									<address>
+										795 Folsom Ave, Suite 600 San Francisco, CADGE 94107 <br>
+										<br> <abbr title="Phone">P:</abbr> (123) 456-7890
+									</address>
+									<p></p>
 								</div>
 							</div>
 						</div>
-						<div class="card-footer small text-muted">Updated yesterday
-							at 11:59 PM</div>
 					</div>
-					<div class="card mb-3">
-						<div class="card-header">Live Map</div>
-						<a href="#"> <img class="card-img-top img-fluid w-100"
-							src="../images/map_screenshot.png" alt="">
-						</a>
-						<div class="card-footer small text-muted">Updated yesterday
-							at 11:59 PM</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4">
-					<div class="card mb-3 " style="height: 500px;">
-						<div class="card-header">
-							<i class="fa fa-bell-o"></i> CMO Live Feed
-						</div>
-
-						<!--CHAT MESSAGE CONTAINER-->
-
-						<div id="chat-page" style="height: 580px;">
-							<div class="connecting"></div>
-							<ul id="messageArea"
-								style="overflow-y: scroll; overflow-x: hidden;">
-							</ul>
-							
-							<!--CHAT INPUT FORM -->
-							<form id="messageForm" name="messageForm" action="">
-								<div class="input-group">
-									<input class="form-control" type="text"
-										placeholder="Send a message..." id="message" /> <span
-										class="input-group-btn">
-										<button class="btn btn-success" type="submit"
-											style="width: 50px;">
-											<i class="fa fa-send"></i>
-										</button>
-									</span>
+					<!-- /.col -->
+					<!-- .col -->
+					<div class="col-md-4 col-sm-4">
+						<div class="card">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 text-center">
+									<a href="contact-detail.html"><img
+										src="../plugins/images/users/varun.jpg" alt="user"
+										class="img-circle img-responsive"></a>
 								</div>
-							</form>
+								<div class="col-md-8 col-sm-8">
+									<h5 class="box-title m-b-0">Johnathan Doe</h5>
+									<small>Web Designer</small>
+									<p></p>
+									<address>
+										795 Folsom Ave, Suite 600 San Francisco, CADGE 94107 <br>
+										<br> <abbr title="Phone">P:</abbr> (123) 456-7890
+									</address>
+									<p></p>
+								</div>
+							</div>
 						</div>
 					</div>
+					<!-- /.col -->
+					<!-- .col -->
+					<div class="col-md-4 col-sm-4">
+						<div class="card">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 text-center">
+									<a href="contact-detail.html"><img
+										src="../plugins/images/users/ritesh.jpg" alt="user"
+										class="img-circle img-responsive"></a>
+								</div>
+								<div class="col-md-8 col-sm-8">
+									<h5 class="box-title m-b-0">Johnathan Doe</h5>
+									<small>Web Designer</small>
+									<p></p>
+									<address>
+										795 Folsom Ave, Suite 600 San Francisco, CADGE 94107 <br>
+										<br> <abbr title="Phone">P:</abbr> (123) 456-7890
+									</address>
+									<p></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.col -->
 				</div>
+
+
+				<div class="row mb-4 ">
+					<!-- .col -->
+					<div class="col-md-4 col-sm-4">
+						<div class="card">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 text-center">
+									<a href="contact-detail.html"><img
+										src="../plugins/images/users/genu.jpg" alt="user"
+										class="img-circle img-responsive"></a>
+								</div>
+								<div class="col-md-8 col-sm-8">
+									<h5 class="box-title m-b-0">Johnathan Doe</h5>
+									<small>Web Designer</small>
+									<p></p>
+									<address>
+										795 Folsom Ave, Suite 600 San Francisco, CADGE 94107 <br>
+										<br> <abbr title="Phone">P:</abbr> (123) 456-7890
+									</address>
+									<p></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.col -->
+					<!-- .col -->
+					<div class="col-md-4 col-sm-4">
+						<div class="card">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 text-center">
+									<a href="contact-detail.html"><img
+										src="../plugins/images/users/varun.jpg" alt="user"
+										class="img-circle img-responsive"></a>
+								</div>
+								<div class="col-md-8 col-sm-8">
+									<h5 class="box-title m-b-0">Johnathan Doe</h5>
+									<small>Web Designer</small>
+									<p></p>
+									<address>
+										795 Folsom Ave, Suite 600 San Francisco, CADGE 94107 <br>
+										<br> <abbr title="Phone">P:</abbr> (123) 456-7890
+									</address>
+									<p></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.col -->
+					<!-- .col -->
+					<div class="col-md-4 col-sm-4">
+						<div class="card">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 text-center">
+									<a href="contact-detail.html"><img
+										src="../plugins/images/users/ritesh.jpg" alt="user"
+										class="img-circle img-responsive"></a>
+								</div>
+								<div class="col-md-8 col-sm-8">
+									<h5 class="box-title m-b-0">Johnathan Doe</h5>
+									<small>Web Designer</small>
+									<p></p>
+									<address>
+										795 Folsom Ave, Suite 600 San Francisco, CADGE 94107 <br>
+										<br> <abbr title="Phone">P:</abbr> (123) 456-7890
+									</address>
+									<p></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.col -->
+				</div>
+
+</div>
+
+
 			</div>
 		</div>
-	</div>
+	
 	<!-- /.container-fluid-->
 	<!-- /.content-wrapper-->
-	<footer class="sticky-footer">
+	<footer class="sticky-footer ">
 		<div class="container">
 			<div class="text-center">
 				<small>Copyright © SSP2 PMO 2017</small>

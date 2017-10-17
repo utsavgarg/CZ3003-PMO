@@ -44,16 +44,16 @@
 						class="nav-link-text">Dashboard</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Chat"><a class="nav-link" href="/chat"> <i
+					title="PMO Chat"><a class="nav-link" href="/chat"> <i
 						class="fa fa-fw fa-edit"></i> <span class="nav-link-text">PMO
 							Chat</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Internal Chat"><a class="nav-link" href="#"> <i
+					title="Contacts "><a class="nav-link" href="/contacts"> <i
 						class="fa fa-fw fa-address-book"></i> <span class="nav-link-text">Contacts</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Contacts"><a class="nav-link" href="#"> <i
+					title="Generate Report"><a class="nav-link" href="/generate"> <i
 						class="fa fa-fw fa-file-pdf-o"></i> <span class="nav-link-text">Generate
 							Report</span>
 				</a></li>

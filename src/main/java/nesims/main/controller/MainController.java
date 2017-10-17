@@ -57,6 +57,12 @@ public class MainController {
 		return "chat";
 	}
 	
+	@GetMapping("/contacts")
+	public String contactPage() {
+		return "contacts";
+	}
+	
+	
 	@GetMapping("/generate")
 	public String generatePage(ModelMap model) {
 		
