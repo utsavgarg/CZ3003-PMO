@@ -73,57 +73,6 @@ public class RestApiController {
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);
     }
  
-    // ------------------- Update a Report ------------------------------------------------
- 
-    @RequestMapping(value = "/report/{crisisID}", method = RequestMethod.PUT)
-    public ResponseEntity<?> updateReport(@PathVariable("crisisID") long crisisID, @RequestBody Report report) {
-        logger.info("Updating Report with crisisID {}", crisisID);
- 
-        Report currentReport = reportRepository.findById(crisisID);
- 
-        if (currentReport == null) {
-            logger.error("Unable to update. Report with crisisID {} not found.", crisisID);
-            return new ResponseEntity(new CustomErrorType("Unable to upate. Report with crisisID " + crisisID + " not found."),
-                    HttpStatus.NOT_FOUND);
-        }
- 
-        currentReport.setPositionInCMO(report.getPositionInCMO());
-        currentReport.setThreatLevel(report.getThreatLevel());
-        currentReport.setAffectedAreas(report.getAffectedAreas());
-        currentReport.setEstimatedCasualties(report.getEstimatedCasualties());
-        currentReport.setCrisisDuration(report.getCrisisDuration());
-        currentReport.setCourseOfActions(report.getCourseOfActions());
-        currentReport.setConsequencesOfAction(report.getConsequencesOfAction());
-      
-        
-        reportRepository.updateReport(currentReport);
-        return new ResponseEntity<Report>(currentReport, HttpStatus.OK);
-    }
- 
-    // ------------------- Delete a Report-----------------------------------------
- 
-    @RequestMapping(value = "/report/{crisisID}", method = RequestMethod.DELETE)
-    public ResponseEntity<?> deleteReport(@PathVariable("crisisID") long crisisID) {
-        logger.info("Fetching & Deleting Report with crisisID {}", crisisID);
- 
-        Report report = reportRepository.findById(crisisID);
-        if (report == null) {
-            logger.error("Unable to delete. Report with crisisID {} not found.", crisisID);
-            return new ResponseEntity(new CustomErrorType("Unable to delete. Report with crisisID " + crisisID + " not found."),
-                    HttpStatus.NOT_FOUND);
-        }
-        reportRepository.deleteReportById(crisisID);
-        return new ResponseEntity<Report>(HttpStatus.NO_CONTENT);
-    }
- 
-    // ------------------- Delete All Reports-----------------------------
- 
-    @RequestMapping(value = "/report/", method = RequestMethod.DELETE)
-    public ResponseEntity<Report> deleteAllReports() {
-        logger.info("Deleting All Reports");
- 
-        reportRepository.deleteAllReports();
-        return new ResponseEntity<Report>(HttpStatus.NO_CONTENT);
-    }
+   
  
 }

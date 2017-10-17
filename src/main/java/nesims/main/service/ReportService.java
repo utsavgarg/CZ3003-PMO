@@ -75,10 +75,10 @@ public class ReportService implements ReportRepository{
  
     private static List<Report> populateDummyReports(){
         List<Report> reports = new ArrayList<Report>();
-        reports.add(new Report(counter.incrementAndGet(),"General", 4, "AA1",10000,"crisis details", "1 hour", "COA1", "COA1"));
-        reports.add(new Report(counter.incrementAndGet(),"General", 1, "AA2",10000, "crisis details", "2 hour", "COA2", "COA2"));
-        reports.add(new Report(counter.incrementAndGet(),"General", 3, "AA3",10000, "crisis details", "2 hour", "COA3", "COA3"));
-        reports.add(new Report(counter.incrementAndGet(),"General", 2, "AA4",10000, "The takeover takes place; the government, military, police, and public are overwhelmed by the robots", "1 hour", "COA4", "COA4"));
+        reports.add(new Report(counter.incrementAndGet(), "Test1", "General" , 4, "Type1", "Area1", 10000, "Duration1", "Detail1", "Action1", "Consequence1", "CleanUp1"));
+        reports.add(new Report(counter.incrementAndGet(), "Test2", "General" , 5, "Type2", "Area2", 10000, "Duration2", "Detail2", "Action2", "Consequence2", "CleanUp2"));
+        reports.add(new Report(counter.incrementAndGet(), "Test3", "General" , 4, "Type3", "Area3", 10000, "Duration3", "Detail3", "Action3", "Consequence3", "CleanUp3"));
+        reports.add(new Report(counter.incrementAndGet(), "Test4", "General" , 5, "Type4", "Area4", 10000, "Duration4", "Detail4", "Action4", "Consequence4", "CleanUp4"));
         return reports;
     }
 

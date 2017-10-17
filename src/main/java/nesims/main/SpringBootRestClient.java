@@ -27,13 +27,15 @@ public class SpringBootRestClient {
 				if (i++ == reportsMap.size()) {
 					// end
 					
-					System.out.println("crisisID=" + map.get("crisisID") + "," + " positionInCMO="
-							+ map.get("positionInCMO") + "," + " threatLevel=" + map.get("threatLevel") + ","
-							+ " crisisType=" + map.get("crisisType") + "," + " affectedAreas="
-							+ map.get("affectedAreas") + "," + " estimatedCasualties=" + map.get("estimatedCasualties")
-							+ "," + " crisisDuration=" + map.get("crisisDuration") + "," + " crisisDetails="
-							+ map.get("crisisDetails") + "," + " courseOfActions=" + map.get("courseOfActions") + ","
-							+ " consequencesOfAction=" + map.get("consequencesOfAction"));
+					System.out.println("crisisID=" + map.get("crisisID") + "," + " name=" + map.get("name") + ","
+							+ " positionInCMO=" + map.get("positionInCMO") + "," + " threatLevel=" + map.get("threatLevel") + ","
+							+ " crisisType=" + map.get("crisisType") + "," + " affectedArea=" + map.get("affectedArea") + ","
+							+ " estimatedCasualties=" + map.get("estimatedCasualties") + ","
+							+ " crisisDuration=" + map.get("crisisDuration") + ","
+							+ " crisisDetails=" + map.get("crisisDetails") + ","
+							+ " courseOfAction=" + map.get("courseOfAction") + ","
+							+ " consequencesOfAction=" + map.get("consequencesOfAction") + ","
+							+ " cleanUpAction=" + map.get("cleanUpAction"));
 				}
 			}
 		} else {
@@ -41,7 +43,7 @@ public class SpringBootRestClient {
 		}
 	}
 
-	// Examples
+	// GET
 	private static void listAllReports() {
 		System.out.println("Testing receiving Action Report API-----------");
 
@@ -52,9 +54,15 @@ public class SpringBootRestClient {
 		if (reportsMap != null) {
 			for (LinkedHashMap<String, Object> map : reportsMap) {
 
-				System.out.println("crisisID=" + map.get("crisisID") + "," + " nameOfSender=" + map.get("nameOfSender")
-						+ "," + " positionInPMO=" + map.get("positionInPMO") + "," + " proposalFeedback="
-						+ map.get("proposalFeedback") + "," + " proposalApproval=" + map.get("proposalApproval"));
+				System.out.println("crisisID=" + map.get("crisisID") + "," + " name=" + map.get("name") + ","
+						+ " positionInCMO=" + map.get("positionInCMO") + "," + " threatLevel=" + map.get("threatLevel") + ","
+						+ " crisisType=" + map.get("crisisType") + "," + " affectedArea=" + map.get("affectedArea") + ","
+						+ " estimatedCasualties=" + map.get("estimatedCasualties") + ","
+						+ " crisisDuration=" + map.get("crisisDuration") + ","
+						+ " crisisDetails=" + map.get("crisisDetails") + ","
+						+ " courseOfAction=" + map.get("courseOfAction") + ","
+						+ " consequencesOfAction=" + map.get("consequencesOfAction") + ","
+						+ " cleanUpAction=" + map.get("cleanUpAction"));
 			}
 		} else {
 			System.out.println("No report exist----------");
@@ -75,33 +83,9 @@ public class SpringBootRestClient {
 	System.out.println("Testing create Report API----------");
 
 	RestTemplate restTemplate = new RestTemplate();
-	Report report = new Report(20, "General", 4, "AA1",10000,"crisis details", "1 hour", "COA1", "COA1");
+	Report report = new Report(10, "Test10", "General" , 4, "Type10", "Area10", 10000, "Duration10", "Detail10", "Action10", "Consequence10", "CleanUp10");
 	URI uri = restTemplate.postForLocation(REST_SERVICE_URI + "/report/", report,
 			Report.class);System.out.println("Location : "+uri.toASCIIString());
-	}
-
-	// PUT
-	private static void updateReport() {
-		System.out.println("Testing update Report API----------");
-		RestTemplate restTemplate = new RestTemplate();
-		Report report = new Report(1, "General", 4, "AA1",10000,"crisis details", "1 hour", "COA1", "COA1");
-		restTemplate.put(REST_SERVICE_URI + "/report/1", report);
-		System.out.println(report);
-	}
-
-	// DELETE
-	private static void deleteReport() {
-		System.out.println("Testing delete Report API----------");
-
-		RestTemplate restTemplate = new RestTemplate();
-		restTemplate.delete(REST_SERVICE_URI + "/report/3");
-	}
-
-	// DELETE
-	private static void deleteAllReports() {
-		System.out.println("Testing all delete Reports API----------");
-		RestTemplate restTemplate = new RestTemplate();
-		restTemplate.delete(REST_SERVICE_URI + "/report/");
 	}
 
 	public static void main(String args[]) {
