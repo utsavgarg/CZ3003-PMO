@@ -5,19 +5,25 @@ import com.itextpdf.text.Font.FontFamily;
 import com.itextpdf.text.pdf.PdfContentByte;
 import com.itextpdf.text.pdf.PdfWriter;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.URI;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.codec.binary.StringUtils;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.client.RestTemplate;
 
 import nesims.main.model.ActionReport;
+import nesims.main.model.Report;
 
 @Controller
 public class ReportController {
@@ -25,7 +31,25 @@ public class ReportController {
 	private static final String HEADER_IMAGE = "resources/header.jpg";
 	private static final String SIGN_IMAGE = "resources/signature.png";
 	public static final String REST_SERVICE_URI = "http://localhost:8080/api";
-
+	public static final String CMO_SERVICE_URI = "http://localhost:8080/PMOtoCMO";
+	
+	private ByteArrayOutputStream loadPdf(String fileName) throws FileNotFoundException
+	{
+		File file = new File(fileName);
+		FileInputStream fis = new FileInputStream(file);
+		ByteArrayOutputStream bos = new ByteArrayOutputStream();
+	
+		byte[] buf = new byte[1024];
+		try {
+			for (int readNum; (readNum = fis.read(buf)) != -1;) {
+				bos.write(buf, 0, readNum);
+			}
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+		return bos;
+	}
+	
     @MessageMapping("/report.generateReport")
     public void generateReport(@Payload ActionReport reportContent){
     	
@@ -92,6 +116,11 @@ public class ReportController {
 	            report.add(img);
 	                       
 	            report.close();
+	            
+	        	ByteArrayOutputStream ba = loadPdf(fileName);
+	        	String pdfBase64String = StringUtils.newStringUtf8(Base64.encodeBase64(ba.toByteArray()));
+	        	URI uri = restTemplate.postForLocation(CMO_SERVICE_URI, pdfBase64String, String.class);
+	        	System.out.println("Location : "+uri.toASCIIString());
 	    	} catch (DocumentException | IOException e) {
              e.printStackTrace();
          }
