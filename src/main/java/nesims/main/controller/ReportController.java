@@ -23,6 +23,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.client.RestTemplate;
 
 import nesims.main.model.ActionReport;
+import nesims.main.model.ApprovalReport;
 import nesims.main.model.Report;
 
 @Controller
@@ -119,7 +120,8 @@ public class ReportController {
 	            
 	        	ByteArrayOutputStream ba = loadPdf(fileName);
 	        	String pdfBase64String = StringUtils.newStringUtf8(Base64.encodeBase64(ba.toByteArray()));
-	        	URI uri = restTemplate.postForLocation(CMO_SERVICE_URI, pdfBase64String, String.class);
+	        	ApprovalReport approvalReport = new ApprovalReport(Long.valueOf(crisisID), pdfBase64String);
+	        	URI uri = restTemplate.postForLocation(REST_SERVICE_URI + "/approvalReport/", approvalReport, ApprovalReport.class);
 	        	System.out.println("Location : "+uri.toASCIIString());
 	    	} catch (DocumentException | IOException e) {
              e.printStackTrace();
