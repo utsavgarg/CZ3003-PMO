@@ -53,12 +53,40 @@ public class MainController {
 	}
 	
 	@GetMapping("/chat")
-	public String chatPage() {
+	public String chatPage(ModelMap model) {
+		int i = 1;
+
+		RestTemplate restTemplate = new RestTemplate();
+		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/report/",
+				List.class);
+
+		if (reportsMap != null) {
+			for (LinkedHashMap<String, Object> map : reportsMap) {
+				if (i++ == reportsMap.size()) {
+					// end	
+					model.addAttribute("crisisID", map.get("crisisID"));
+					model.addAttribute("name", map.get("name"));
+					model.addAttribute("positionInCMO", map.get("positionInCMO"));
+					model.addAttribute("threatLevel", map.get("threatLevel"));
+					model.addAttribute("crisisType", map.get("crisisType"));
+					model.addAttribute("affectedArea", map.get("affectedArea"));
+					model.addAttribute("estimatedCasualties", map.get("estimatedCasualties"));
+					model.addAttribute("crisisDuration", map.get("crisisDuration"));
+					model.addAttribute("crisisDetails", map.get("crisisDetails"));
+					model.addAttribute("courseOfAction", map.get("courseOfAction"));
+					model.addAttribute("consequencesOfAction", map.get("consequencesOfAction"));
+					model.addAttribute("cleanUpAction", map.get("cleanUpAction"));
+				}
+			}
+		} else {
+			System.out.println("No report exist----------");
+		}
 		return "chat";
 	}
 	
 	@GetMapping("/contacts")
 	public String contactPage() {
+		
 		return "contacts";
 	}
 	

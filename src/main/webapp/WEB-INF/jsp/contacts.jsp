@@ -72,15 +72,15 @@
 				<div class="row mb-4 ">
 					<!-- .col -->
 					<div class="col-md-4 col-sm-4">
-						<div class="card">
+						<div class="card bg-light">
 							<div class="row">
-								<div class="col-md-4 col-sm-4  text-center">
-									<a href="contact-detail.html"><img
-										src="../plugins/images/users/genu.jpg" alt="user"
+								<div class="col-md-4 col-sm-4   text-center">
+									<a href="contact-detail.html"><img class = "mt-2 ml-3"
+										src="../images/profileavatar.png" style="width:70px;height:70px;"alt="user"
 										class="img-circle img-responsive"></a>
 								</div>
 								<div class="col-md-8 col-sm-8">
-									<h5 class="box-title m-b-0">Johnathan Doe</h5>
+									<h5 class="box-title mt-3">Johnathan Doe</h5>
 									<small>Web Designer</small>
 									<p></p>
 									<address>
@@ -95,15 +95,15 @@
 					<!-- /.col -->
 					<!-- .col -->
 					<div class="col-md-4 col-sm-4">
-						<div class="card">
+						<div class="card bg-light">
 							<div class="row">
 								<div class="col-md-4 col-sm-4 text-center">
-									<a href="contact-detail.html"><img
-										src="../plugins/images/users/varun.jpg" alt="user"
+									<a href="contact-detail.html"><img class = "mt-2 ml-3"
+										src="../images/profileavatar.png" style="width:70px;height:70px;" alt="user"
 										class="img-circle img-responsive"></a>
 								</div>
 								<div class="col-md-8 col-sm-8">
-									<h5 class="box-title m-b-0">Johnathan Doe</h5>
+									<h5 class="box-title mt-3">Johnathan Doe</h5>
 									<small>Web Designer</small>
 									<p></p>
 									<address>
@@ -118,15 +118,15 @@
 					<!-- /.col -->
 					<!-- .col -->
 					<div class="col-md-4 col-sm-4">
-						<div class="card">
+						<div class="card bg-light">
 							<div class="row">
 								<div class="col-md-4 col-sm-4 text-center">
-									<a href="contact-detail.html"><img
-										src="../plugins/images/users/ritesh.jpg" alt="user"
+									<a href="contact-detail.html"><img class = "mt-2 ml-3"
+										src="../images/profileavatar.png" style="width:70px;height:70px;" alt="user"
 										class="img-circle img-responsive"></a>
 								</div>
 								<div class="col-md-8 col-sm-8">
-									<h5 class="box-title m-b-0">Johnathan Doe</h5>
+									<h5 class="box-title mt-3">Johnathan Doe</h5>
 									<small>Web Designer</small>
 									<p></p>
 									<address>
@@ -145,15 +145,15 @@
 				<div class="row mb-4 ">
 					<!-- .col -->
 					<div class="col-md-4 col-sm-4">
-						<div class="card">
+						<div class="card bg-light">
 							<div class="row">
 								<div class="col-md-4 col-sm-4 text-center">
-									<a href="contact-detail.html"><img
-										src="../plugins/images/users/genu.jpg" alt="user"
+									<a href="contact-detail.html"><img class = "mt-2 ml-3"
+										src="../images/profileavatar.png" style="width:70px;height:70px;" alt="user"
 										class="img-circle img-responsive"></a>
 								</div>
 								<div class="col-md-8 col-sm-8">
-									<h5 class="box-title m-b-0">Johnathan Doe</h5>
+									<h5 class="box-title mt-3">Johnathan Doe</h5>
 									<small>Web Designer</small>
 									<p></p>
 									<address>
@@ -168,15 +168,15 @@
 					<!-- /.col -->
 					<!-- .col -->
 					<div class="col-md-4 col-sm-4">
-						<div class="card">
+						<div class="card bg-light">
 							<div class="row">
 								<div class="col-md-4 col-sm-4 text-center">
-									<a href="contact-detail.html"><img
-										src="../plugins/images/users/varun.jpg" alt="user"
+									<a href="contact-detail.html"><img class = "mt-2 ml-3"
+										src="../images/profileavatar.png" style="width:70px;height:70px;" alt="user"
 										class="img-circle img-responsive"></a>
 								</div>
 								<div class="col-md-8 col-sm-8">
-									<h5 class="box-title m-b-0">Johnathan Doe</h5>
+									<h5 class="box-title mt-3">Johnathan Doe</h5>
 									<small>Web Designer</small>
 									<p></p>
 									<address>
@@ -191,15 +191,15 @@
 					<!-- /.col -->
 					<!-- .col -->
 					<div class="col-md-4 col-sm-4">
-						<div class="card">
+						<div class="card bg-light">
 							<div class="row">
 								<div class="col-md-4 col-sm-4 text-center">
-									<a href="contact-detail.html"><img
-										src="../plugins/images/users/ritesh.jpg" alt="user"
+									<a href="contact-detail.html"><img class = "mt-2 ml-3"
+										src="../images/profileavatar.png" style="width:70px;height:70px;" alt="user"
 										class="img-circle img-responsive"></a>
 								</div>
 								<div class="col-md-8 col-sm-8">
-									<h5 class="box-title m-b-0">Johnathan Doe</h5>
+									<h5 class="box-title mt-3">Johnathan Doe</h5>
 									<small>Web Designer</small>
 									<p></p>
 									<address>

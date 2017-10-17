@@ -70,14 +70,14 @@
 			<br />
 
 
-			<div class="card mb-3 " style="height: 460px;">
+			<div class="card mb-3 " style="height: 480px;">
 				<div class="card-header">
 					<i class="fa fa-bell-o"></i> PMO Internal Chat
 				</div>
 
 				<!--CHAT MESSAGE CONTAINER-->
 
-				<div id="chat-page" style="height: 500px;">
+				<div id="chat-page" style="height: 655px;">
 					<div class="connecting"></div>
 					<ul id="internalmessageArea"
 						style="overflow-y: scroll; overflow-x: hidden;">
@@ -96,7 +96,102 @@
 					</form>
 				</div>
 			</div>
+<div class="card mb-3">
+						<div class="card-header font-weight-bold" data-toggle="collapse" href="#collapseExample" aria-expanded="false">Crisis Information</div>
+						<div class="card-body collapse" id="collapseExample">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="card bg-light mb-3">
+										<div class="card-body">
+											<div class="row row-in">
+												<div class="col-lg-4 col-sm-6 row-in-br">
+													<div class="text-center small"><i class="fa fa-address-card-o"></i>Crisis ID</div>
+													<hr>
+													<div
+														class="h4 mb-0 small font-weight-bold text-info text-center">${crisisID}</div>
+												</div>
+												<div class="col-lg-4 col-sm-6 row-in-br  b-r-none">
+													<div class="text-center small"><i class="fa fa-filter"></i>Crisis Type</div>
+													<hr>
+													<div
+														class="h4 mb-0 small font-weight-bold text-info text-center">${crisisType}</div>
+												</div>
+												<div class="col-lg-4 col-sm-6  b-0">
+													<div class="text-center small"><i class="fa fa-signal"></i>Threat Level</div>
+													<hr>
+													<div
+														class="h4 mb-0 small font-weight-bold text-danger text-center">${threatLevel}</div>
+												</div>
+											</div>
+										</div>
+									</div>
 
+
+									<div class="card bg-light mb-3">
+										<div class="card-body">
+											<div class="row row-in">
+												<div class="col-lg-4 col-sm-6 row-in-br">
+													<div class="text-center small"><i class="fa fa-clock-o"></i>Crisis Duration</div>
+													<hr>
+													<div
+														class="h4 mb-0 small font-weight-bold text-info text-center">${crisisDuration}</div>
+												</div>
+												<div class="col-lg-4 col-sm-6 row-in-br  b-r-none">
+													<div class="text-center small"><i class="fa fa-users"></i>Estimated Casualties</div>
+													<hr>
+													<div
+														class="h4 mb-0 small font-weight-bold text-warning text-center">${estimatedCasualties}</div>
+												</div>
+												<div class="col-lg-4 col-sm-6  b-0">
+													<div class="text-center small"><i class="fa fa-map-o"></i>Affected Area(s)</div>
+													<hr>
+													<div
+														class="h4 mb-0 small font-weight-bold text-info text-center">${affectedArea}</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="card bg-light mb-3">
+										<ul class="nav nav-pills" id="myTab" role="tablist">
+											<li class="nav-item"><a class="nav-link active small"
+												id="home-tab" data-toggle="pill" href="#home" role="tab"
+												aria-controls="home" aria-expanded="true">Crisis Details</a></li>
+											<li class="nav-item"><a class="nav-link small"
+												id="courseOfAction-tab" data-toggle="pill"
+												href="#courseOfAction" role="tab"
+												aria-controls="courseOfAction">Course of Action</a></li>
+											<li class="nav-item"><a class="nav-link small"
+												id="consequencesOfAction-tab" data-toggle="pill"
+												href="#consequencesOfAction" role="tab"
+												aria-controls="consequencesOfAction">Consequences of
+													Action</a></li>
+											<li class="nav-item"><a class="nav-link small"
+												id="cleanUpAction-tab" data-toggle="pill"
+												href="#cleanUpAction" role="tab"
+												aria-controls="cleanUpAction">Clean up Action</a></li>
+										</ul>
+										<div class="card-body">
+											<div class="row row-in">
+												<div class="tab-content" id="myTabContent">
+													<div class="tab-pane fade show active" id="home"
+														role="tabpanel" aria-labelledby="home-tab">${crisisDetails}</div>
+													<div class="tab-pane fade" id="courseOfAction"
+														role="tabpanel" aria-labelledby="courseOfAction-tab">${courseOfAction}</div>
+													<div class="tab-pane fade" id="consequencesOfAction"
+														role="tabpanel" aria-labelledby="consequencesOfAction-tab">${consequencesOfAction}</div>
+													<div class="tab-pane fade" id="cleanUpAction"
+														role="tabpanel" aria-labelledby="cleanUpAction-tab">${cleanUpAction}</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer small text-muted">Sent by: ${name},
+							${positionInCMO}</div>
+					</div>
 
 
 		</div>
