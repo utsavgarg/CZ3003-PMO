@@ -68,7 +68,6 @@
 	<div class="content-wrapper">
 		<div class="container-fluid ">
 			<br />
-			<div class="card-deck">
 				<div class="row mb-4 ">
 					<!-- .col -->
 					<div class="col-md-4 col-sm-4">
@@ -80,12 +79,15 @@
 										class="img-circle img-responsive"></a>
 								</div>
 								<div class="col-md-8 col-sm-8">
-									<h5 class="box-title mt-3">Johnathan Doe</h5>
-									<small>Web Designer</small>
+									<h6 class="box-title mt-3">Mrs Connie CHAN</h6>
+									<h6 class="box-title">&nbsp;</h6>
+									<small>1 Private Secretary to Prime Minister</small> <br/>
+									<small>&nbsp;</small> <br/>
+									<small>&nbsp;</small>
 									<p></p>
 									<address>
-										795 Folsom Ave, Suite 600 San Francisco, CADGE 94107 <br>
-										<br> <abbr title="Phone">P:</abbr> (123) 456-7890
+										<small><i class="fa fa-envelope-o" a>&nbsp;</i>connie_chan@pmo.gov.sg</small> <br>
+									<abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>62358577</abbr>
 									</address>
 									<p></p>
 								</div>
@@ -103,12 +105,15 @@
 										class="img-circle img-responsive"></a>
 								</div>
 								<div class="col-md-8 col-sm-8">
-									<h5 class="box-title mt-3">Johnathan Doe</h5>
-									<small>Web Designer</small>
+									<h6 class="box-title mt-3">Ms Patrina TAN</h6>
+									<h6 class="box-title">&nbsp;</h6>
+									<small>Personal Assistant to Deputy Prime </small> <br/>
+									<small>Minister and Coordinating Minister</small> <br/>
+									<small>for National Security</small>
 									<p></p>
 									<address>
-										795 Folsom Ave, Suite 600 San Francisco, CADGE 94107 <br>
-										<br> <abbr title="Phone">P:</abbr> (123) 456-7890
+										<small><i class="fa fa-envelope-o" a>&nbsp;</i>patrina_tan@pmo.gov.sg</small> <br>
+									<abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>64787090</abbr>
 									</address>
 									<p></p>
 								</div>
@@ -126,12 +131,15 @@
 										class="img-circle img-responsive"></a>
 								</div>
 								<div class="col-md-8 col-sm-8">
-									<h5 class="box-title mt-3">Johnathan Doe</h5>
-									<small>Web Designer</small>
+									<h6 class="box-title mt-3">LOH Pang Shing</h6>
+									<h6 class="box-title">&nbsp;</h6>
+									<small>Personal Assistant to Deputy Prime</small> <br/>
+									<small>Minister & Coordinating Minister</small> <br/>
+									<small>for Economic and Social Policies</small>
 									<p></p>
 									<address>
-										795 Folsom Ave, Suite 600 San Francisco, CADGE 94107 <br>
-										<br> <abbr title="Phone">P:</abbr> (123) 456-7890
+										<small><i class="fa fa-envelope-o" a>&nbsp;</i>loh_pang_shing@pmo.gov.sg</small> <br>
+									<abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>63322717</abbr>
 									</address>
 									<p></p>
 								</div>
@@ -153,12 +161,15 @@
 										class="img-circle img-responsive"></a>
 								</div>
 								<div class="col-md-8 col-sm-8">
-									<h5 class="box-title mt-3">Johnathan Doe</h5>
-									<small>Web Designer</small>
+									<h6 class="box-title mt-3">Ms SOH Wan Kuan</h6>
+									<h6 class="box-title">&nbsp;</h6>
+									<small>Personal Assistant to Coordinating</small> <br/>
+									<small>Minister for Infrastructure</small> <br/>
+									<small>&nbsp;</small>
 									<p></p>
 									<address>
-										795 Folsom Ave, Suite 600 San Francisco, CADGE 94107 <br>
-										<br> <abbr title="Phone">P:</abbr> (123) 456-7890
+										<small><i class="fa fa-envelope-o" a>&nbsp;</i>soh_wan_kuan@mot.gov.sg</small> <br>
+									<abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>63757700</abbr>
 									</address>
 									<p></p>
 								</div>
@@ -176,12 +187,15 @@
 										class="img-circle img-responsive"></a>
 								</div>
 								<div class="col-md-8 col-sm-8">
-									<h5 class="box-title mt-3">Johnathan Doe</h5>
-									<small>Web Designer</small>
+									<h6 class="box-title mt-3">Ms Grace Chia</h6>
+									<h6 class="box-title">&nbsp;</h6>
+									<small>Personal Assistant to Minister</small> <br/>
+									<small>&nbsp;</small> <br/>
+									<small>&nbsp;</small>
 									<p></p>
 									<address>
-										795 Folsom Ave, Suite 600 San Francisco, CADGE 94107 <br>
-										<br> <abbr title="Phone">P:</abbr> (123) 456-7890
+										<small><i class="fa fa-envelope-o" a>&nbsp;</i>grace_chia@pmo.gov.sg</small> <br>
+									<abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>62138589</abbr>
 									</address>
 									<p></p>
 								</div>
@@ -199,12 +213,15 @@
 										class="img-circle img-responsive"></a>
 								</div>
 								<div class="col-md-8 col-sm-8">
-									<h5 class="box-title mt-3">Johnathan Doe</h5>
-									<small>Web Designer</small>
+									<h6 class="box-title mt-3">Miss Shanthi</h6>
+									<h6 class="box-title">RAMAKRISHNAN</h6>
+									<small>Personal Assistant to Senior</small> <br/>
+									<small>Minister of State</small> <br/>
+									<small>&nbsp;</small>
 									<p></p>
 									<address>
-										795 Folsom Ave, Suite 600 San Francisco, CADGE 94107 <br>
-										<br> <abbr title="Phone">P:</abbr> (123) 456-7890
+										<small><i class="fa fa-envelope-o" a>&nbsp;</i>shanthi@ntuc.org.sg</small> <br>
+									<abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>62138080</abbr>
 									</address>
 									<p></p>
 								</div>
@@ -213,8 +230,6 @@
 					</div>
 					<!-- /.col -->
 				</div>
-
-			</div>
 
 
 		</div>

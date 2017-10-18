@@ -72,24 +72,24 @@
 						<div class="card-header font-weight-bold">Crisis Information</div>
 						<div class="card-body">
 							<div class="row">
-								<div class="col-sm-12">
+								<div class="col-sm-13">
 									<div class="card bg-light mb-3">
 										<div class="card-body">
 											<div class="row row-in">
 												<div class="col-lg-4 col-sm-6 row-in-br">
-													<div class="text-center small"><i class="fa fa-address-card-o"></i>Crisis ID</div>
+													<div class="text-center small"><i class="fa fa-address-card-o">&nbsp;</i>Crisis ID</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-info text-center">${crisisID}</div>
 												</div>
 												<div class="col-lg-4 col-sm-6 row-in-br  b-r-none">
-													<div class="text-center small"><i class="fa fa-filter"></i>Crisis Type</div>
+													<div class="text-center small"><i class="fa fa-filter">&nbsp;</i>Crisis Type</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-info text-center">${crisisType}</div>
 												</div>
 												<div class="col-lg-4 col-sm-6  b-0">
-													<div class="text-center small"><i class="fa fa-signal"></i>Threat Level</div>
+													<div class="text-center small"><i class="fa fa-signal">&nbsp;</i>Threat Level</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-danger text-center">${threatLevel}</div>
@@ -103,19 +103,19 @@
 										<div class="card-body">
 											<div class="row row-in">
 												<div class="col-lg-4 col-sm-6 row-in-br">
-													<div class="text-center small"><i class="fa fa-clock-o"></i>Crisis Duration</div>
+													<div class="text-center small"><i class="fa fa-clock-o">&nbsp;</i>Crisis Duration</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-info text-center">${crisisDuration}</div>
 												</div>
 												<div class="col-lg-4 col-sm-6 row-in-br  b-r-none">
-													<div class="text-center small"><i class="fa fa-users"></i>Estimated Casualties</div>
+													<div class="text-center small"><i class="fa fa-users">&nbsp;</i>Estimated Casualties</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-warning text-center">${estimatedCasualties}</div>
 												</div>
 												<div class="col-lg-4 col-sm-6  b-0">
-													<div class="text-center small"><i class="fa fa-map-o"></i>Affected Area(s)</div>
+													<div class="text-center small"><i class="fa fa-map-o">&nbsp;</i>Affected Area(s)</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-info text-center">${affectedArea}</div>
@@ -183,11 +183,16 @@
 						</div>
 					</div>
 					<button class="btn btn-success text-center" type="submit"
-						id="reportButton" style="width: 200px;">
+						id="reportButton" style="width: 200px; onclick="showAlert();">
 						<i class="fa fa-fw fa-file-pdf-o"></i> <span class="nav-link-text">Generate
 							Report</span>
 					</button>
-					
+					<div class="container" style="display:none;" id="myAlert">
+        <div class="alert alert-success alert-dismissable" id="myAlert2">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        </div>
+
+    </div>
 				</div>
 			</div>
 		</div>
