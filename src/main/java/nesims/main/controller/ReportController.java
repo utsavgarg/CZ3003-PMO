@@ -29,8 +29,8 @@ import nesims.main.model.Report;
 @Controller
 public class ReportController {
 	
-	private static final String HEADER_IMAGE = "resources/header.jpg";
-	private static final String SIGN_IMAGE = "resources/signature.png";
+	private static final String HEADER_IMAGE = "src/main/webapp/images/header.jpg";
+	private static final String SIGN_IMAGE = "src/main/webapp/images/signature.png";
 	public static final String REST_SERVICE_URI = "http://localhost:8080/api";
 	public static final String CMO_SERVICE_URI = "http://localhost:8080/PMOtoCMO";
 	

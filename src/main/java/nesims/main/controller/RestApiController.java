@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
  
 import nesims.main.model.Report;
-import nesims.main.service.ReportRepository;
+import nesims.main.repository.ReportRepository;
 import nesims.main.config.CustomErrorType;
  
 @RestController

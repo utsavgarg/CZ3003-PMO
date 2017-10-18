@@ -1,4 +1,4 @@
-package nesims.main.service;
+package nesims.main.repository;
 
 import java.util.List;
 

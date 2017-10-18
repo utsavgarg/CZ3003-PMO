@@ -9,6 +9,7 @@ import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.stereotype.Service;
  
 import nesims.main.model.Report;
+import nesims.main.repository.ReportRepository;
  
  
  
