@@ -30,14 +30,20 @@ public class WebSocketEventListener {
         StompHeaderAccessor headerAccessor = StompHeaderAccessor.wrap(event.getMessage());
 
         String username = (String) headerAccessor.getSessionAttributes().get("username");
+        String channelType = (String) headerAccessor.getSessionAttributes().get("channeltype");
         if(username != null) {
+        	
             logger.info("User Disconnected : " + username);
 
             ChatMessage chatMessage = new ChatMessage();
             chatMessage.setType(ChatMessage.MessageType.LEAVE);
             chatMessage.setSender(username);
+            
+            if(channelType == "public")
+            	messagingTemplate.convertAndSend("/channel/public", chatMessage);
+            else
+            	messagingTemplate.convertAndSend("/channel/private", chatMessage);
 
-            messagingTemplate.convertAndSend("/channel/public", chatMessage);
         }
     }
 }
