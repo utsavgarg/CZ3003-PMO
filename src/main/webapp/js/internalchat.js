@@ -14,7 +14,7 @@ var colors = [
 ];
 
 function connect(event) {
-    username = "Derrick";
+    username = "derrick";
 
     if(username) {
 

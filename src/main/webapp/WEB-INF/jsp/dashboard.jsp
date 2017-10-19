@@ -1,3 +1,8 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,7 +64,8 @@
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link" data-toggle="modal"
-					data-target="#logoutModal"> <i class="fa fa-fw fa-sign-out"></i>Logout
+					data-target="#logoutModal"> <i class="fa fa-fw fa-sign-out"></i>Logout <b><c:out value="${pageContext.request.remoteUser}"></c:out></b>
+					
 				</a></li>
 			</ul>
 		</div>
@@ -231,7 +237,13 @@
 				<div class="modal-footer">
 					<button class="btn btn-secondary" type="button"
 						data-dismiss="modal">Cancel</button>
-					<a class="btn btn-primary" href="/login">Logout</a>
+						
+				   <form action="/logout" method="post">
+				   
+				   <input type="submit" class="btn btn-primary" value="Logout" style="margin: 1.5px;"/>
+				   	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />	
+<!-- 					<a class="btn btn-primary" href="/login">Logout</a>
+ -->					</form>
 				</div>
 			</div>
 		</div>

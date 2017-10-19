@@ -1,3 +1,8 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,14 +31,44 @@
 			<img class="pmo_login_logo" src="./images/pmo_logo.png">
 			<h3>Login</h3>
 			<br />
-			<form method="get" action="/dashboard">
-				<input type="text" name="u" placeholder="Username"
-					required="required" /> <input type="password" name="p"
+
+			<form action="/login" method="post">
+				<input type="text" name="username" placeholder="Username"
+					required="required" /> <input type="password" name="password"
 					placeholder="Password" required="required" />
 				<button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
+
+				<br />
+
+				<c:if test="${param.error ne null}">
+					<div class="alert alert-danger alert-dismissible fade show"
+						role="alert">
+						<button type="button" class="close" data-dismiss="alert"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						Invalid username and password.
+					</div>
+				</c:if>
+
+				<c:if test="${param.logout ne null}">
+					<div class="alert alert-success alert-dismissible fade show"
+						role="alert">
+						You have been logged out.
+
+						<button type="button" class="close" data-dismiss="alert"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+
+					</div>
+				</c:if>
+				<input type="hidden" name="${_csrf.parameterName}"
+					value="${_csrf.token}" />
+
+
 			</form>
 		</div>
-	</div>
 	</div>
 	<!-- Bootstrap core JavaScript-->
 	<script src="vendor/jquery/jquery.min.js"></script>
