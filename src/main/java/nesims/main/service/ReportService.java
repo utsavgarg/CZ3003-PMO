@@ -47,7 +47,6 @@ public class ReportService implements ReportRepository{
     }
      
     public void saveReport(Report report) {
-        report.setCrisisID(counter.incrementAndGet());
         reports.add(report);
     }
  
@@ -76,10 +75,10 @@ public class ReportService implements ReportRepository{
  
     private static List<Report> populateDummyReports(){
         List<Report> reports = new ArrayList<Report>();
-        reports.add(new Report(counter.incrementAndGet(), "Test1", "General" , 4, "Type1", "Area1", 10000, "Duration1", "Detail1", "Action1", "Consequence1", "CleanUp1"));
-        reports.add(new Report(counter.incrementAndGet(), "Test2", "General" , 5, "Type2", "Area2", 10000, "Duration2", "Detail2", "Action2", "Consequence2", "CleanUp2"));
-        reports.add(new Report(counter.incrementAndGet(), "Test3", "General" , 4, "Type3", "Area3", 10000, "Duration3", "Detail3", "Action3", "Consequence3", "CleanUp3"));
-        reports.add(new Report(counter.incrementAndGet(), "Kevin", "General" , 5, "Rougue A.I", "Area4", 10000, "1 HR", "It follows warnings that scientists have successfully trained computers to use artificial intelligence to learn from experience – and one day they could be smarter than their creators.\r\n" + 
+        reports.add(new Report(1, "Test1", "General" , 4, "Type1", "Area1", 10000, "Duration1", "Detail1", "Action1", "Consequence1", "CleanUp1"));
+        reports.add(new Report(2, "Test2", "General" , 5, "Type2", "Area2", 10000, "Duration2", "Detail2", "Action2", "Consequence2", "CleanUp2"));
+        reports.add(new Report(3, "Test3", "General" , 4, "Type3", "Area3", 10000, "Duration3", "Detail3", "Action3", "Consequence3", "CleanUp3"));
+        reports.add(new Report(4, "Kevin", "General" , 5, "Rougue A.I", "Area4", 10000, "1 HR", "It follows warnings that scientists have successfully trained computers to use artificial intelligence to learn from experience – and one day they could be smarter than their creators.\r\n" + 
         		"\r\n" + 
         		"You might be familiar with chatbots in Facebook Messenger or as virtual sales assistants found on a number of online shops.\r\n" + 
         		"\r\n" + 

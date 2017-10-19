@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class MainController {
 	
-	public static final String REST_SERVICE_URI = "http://localhost:8080/api";
+	public static final String REST_SERVICE_URI = "http://localhost:8080/CMOtoPMO";
 	
 	@RequestMapping(value={"/", "/login"}, method = RequestMethod.GET)
 	public ModelAndView login() {
@@ -33,7 +33,7 @@ public class MainController {
 	    int i = 1;
 
 		RestTemplate restTemplate = new RestTemplate();
-		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/report/",
+		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/proposal/",
 				List.class);
 
 		if (reportsMap != null) {
@@ -69,7 +69,7 @@ public class MainController {
 	    int i = 1;
 
 		RestTemplate restTemplate = new RestTemplate();
-		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/report/",
+		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/proposal/",
 				List.class);
 
 		if (reportsMap != null) {
@@ -114,7 +114,7 @@ public class MainController {
 	    int i = 1;
 
 		RestTemplate restTemplate = new RestTemplate();
-		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/report/",
+		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/proposal/",
 				List.class);
 
 		if (reportsMap != null) {

@@ -16,7 +16,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 
 import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.codec.binary.StringUtils;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Controller;
@@ -31,8 +30,8 @@ public class ReportController {
 	
 	private static final String HEADER_IMAGE = "src/main/webapp/images/header.jpg";
 	private static final String SIGN_IMAGE = "src/main/webapp/images/signature.png";
-	public static final String REST_SERVICE_URI = "http://localhost:8080/api";
-	public static final String CMO_SERVICE_URI = "http://localhost:8080/PMOtoCMO";
+	public static final String REST_SERVICE_URI = "http://localhost:8080/CMOtoPMO";
+	public static final String CMO_SERVICE_URI = "http://10.27.114.25:8080/PMOtoCMO";
 	
 	private ByteArrayOutputStream loadPdf(String fileName) throws FileNotFoundException
 	{
@@ -118,10 +117,13 @@ public class ReportController {
 	                       
 	            report.close();
 	            
+	 
 	        	ByteArrayOutputStream ba = loadPdf(fileName);
-	        	String pdfBase64String = StringUtils.newStringUtf8(Base64.encodeBase64(ba.toByteArray()));
+	        	String pdfBase64String = Base64.encodeBase64String(ba.toByteArray());
+	        	
+	        	
 	        	ApprovalReport approvalReport = new ApprovalReport(Long.valueOf(crisisID), pdfBase64String);
-	        	URI uri = restTemplate.postForLocation(REST_SERVICE_URI + "/approvalReport/", approvalReport, ApprovalReport.class);
+	        	URI uri = restTemplate.postForLocation(CMO_SERVICE_URI + "/approvalReport/", approvalReport, ApprovalReport.class);
 	        	System.out.println("Location : "+uri.toASCIIString());
 	    	} catch (DocumentException | IOException e) {
              e.printStackTrace();

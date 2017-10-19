@@ -21,7 +21,7 @@ import nesims.main.repository.ReportRepository;
 import nesims.main.config.CustomErrorType;
  
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/CMOtoPMO")
 public class RestApiController {
  
     public static final Logger logger = LoggerFactory.getLogger(RestApiController.class);
@@ -31,7 +31,8 @@ public class RestApiController {
  
     // -------------------Retrieve All Reports---------------------------------------------
  
-    @RequestMapping(value = "/report/", method = RequestMethod.GET)
+	@SuppressWarnings("unchecked")
+	@RequestMapping(value = "/proposal/", method = RequestMethod.GET)
     public ResponseEntity<List<Report>> listAllReports() {
         List<Report> reports = reportRepository.findAllReports();
         if (reports.isEmpty()) {
@@ -43,13 +44,14 @@ public class RestApiController {
  
     // -------------------Retrieve Single Report------------------------------------------
  
-    @RequestMapping(value = "/report/{crisisID}", method = RequestMethod.GET)
+	@SuppressWarnings("unchecked")
+	@RequestMapping(value = "/proposal/{crisisID}", method = RequestMethod.GET)
     public ResponseEntity<?> getReport(@PathVariable("crisisID") long crisisID) {
         logger.info("Fetching Report with crisisID {}", crisisID);
         Report report = reportRepository.findById(crisisID);
         if (report == null) {
             logger.error("Report with crisisID {} not found.", crisisID);
-            return new ResponseEntity(new CustomErrorType("Report with crisisID " + crisisID 
+            return new ResponseEntity<Object>(new CustomErrorType("Report with crisisID " + crisisID 
                     + " not found"), HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<Report>(report, HttpStatus.OK);
@@ -57,7 +59,8 @@ public class RestApiController {
  
     // -------------------Create a Report-------------------------------------------
  
-    @RequestMapping(value = "/report/", method = RequestMethod.POST)
+    @SuppressWarnings("unchecked")
+	@RequestMapping(value = "/proposal/", method = RequestMethod.POST)
     public ResponseEntity<?> createReport(@RequestBody Report report, UriComponentsBuilder ucBuilder) {
         logger.info("Creating Report : {}", report);
  
