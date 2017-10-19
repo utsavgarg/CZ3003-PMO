@@ -64,7 +64,7 @@
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link" data-toggle="modal"
-					data-target="#logoutModal"> <i class="fa fa-fw fa-sign-out"></i>Logout <b><c:out value="${pageContext.request.remoteUser}"></c:out></b>
+					data-target="#logoutModal"> <i class="fa fa-fw fa-sign-out"></i>Logout <b id="valueHolderId"><c:out value="${pageContext.request.remoteUser}"></c:out></b>
 					
 				</a></li>
 			</ul>

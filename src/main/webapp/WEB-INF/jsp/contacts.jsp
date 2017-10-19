@@ -1,3 +1,8 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,7 +64,8 @@
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link" data-toggle="modal"
-					data-target="#logoutModal"> <i class="fa fa-fw fa-sign-out"></i>Logout
+					data-target="#logoutModal"> <i class="fa fa-fw fa-sign-out"></i>Logout <b id="valueHolderId"><c:out value="${pageContext.request.remoteUser}"></c:out></b>
+					
 				</a></li>
 			</ul>
 		</div>

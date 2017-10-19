@@ -17,7 +17,8 @@ var colors = [
 
 function connect(event) {
 	
-    username = "poh keong";
+    username = $('#valueHolderId').html();
+
 
 
     if(username) {

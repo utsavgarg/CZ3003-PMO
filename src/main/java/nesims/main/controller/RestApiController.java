@@ -72,7 +72,7 @@ public class RestApiController {
         reportRepository.saveReport(report);
  
         HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(ucBuilder.path("/api/report/{crisisID}").buildAndExpand(report.getCrisisID()).toUri());
+        headers.setLocation(ucBuilder.path("/CMOtoPMO/proposal/{crisisID}").buildAndExpand(report.getCrisisID()).toUri());
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);
     }
  
