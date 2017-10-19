@@ -183,16 +183,11 @@
 						</div>
 					</div>
 					<button class="btn btn-success text-center" type="submit"
-						id="reportButton" style="width: 200px; onclick="showAlert();">
+						id="reportButton" style="width: 200px;">
 						<i class="fa fa-fw fa-file-pdf-o"></i> <span class="nav-link-text">Generate
 							Report</span>
 					</button>
-					<div class="container" style="display:none;" id="myAlert">
-        <div class="alert alert-success alert-dismissable" id="myAlert2">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        </div>
-
-    </div>
+					
 				</div>
 			</div>
 		</div>

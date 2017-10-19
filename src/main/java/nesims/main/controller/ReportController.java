@@ -54,7 +54,7 @@ public class ReportController {
     public void generateReport(@Payload ActionReport reportContent){
     	
     	RestTemplate restTemplate = new RestTemplate();
-		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/report/",
+		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/proposal/",
 				List.class);
 		int i = 1;
 		if (reportsMap != null) {

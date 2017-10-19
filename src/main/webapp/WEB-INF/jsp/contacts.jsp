@@ -81,8 +81,8 @@
 								<div class="col-md-8 col-sm-8">
 									<h6 class="box-title mt-3">Mrs Connie CHAN</h6>
 									<h6 class="box-title">&nbsp;</h6>
-									<small>1 Private Secretary to Prime Minister</small> <br/>
-									<small>&nbsp;</small> <br/>
+									<small>1 Private Secretary to Prime</small> <br/>
+									<small>Minister</small> <br/>
 									<small>&nbsp;</small>
 									<p></p>
 									<address>
@@ -107,9 +107,9 @@
 								<div class="col-md-8 col-sm-8">
 									<h6 class="box-title mt-3">Ms Patrina TAN</h6>
 									<h6 class="box-title">&nbsp;</h6>
-									<small>Personal Assistant to Deputy Prime </small> <br/>
-									<small>Minister and Coordinating Minister</small> <br/>
-									<small>for National Security</small>
+									<small>Personal Assistant to</small> <br/>
+									<small>Coordinating Minister for</small> <br/>
+									<small>National Security</small>
 									<p></p>
 									<address>
 										<small><i class="fa fa-envelope-o" a>&nbsp;</i>patrina_tan@pmo.gov.sg</small> <br>
@@ -133,12 +133,12 @@
 								<div class="col-md-8 col-sm-8">
 									<h6 class="box-title mt-3">LOH Pang Shing</h6>
 									<h6 class="box-title">&nbsp;</h6>
-									<small>Personal Assistant to Deputy Prime</small> <br/>
-									<small>Minister & Coordinating Minister</small> <br/>
-									<small>for Economic and Social Policies</small>
+									<small>Personal Assistant to</small> <br/>
+									<small>Coordinating Minister for</small> <br/>
+									<small>Economic and Social Policies</small>
 									<p></p>
 									<address>
-										<small><i class="fa fa-envelope-o" a>&nbsp;</i>loh_pang_shing@pmo.gov.sg</small> <br>
+										<small><i class="fa fa-envelope-o" a>&nbsp;</i>pang_shing@pmo.gov.sg</small> <br>
 									<abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>63322717</abbr>
 									</address>
 									<p></p>
@@ -163,9 +163,9 @@
 								<div class="col-md-8 col-sm-8">
 									<h6 class="box-title mt-3">Ms SOH Wan Kuan</h6>
 									<h6 class="box-title">&nbsp;</h6>
-									<small>Personal Assistant to Coordinating</small> <br/>
-									<small>Minister for Infrastructure</small> <br/>
-									<small>&nbsp;</small>
+									<small>Personal Assistant to</small> <br/>
+									<small>Coordinating Minister for</small> <br/>
+									<small>Infrastructure</small>
 									<p></p>
 									<address>
 										<small><i class="fa fa-envelope-o" a>&nbsp;</i>soh_wan_kuan@mot.gov.sg</small> <br>
