@@ -189,9 +189,12 @@
 						</div>
 					</div>
 					<button class="btn btn-success text-center" type="submit"
-						id="reportButton" style="width: 200px;">
-						<i class="fa fa-fw fa-file-pdf-o"></i> <span class="nav-link-text">Generate
-							Report</span>
+						id="reportButton" style="width: 150px;">
+						<i class="fa fa-fw fa-file-pdf-o"></i> <span class="nav-link-text">Generate</span>
+					</button>
+					<button class="btn btn-success text-center" type="submit"
+						id="sendButton" style="width: 150px;">
+						<i class="fa fa-fw fa-send"></i> <span class="nav-link-text">Send</span>
 					</button>
 					
 				</div>
@@ -242,7 +245,7 @@
 	<!-- Chat JavaScript-->
 	<script src="/js/sockjs.min.js" type="text/javascript"></script>
 	<script src="/js/stomp.min.js" type="text/javascript"></script>
-	<script src="/js/main.js" type="text/javascript"></script>
+	<script src="/js/generate.js" type="text/javascript"></script>
 	</div>
 </body>
 

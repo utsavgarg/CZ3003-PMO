@@ -117,14 +117,6 @@ public class ReportController {
 	                       
 	            report.close();
 	            
-	 
-	        	ByteArrayOutputStream ba = loadPdf(fileName);
-	        	String pdfBase64String = Base64.encodeBase64String(ba.toByteArray());
-	        	
-	        	
-	        	ApprovalReport approvalReport = new ApprovalReport(Long.valueOf(crisisID), pdfBase64String);
-	        	URI uri = restTemplate.postForLocation(CMO_SERVICE_URI + "/approvalReport/", approvalReport, ApprovalReport.class);
-	        	System.out.println("Location : "+uri.toASCIIString());
 	    	} catch (DocumentException | IOException e) {
              e.printStackTrace();
          }
@@ -132,4 +124,36 @@ public class ReportController {
  			System.out.println("No report exist----------");
  		}
     }
+    
+    @MessageMapping("/report.sendReport")
+    public void SendReport(){
+    	RestTemplate restTemplate = new RestTemplate();
+		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/proposal/",
+				List.class);
+		int i = 1;
+		if (reportsMap != null) {
+			String crisisID = "";
+			for (LinkedHashMap<String, Object> map : reportsMap) {
+				if (i++ == reportsMap.size()) {
+					crisisID = String.valueOf(map.get("crisisID"));
+				}
+			}
+		    	
+	    	try {
+	    		String fileName = "reports/" + crisisID + ".pdf";            
+	 
+	        	ByteArrayOutputStream ba = loadPdf(fileName);
+	        	String pdfBase64String = Base64.encodeBase64String(ba.toByteArray());
+	        	
+	        	ApprovalReport approvalReport = new ApprovalReport(Long.valueOf(crisisID), pdfBase64String);
+	        	URI uri = restTemplate.postForLocation(CMO_SERVICE_URI + "/approvalReport/", approvalReport, ApprovalReport.class);
+	        	System.out.println("Location : "+uri.toASCIIString());
+	    	} catch (IOException e) {
+             e.printStackTrace();
+         }
+		}else {
+ 			System.out.println("No report exist----------");
+ 		}
+    }    
+    
 }
