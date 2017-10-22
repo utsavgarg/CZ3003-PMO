@@ -17,8 +17,8 @@ var colors = [
 
 function connect(event) {
 	
+	  
     username = $('#valueHolderId').html();
-
 
 
     if(username) {
@@ -32,6 +32,7 @@ function connect(event) {
 }
 
 function onConnected() {
+
     // Subscribe to the Public Channel
     stompClient.subscribe('/channel/public', onMessageReceived);
 
@@ -42,12 +43,38 @@ function onConnected() {
     )
 
     connectingElement.classList.add('hidden');
+    
+
+    document.getElementById('online-status').style.background = "#32CD32";
+    document.getElementById("online-status-text").classList.remove('text-danger');
+    document.getElementById("online-status-text").classList.add('text-success');
+    document.getElementById("online-status-text").innerHTML = "Online";
+    
+    document.getElementById('reconnect').style.display = "none";
+    document.getElementById('chat-page').style.display = "block";
+    connectingElement.style.display = "none";
+
+    
+
 }
 
 
 function onError(error) {
-    connectingElement.textContent = 'Could not connect to WebSocket server (External Chat). Please refresh this page to try again!';
+    connectingElement.textContent = 'Could not connect to WebSocket server (External Chat). Please refresh or click reconnect to re-establish connection';
     connectingElement.style.color = 'red';
+    connectingElement.style.marginTop  = '20px';
+
+    
+    document.getElementById('online-status').style.background = "#f00";
+    document.getElementById("online-status-text").classList.remove('text-success');
+    document.getElementById("online-status-text").classList.add('text-danger');
+    document.getElementById("online-status-text").innerHTML = "Offline";
+    
+    document.getElementById('reconnect').style.display = "block";
+    document.getElementById('chat-page').style.display = "none";
+    connectingElement.style.display = "block";
+
+
 }
 
 
@@ -129,5 +156,14 @@ function getAvatarColor(messageSender) {
     var index = Math.abs(hash % colors.length);
     return colors[index];
 }
+
+
+function reconnect() {
+	
+	connect("load");
+}
+
+
 window.addEventListener("load", connect, true)
 messageForm.addEventListener('submit', sendMessage, true)
+

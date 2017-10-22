@@ -165,3 +165,32 @@
     float:right;
 }
 
+.online-status { 
+    background: #32CD32;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+	display:inline-block;
+	margin-left: 10px;
+	margin-right: 5px;
+	margin-bottom: 3px;	
+            }
+            
+.same-line {
+	display:inline-block;
+	margin: 0px;
+	padding: 0px;
+}
+
+.center-div
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  display: none;
+}

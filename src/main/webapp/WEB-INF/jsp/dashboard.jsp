@@ -222,13 +222,26 @@
 				<div class="col-lg-4">
 					<div class="card mb-3 " style="height: 500px;">
 						<div class="card-header">
-							<i class="fa fa-bell-o"></i> CMO Live Feed
+							<i class="fa fa-bell-o"></i> <p class= "same-line">CMO Live Feed</p>
+							<div id="online-status" class="online-status" ></div><p id="online-status-text" class= "same-line text-success small">Online</p>
+
 						</div>
+
+
+	<!--CHAT RECONNECT BUTTON-->
+				
+				<div class="connecting"></div>
+              
+                <div id="reconnect" class="center-div form-group">
+                    <button type="submit" onclick="reconnect()" class="accent username-submit btn btn-success">Reconnect</button>
+                </div>
+
+
 
 						<!--CHAT MESSAGE CONTAINER-->
 
 						<div id="chat-page" style="height: 580px;">
-							<div class="connecting"></div>
+							
 							<ul id="messageArea"
 								style="overflow-y: scroll; overflow-x: hidden;">
 							</ul>
