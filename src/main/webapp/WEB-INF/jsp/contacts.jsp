@@ -43,9 +43,8 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Dashboard"><a class="nav-link" href="/dashboard"
-					method="post"> <i class="fa fa-fw fa-dashboard"></i> <span
-						class="nav-link-text">Dashboard</span>
+					title="Dashboard"><a class="nav-link" href="/dashboard">
+						<i class="fa fa-fw fa-dashboard"></i> <span class="nav-link-text">Dashboard</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
 					title="PMO Chat"><a class="nav-link" href="/chat"> <i
@@ -64,8 +63,10 @@
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link" data-toggle="modal"
-					data-target="#logoutModal"> <i class="fa fa-fw fa-sign-out"></i>Logout <b id="valueHolderId"><c:out value="${pageContext.request.remoteUser}"></c:out></b>
-					
+					data-target="#logoutModal"> <i class="fa fa-fw fa-sign-out"></i>Logout
+						<b id="valueHolderId"><c:out
+								value="${pageContext.request.remoteUser}"></c:out></b>
+
 				</a></li>
 			</ul>
 		</div>
@@ -74,168 +75,169 @@
 	<div class="content-wrapper">
 		<div class="container-fluid ">
 			<br />
-				<div class="row mb-4 ">
-					<!-- .col -->
-					<div class="col-md-4 col-sm-4">
-						<div class="card bg-light">
-							<div class="row">
-								<div class="col-md-4 col-sm-4   text-center">
-									<a href="contact-detail.html"><img class = "mt-2 ml-3"
-										src="../images/profileavatar.png" style="width:70px;height:70px;"alt="user"
-										class="img-circle img-responsive"></a>
-								</div>
-								<div class="col-md-8 col-sm-8">
-									<h6 class="box-title mt-3">Mrs Connie CHAN</h6>
-									<h6 class="box-title">&nbsp;</h6>
-									<small>1 Private Secretary to Prime</small> <br/>
-									<small>Minister</small> <br/>
-									<small>&nbsp;</small>
-									<p></p>
-									<address>
-										<small><i class="fa fa-envelope-o" a>&nbsp;</i>connie_chan@pmo.gov.sg</small> <br>
-									<abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>62358577</abbr>
-									</address>
-									<p></p>
-								</div>
+			<div class="row mb-4 ">
+				<!-- .col -->
+				<div class="col-md-4 col-sm-4">
+					<div class="card bg-light">
+						<div class="row">
+							<div class="col-md-4 col-sm-4   text-center">
+								<a href="contact-detail.html"><img class="mt-2 ml-3"
+									src="../images/profileavatar.png"
+									style="width: 70px; height: 70px;" alt="user"
+									class="img-circle img-responsive"></a>
+							</div>
+							<div class="col-md-8 col-sm-8">
+								<h6 class="box-title mt-3">Mrs Connie CHAN</h6>
+								<h6 class="box-title">&nbsp;</h6>
+								<small>1 Private Secretary to Prime</small> <br /> <small>Minister</small>
+								<br /> <small>&nbsp;</small>
+								<p></p>
+								<address>
+									<small><i class="fa fa-envelope-o">&nbsp;</i>connie_chan@pmo.gov.sg</small>
+									<br> <abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>62358577</abbr>
+								</address>
+								<p></p>
 							</div>
 						</div>
 					</div>
-					<!-- /.col -->
-					<!-- .col -->
-					<div class="col-md-4 col-sm-4">
-						<div class="card bg-light">
-							<div class="row">
-								<div class="col-md-4 col-sm-4 text-center">
-									<a href="contact-detail.html"><img class = "mt-2 ml-3"
-										src="../images/profileavatar.png" style="width:70px;height:70px;" alt="user"
-										class="img-circle img-responsive"></a>
-								</div>
-								<div class="col-md-8 col-sm-8">
-									<h6 class="box-title mt-3">Ms Patrina TAN</h6>
-									<h6 class="box-title">&nbsp;</h6>
-									<small>Personal Assistant to</small> <br/>
-									<small>Coordinating Minister for</small> <br/>
-									<small>National Security</small>
-									<p></p>
-									<address>
-										<small><i class="fa fa-envelope-o" a>&nbsp;</i>patrina_tan@pmo.gov.sg</small> <br>
-									<abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>64787090</abbr>
-									</address>
-									<p></p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /.col -->
-					<!-- .col -->
-					<div class="col-md-4 col-sm-4">
-						<div class="card bg-light">
-							<div class="row">
-								<div class="col-md-4 col-sm-4 text-center">
-									<a href="contact-detail.html"><img class = "mt-2 ml-3"
-										src="../images/profileavatar.png" style="width:70px;height:70px;" alt="user"
-										class="img-circle img-responsive"></a>
-								</div>
-								<div class="col-md-8 col-sm-8">
-									<h6 class="box-title mt-3">LOH Pang Shing</h6>
-									<h6 class="box-title">&nbsp;</h6>
-									<small>Personal Assistant to</small> <br/>
-									<small>Coordinating Minister for</small> <br/>
-									<small>Economic and Social Policies</small>
-									<p></p>
-									<address>
-										<small><i class="fa fa-envelope-o" a>&nbsp;</i>pang_shing@pmo.gov.sg</small> <br>
-									<abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>63322717</abbr>
-									</address>
-									<p></p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /.col -->
 				</div>
+				<!-- /.col -->
+				<!-- .col -->
+				<div class="col-md-4 col-sm-4">
+					<div class="card bg-light">
+						<div class="row">
+							<div class="col-md-4 col-sm-4 text-center">
+								<a href="contact-detail.html"><img class="mt-2 ml-3"
+									src="../images/profileavatar.png"
+									style="width: 70px; height: 70px;" alt="user"
+									class="img-circle img-responsive"></a>
+							</div>
+							<div class="col-md-8 col-sm-8">
+								<h6 class="box-title mt-3">Ms Patrina TAN</h6>
+								<h6 class="box-title">&nbsp;</h6>
+								<small>Personal Assistant to</small> <br /> <small>Coordinating
+									Minister for</small> <br /> <small>National Security</small>
+								<p></p>
+								<address>
+									<small><i class="fa fa-envelope-o">&nbsp;</i>patrina_tan@pmo.gov.sg</small>
+									<br> <abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>64787090</abbr>
+								</address>
+								<p></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.col -->
+				<!-- .col -->
+				<div class="col-md-4 col-sm-4">
+					<div class="card bg-light">
+						<div class="row">
+							<div class="col-md-4 col-sm-4 text-center">
+								<a href="contact-detail.html"><img class="mt-2 ml-3"
+									src="../images/profileavatar.png"
+									style="width: 70px; height: 70px;" alt="user"
+									class="img-circle img-responsive"></a>
+							</div>
+							<div class="col-md-8 col-sm-8">
+								<h6 class="box-title mt-3">LOH Pang Shing</h6>
+								<h6 class="box-title">&nbsp;</h6>
+								<small>Personal Assistant to</small> <br /> <small>Coordinating
+									Minister for</small> <br /> <small>Economic and Social
+									Policies</small>
+								<p></p>
+								<address>
+									<small><i class="fa fa-envelope-o">&nbsp;</i>pang_shing@pmo.gov.sg</small>
+									<br> <abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>63322717</abbr>
+								</address>
+								<p></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.col -->
+			</div>
 
 
-				<div class="row mb-4 ">
-					<!-- .col -->
-					<div class="col-md-4 col-sm-4">
-						<div class="card bg-light">
-							<div class="row">
-								<div class="col-md-4 col-sm-4 text-center">
-									<a href="contact-detail.html"><img class = "mt-2 ml-3"
-										src="../images/profileavatar.png" style="width:70px;height:70px;" alt="user"
-										class="img-circle img-responsive"></a>
-								</div>
-								<div class="col-md-8 col-sm-8">
-									<h6 class="box-title mt-3">Ms SOH Wan Kuan</h6>
-									<h6 class="box-title">&nbsp;</h6>
-									<small>Personal Assistant to</small> <br/>
-									<small>Coordinating Minister for</small> <br/>
-									<small>Infrastructure</small>
-									<p></p>
-									<address>
-										<small><i class="fa fa-envelope-o" a>&nbsp;</i>soh_wan_kuan@mot.gov.sg</small> <br>
-									<abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>63757700</abbr>
-									</address>
-									<p></p>
-								</div>
+			<div class="row mb-4 ">
+				<!-- .col -->
+				<div class="col-md-4 col-sm-4">
+					<div class="card bg-light">
+						<div class="row">
+							<div class="col-md-4 col-sm-4 text-center">
+								<a href="contact-detail.html"><img class="mt-2 ml-3"
+									src="../images/profileavatar.png"
+									style="width: 70px; height: 70px;" alt="user"
+									class="img-circle img-responsive"></a>
+							</div>
+							<div class="col-md-8 col-sm-8">
+								<h6 class="box-title mt-3">Ms SOH Wan Kuan</h6>
+								<h6 class="box-title">&nbsp;</h6>
+								<small>Personal Assistant to</small> <br /> <small>Coordinating
+									Minister for</small> <br /> <small>Infrastructure</small>
+								<p></p>
+								<address>
+									<small><i class="fa fa-envelope-o">&nbsp;</i>soh_wan_kuan@mot.gov.sg</small>
+									<br> <abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>63757700</abbr>
+								</address>
+								<p></p>
 							</div>
 						</div>
 					</div>
-					<!-- /.col -->
-					<!-- .col -->
-					<div class="col-md-4 col-sm-4">
-						<div class="card bg-light">
-							<div class="row">
-								<div class="col-md-4 col-sm-4 text-center">
-									<a href="contact-detail.html"><img class = "mt-2 ml-3"
-										src="../images/profileavatar.png" style="width:70px;height:70px;" alt="user"
-										class="img-circle img-responsive"></a>
-								</div>
-								<div class="col-md-8 col-sm-8">
-									<h6 class="box-title mt-3">Ms Grace Chia</h6>
-									<h6 class="box-title">&nbsp;</h6>
-									<small>Personal Assistant to Minister</small> <br/>
-									<small>&nbsp;</small> <br/>
-									<small>&nbsp;</small>
-									<p></p>
-									<address>
-										<small><i class="fa fa-envelope-o" a>&nbsp;</i>grace_chia@pmo.gov.sg</small> <br>
-									<abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>62138589</abbr>
-									</address>
-									<p></p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /.col -->
-					<!-- .col -->
-					<div class="col-md-4 col-sm-4">
-						<div class="card bg-light">
-							<div class="row">
-								<div class="col-md-4 col-sm-4 text-center">
-									<a href="contact-detail.html"><img class = "mt-2 ml-3"
-										src="../images/profileavatar.png" style="width:70px;height:70px;" alt="user"
-										class="img-circle img-responsive"></a>
-								</div>
-								<div class="col-md-8 col-sm-8">
-									<h6 class="box-title mt-3">Miss Shanthi</h6>
-									<h6 class="box-title">RAMAKRISHNAN</h6>
-									<small>Personal Assistant to Senior</small> <br/>
-									<small>Minister of State</small> <br/>
-									<small>&nbsp;</small>
-									<p></p>
-									<address>
-										<small><i class="fa fa-envelope-o" a>&nbsp;</i>shanthi@ntuc.org.sg</small> <br>
-									<abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>62138080</abbr>
-									</address>
-									<p></p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /.col -->
 				</div>
+				<!-- /.col -->
+				<!-- .col -->
+				<div class="col-md-4 col-sm-4">
+					<div class="card bg-light">
+						<div class="row">
+							<div class="col-md-4 col-sm-4 text-center">
+								<a href="contact-detail.html"><img class="mt-2 ml-3"
+									src="../images/profileavatar.png"
+									style="width: 70px; height: 70px;" alt="user"
+									class="img-circle img-responsive"></a>
+							</div>
+							<div class="col-md-8 col-sm-8">
+								<h6 class="box-title mt-3">Ms Grace Chia</h6>
+								<h6 class="box-title">&nbsp;</h6>
+								<small>Personal Assistant to Minister</small> <br /> <small>&nbsp;</small>
+								<br /> <small>&nbsp;</small>
+								<p></p>
+								<address>
+									<small><i class="fa fa-envelope-o">&nbsp;</i>grace_chia@pmo.gov.sg</small>
+									<br> <abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>62138589</abbr>
+								</address>
+								<p></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.col -->
+				<!-- .col -->
+				<div class="col-md-4 col-sm-4">
+					<div class="card bg-light">
+						<div class="row">
+							<div class="col-md-4 col-sm-4 text-center">
+								<a href="contact-detail.html"><img class="mt-2 ml-3"
+									src="../images/profileavatar.png"
+									style="width: 70px; height: 70px;" alt="user"
+									class="img-circle img-responsive"></a>
+							</div>
+							<div class="col-md-8 col-sm-8">
+								<h6 class="box-title mt-3">Miss Shanthi</h6>
+								<h6 class="box-title">RAMAKRISHNAN</h6>
+								<small>Personal Assistant to Senior</small> <br /> <small>Minister
+									of State</small> <br /> <small>&nbsp;</small>
+								<p></p>
+								<address>
+									<small><i class="fa fa-envelope-o">&nbsp;</i>shanthi@ntuc.org.sg</small>
+									<br> <abbr title="Phone"><i class="fa fa-phone">&nbsp;</i>62138080</abbr>
+								</address>
+								<p></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.col -->
+			</div>
 
 
 		</div>
@@ -286,7 +288,7 @@
 	<script src="/js/sockjs.min.js" type="text/javascript"></script>
 	<script src="/js/stomp.min.js" type="text/javascript"></script>
 	<script src="/js/main.js" type="text/javascript"></script>
-	</div>
+
 </body>
 
 </html>

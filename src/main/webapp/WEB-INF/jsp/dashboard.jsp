@@ -43,9 +43,8 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Dashboard"><a class="nav-link" href="/dashboard"
-					method="post"> <i class="fa fa-fw fa-dashboard"></i> <span
-						class="nav-link-text">Dashboard</span>
+					title="Dashboard"><a class="nav-link" href="/dashboard"> <i
+						class="fa fa-fw fa-dashboard"></i> <span class="nav-link-text">Dashboard</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
 					title="PMO Chat"><a class="nav-link" href="/chat"> <i
@@ -64,8 +63,10 @@
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link" data-toggle="modal"
-					data-target="#logoutModal"> <i class="fa fa-fw fa-sign-out"></i>Logout <b id="valueHolderId"><c:out value="${pageContext.request.remoteUser}"></c:out></b>
-					
+					data-target="#logoutModal"> <i class="fa fa-fw fa-sign-out"></i>Logout
+						<b id="valueHolderId"><c:out
+								value="${pageContext.request.remoteUser}"></c:out></b>
+
 				</a></li>
 			</ul>
 		</div>
@@ -85,19 +86,25 @@
 										<div class="card-body">
 											<div class="row row-in">
 												<div class="col-lg-4 col-sm-6 row-in-br">
-													<div class="text-center small"><i class="fa fa-address-card-o">&nbsp;</i>Crisis ID</div>
+													<div class="text-center small">
+														<i class="fa fa-address-card-o">&nbsp;</i>Crisis ID
+													</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-info text-center">${crisisID}</div>
 												</div>
 												<div class="col-lg-4 col-sm-6 row-in-br  b-r-none">
-													<div class="text-center small"><i class="fa fa-filter">&nbsp;</i>Crisis Type</div>
+													<div class="text-center small">
+														<i class="fa fa-filter">&nbsp;</i>Crisis Type
+													</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-info text-center">${crisisType}</div>
 												</div>
 												<div class="col-lg-4 col-sm-6  b-0">
-													<div class="text-center small"><i class="fa fa-signal">&nbsp;</i>Threat Level</div>
+													<div class="text-center small">
+														<i class="fa fa-signal">&nbsp;</i>Threat Level
+													</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-danger text-center">${threatLevel}</div>
@@ -111,19 +118,25 @@
 										<div class="card-body">
 											<div class="row row-in">
 												<div class="col-lg-4 col-sm-6 row-in-br">
-													<div class="text-center small"><i class="fa fa-clock-o">&nbsp;</i>Crisis Duration</div>
+													<div class="text-center small">
+														<i class="fa fa-clock-o">&nbsp;</i>Crisis Duration
+													</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-info text-center">${crisisDuration}</div>
 												</div>
 												<div class="col-lg-4 col-sm-6 row-in-br  b-r-none">
-													<div class="text-center small"><i class="fa fa-users">&nbsp;</i>Estimated Casualties</div>
+													<div class="text-center small">
+														<i class="fa fa-users">&nbsp;</i>Estimated Casualties
+													</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-warning text-center">${estimatedCasualties}</div>
 												</div>
 												<div class="col-lg-4 col-sm-6  b-0">
-													<div class="text-center small"><i class="fa fa-map-o">&nbsp;</i>Affected Area(s)</div>
+													<div class="text-center small">
+														<i class="fa fa-map-o">&nbsp;</i>Affected Area(s)
+													</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-info text-center">${affectedArea}</div>
@@ -237,13 +250,15 @@
 				<div class="modal-footer">
 					<button class="btn btn-secondary" type="button"
 						data-dismiss="modal">Cancel</button>
-						
-				   <form action="/logout" method="post">
-				   
-				   <input type="submit" class="btn btn-primary" value="Logout" style="margin: 1.5px;"/>
-				   	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />	
-<!-- 					<a class="btn btn-primary" href="/login">Logout</a>
- -->					</form>
+
+					<form action="/logout" method="post">
+
+						<input type="submit" class="btn btn-primary" value="Logout"
+							style="margin: 1.5px;" /> <input type="hidden"
+							name="${_csrf.parameterName}" value="${_csrf.token}" />
+						<!-- 					<a class="btn btn-primary" href="/login">Logout</a>
+ -->
+					</form>
 				</div>
 			</div>
 		</div>
@@ -266,7 +281,6 @@
 	<script src="/js/sockjs.min.js" type="text/javascript"></script>
 	<script src="/js/stomp.min.js" type="text/javascript"></script>
 	<script src="/js/main.js" type="text/javascript"></script>
-	</div>
 </body>
 
 </html>

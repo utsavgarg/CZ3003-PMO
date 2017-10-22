@@ -1,7 +1,7 @@
 package nesims.main.model;
 
 public class Report {
-	
+
 	private long crisisID;
 	private String name;
 	private String positionInCMO;
@@ -14,12 +14,12 @@ public class Report {
 	private String courseOfAction;
 	private String consequencesOfAction;
 	private String cleanUpAction;
- 
-    public Report(){
-        crisisID=0;
-    }
-    
-    public Report(long crisisID, String name, String positionInCMO, int threatLevel, String crisisType,
+
+	public Report() {
+		crisisID = 0;
+	}
+
+	public Report(long crisisID, String name, String positionInCMO, int threatLevel, String crisisType,
 			String affectedArea, int estimatedCasualties, String crisisDuration, String crisisDetails,
 			String courseOfAction, String consequencesOfAction, String cleanUpAction) {
 		this.crisisID = crisisID;
@@ -35,8 +35,6 @@ public class Report {
 		this.consequencesOfAction = consequencesOfAction;
 		this.cleanUpAction = cleanUpAction;
 	}
-
-	
 
 	public long getCrisisID() {
 		return crisisID;
@@ -135,26 +133,26 @@ public class Report {
 	}
 
 	@Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + (int) (crisisID ^ (crisisID >>> 32));
-        return result;
-    }
- 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Report other = (Report) obj;
-        if (crisisID != other.crisisID)
-            return false;
-        return true;
-    }
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (int) (crisisID ^ (crisisID >>> 32));
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Report other = (Report) obj;
+		if (crisisID != other.crisisID)
+			return false;
+		return true;
+	}
 
 	@Override
 	public String toString() {
@@ -165,8 +163,4 @@ public class Report {
 				+ consequencesOfAction + ", cleanUpAction=" + cleanUpAction + "]";
 	}
 
-
-   
- 
- 
 }

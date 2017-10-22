@@ -14,26 +14,23 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MainController {
-	
+
 	public static final String REST_SERVICE_URI = "http://localhost:8080/CMOtoPMO";
-	
-	
 
-	
-	@RequestMapping(value={"/login"}, method = RequestMethod.GET)
+	@RequestMapping(value = { "/login" }, method = RequestMethod.GET)
 	public ModelAndView login() {
-	    ModelAndView mav = new ModelAndView();
-	    mav.setViewName("login");
-	    return mav;
-        }
-	
-	@RequestMapping(value={"/dashboard", "/"}, method = RequestMethod.GET)
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("login");
+		return mav;
+	}
+
+	@RequestMapping(value = { "/dashboard", "/" }, method = RequestMethod.GET)
 	public ModelAndView dashboard(ModelMap model) {
-		
-	    ModelAndView mav = new ModelAndView();
-	    mav.setViewName("dashboard");
-	    
-	    int i = 1;
+
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("dashboard");
+
+		int i = 1;
 
 		RestTemplate restTemplate = new RestTemplate();
 		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/proposal/",
@@ -42,7 +39,7 @@ public class MainController {
 		if (reportsMap != null) {
 			for (LinkedHashMap<String, Object> map : reportsMap) {
 				if (i++ == reportsMap.size()) {
-					// end	
+					// end
 					model.addAttribute("crisisID", map.get("crisisID"));
 					model.addAttribute("name", map.get("name"));
 					model.addAttribute("positionInCMO", map.get("positionInCMO"));
@@ -60,16 +57,16 @@ public class MainController {
 		} else {
 			System.out.println("No report exist----------");
 		}
-	    return mav;
-        }
-	
-	@RequestMapping(value={"/chat"}, method = RequestMethod.GET)
+		return mav;
+	}
+
+	@RequestMapping(value = { "/chat" }, method = RequestMethod.GET)
 	public ModelAndView chat(ModelMap model) {
-		
-	    ModelAndView mav = new ModelAndView();
-	    mav.setViewName("chat");
-	    
-	    int i = 1;
+
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("chat");
+
+		int i = 1;
 
 		RestTemplate restTemplate = new RestTemplate();
 		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/proposal/",
@@ -78,7 +75,7 @@ public class MainController {
 		if (reportsMap != null) {
 			for (LinkedHashMap<String, Object> map : reportsMap) {
 				if (i++ == reportsMap.size()) {
-					// end	
+					// end
 					model.addAttribute("crisisID", map.get("crisisID"));
 					model.addAttribute("name", map.get("name"));
 					model.addAttribute("positionInCMO", map.get("positionInCMO"));
@@ -96,25 +93,23 @@ public class MainController {
 		} else {
 			System.out.println("No report exist----------");
 		}
-	    return mav;
-        }
-	
-	
-	@RequestMapping(value={"contacts"}, method = RequestMethod.GET)
+		return mav;
+	}
+
+	@RequestMapping(value = { "contacts" }, method = RequestMethod.GET)
 	public ModelAndView contacts() {
-	    ModelAndView mav = new ModelAndView();
-	    mav.setViewName("contacts");
-	    return mav;
-        }
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("contacts");
+		return mav;
+	}
 
-	
-	@RequestMapping(value={"/generate"}, method = RequestMethod.GET)
+	@RequestMapping(value = { "/generate" }, method = RequestMethod.GET)
 	public ModelAndView generate(ModelMap model) {
-		
-	    ModelAndView mav = new ModelAndView();
-	    mav.setViewName("generate");
-	    
-	    int i = 1;
+
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("generate");
+
+		int i = 1;
 
 		RestTemplate restTemplate = new RestTemplate();
 		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/proposal/",
@@ -123,7 +118,7 @@ public class MainController {
 		if (reportsMap != null) {
 			for (LinkedHashMap<String, Object> map : reportsMap) {
 				if (i++ == reportsMap.size()) {
-					// end	
+					// end
 					model.addAttribute("crisisID", map.get("crisisID"));
 					model.addAttribute("name", map.get("name"));
 					model.addAttribute("positionInCMO", map.get("positionInCMO"));
@@ -141,8 +136,7 @@ public class MainController {
 		} else {
 			System.out.println("No report exist----------");
 		}
-	    return mav;
-        }
-	
+		return mav;
+	}
 
 }

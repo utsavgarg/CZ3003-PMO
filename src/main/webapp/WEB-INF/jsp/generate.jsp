@@ -42,9 +42,8 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Dashboard"><a class="nav-link" href="/dashboard"
-					method="post"> <i class="fa fa-fw fa-dashboard"></i> <span
-						class="nav-link-text">Dashboard</span>
+					title="Dashboard"><a class="nav-link" href="/dashboard"> <i
+						class="fa fa-fw fa-dashboard"></i> <span class="nav-link-text">Dashboard</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
 					title="PMO Chat"><a class="nav-link" href="/chat"> <i
@@ -63,8 +62,10 @@
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link" data-toggle="modal"
-					data-target="#logoutModal"> <i class="fa fa-fw fa-sign-out"></i>Logout <b id="valueHolderId"><c:out value="${pageContext.request.remoteUser}"></c:out></b>
-					
+					data-target="#logoutModal"> <i class="fa fa-fw fa-sign-out"></i>Logout
+						<b id="valueHolderId"><c:out
+								value="${pageContext.request.remoteUser}"></c:out></b>
+
 				</a></li>
 			</ul>
 		</div>
@@ -83,19 +84,25 @@
 										<div class="card-body">
 											<div class="row row-in">
 												<div class="col-lg-4 col-sm-6 row-in-br">
-													<div class="text-center small"><i class="fa fa-address-card-o">&nbsp;</i>Crisis ID</div>
+													<div class="text-center small">
+														<i class="fa fa-address-card-o">&nbsp;</i>Crisis ID
+													</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-info text-center">${crisisID}</div>
 												</div>
 												<div class="col-lg-4 col-sm-6 row-in-br  b-r-none">
-													<div class="text-center small"><i class="fa fa-filter">&nbsp;</i>Crisis Type</div>
+													<div class="text-center small">
+														<i class="fa fa-filter">&nbsp;</i>Crisis Type
+													</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-info text-center">${crisisType}</div>
 												</div>
 												<div class="col-lg-4 col-sm-6  b-0">
-													<div class="text-center small"><i class="fa fa-signal">&nbsp;</i>Threat Level</div>
+													<div class="text-center small">
+														<i class="fa fa-signal">&nbsp;</i>Threat Level
+													</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-danger text-center">${threatLevel}</div>
@@ -109,19 +116,25 @@
 										<div class="card-body">
 											<div class="row row-in">
 												<div class="col-lg-4 col-sm-6 row-in-br">
-													<div class="text-center small"><i class="fa fa-clock-o">&nbsp;</i>Crisis Duration</div>
+													<div class="text-center small">
+														<i class="fa fa-clock-o">&nbsp;</i>Crisis Duration
+													</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-info text-center">${crisisDuration}</div>
 												</div>
 												<div class="col-lg-4 col-sm-6 row-in-br  b-r-none">
-													<div class="text-center small"><i class="fa fa-users">&nbsp;</i>Estimated Casualties</div>
+													<div class="text-center small">
+														<i class="fa fa-users">&nbsp;</i>Estimated Casualties
+													</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-warning text-center">${estimatedCasualties}</div>
 												</div>
 												<div class="col-lg-4 col-sm-6  b-0">
-													<div class="text-center small"><i class="fa fa-map-o">&nbsp;</i>Affected Area(s)</div>
+													<div class="text-center small">
+														<i class="fa fa-map-o">&nbsp;</i>Affected Area(s)
+													</div>
 													<hr>
 													<div
 														class="h4 mb-0 small font-weight-bold text-info text-center">${affectedArea}</div>
@@ -173,7 +186,7 @@
 				</div>
 
 				<div class="col-lg-4 text-center">
-					<div class="card mb-3 " >
+					<div class="card mb-3 ">
 						<div class="card-header">
 							<i class="fa fa-bell-o"></i> Action Response
 						</div>
@@ -189,14 +202,31 @@
 						</div>
 					</div>
 					<button class="btn btn-success text-center" type="submit"
-						id="reportButton" style="width: 150px;">
+						id="reportButton">
 						<i class="fa fa-fw fa-file-pdf-o"></i> <span class="nav-link-text">Generate</span>
 					</button>
 					<button class="btn btn-success text-center" type="submit"
-						id="sendButton" style="width: 150px;">
+						id="sendButton">
 						<i class="fa fa-fw fa-send"></i> <span class="nav-link-text">Send</span>
 					</button>
-					
+
+					<br />
+					<br />
+					<div class="container" style="display: none;" id="myAlert">
+						<div class="alert alert-success alert-dismissable" id="myAlert2">
+							<button type="button" class="close" data-dismiss="alert"
+								aria-hidden="true">&times;</button>
+							Success! Report Generated.
+						</div>
+						
+						<div class="container" style="display: none;" id="myAlert3">
+						<div class="alert alert-success alert-dismissable" id="myAlert4">
+							<button type="button" class="close" data-dismiss="alert"
+								aria-hidden="true">&times;</button>
+							Success! Report Sent.
+						</div>
+
+					</div>
 				</div>
 			</div>
 		</div>
@@ -236,6 +266,7 @@
 	<!-- Core plugin JavaScript-->
 	<script src="../vendor/jquery-easing/jquery.easing.min.js"
 		type="text/javascript"></script>
+	<script src="../vendor/jquery/jquery.min.js" type="text/javascript"></script>
 	<!-- Page level plugin JavaScript-->
 	<script src="../vendor/chart.js/Chart.min.js" type="text/javascript"></script>
 	<script src="../vendor/datatables/jquery.dataTables.js"

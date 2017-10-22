@@ -1,13 +1,13 @@
 package nesims.main.model;
 
 public class ApprovalReport {
-	
+
 	private long crisisID;
 	private String pdfBase64;
- 
-	public ApprovalReport(){
-        crisisID=0;
-    }
+
+	public ApprovalReport() {
+		crisisID = 0;
+	}
 
 	public ApprovalReport(long crisisID, String pdfBase64) {
 		this.crisisID = crisisID;
@@ -31,31 +31,30 @@ public class ApprovalReport {
 	}
 
 	@Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + (int) (crisisID ^ (crisisID >>> 32));
-        return result;
-    }
- 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        ApprovalReport other = (ApprovalReport) obj;
-        if (crisisID != other.crisisID)
-            return false;
-        return true;
-    }
- 
-    @Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (int) (crisisID ^ (crisisID >>> 32));
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ApprovalReport other = (ApprovalReport) obj;
+		if (crisisID != other.crisisID)
+			return false;
+		return true;
+	}
+
+	@Override
 	public String toString() {
 		return "Report [crisisID=" + crisisID + ", pdfBase64=" + pdfBase64 + "]";
 	}
- 
- 
+
 }

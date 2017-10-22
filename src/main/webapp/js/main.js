@@ -68,40 +68,6 @@ function sendMessage(event) {
     event.preventDefault();
 }
 
-$("#reportButton").click(function() {
-    var reportContent = actionReportText.value.trim();
-    console.log(reportContent);
-
-    if(reportContent && stompClient) {
-        var report = {
-            sender: username,
-            content: reportContent
-        };
-
-        stompClient.send("/app/report.generateReport", {}, JSON.stringify(report));
-        reportContent = '';
-    }
-    event.preventDefault();
-})
-
-function generateReport(event) {
-    var reportContent = actionReportText.value.trim();
-    console.log(reportContent);
-
-    if(reportContent && stompClient) {
-        var report = {
-            sender: username,
-            content: reportContent.value,
-            type: 'REPORT'
-        };
-
-        stompClient.send("/app/report.generateReport", {}, JSON.stringify(report));
-        reportContent.value = '';
-    }
-    event.preventDefault();
-}
-
-
 function onMessageReceived(payload) {
     var message = JSON.parse(payload.body);
 

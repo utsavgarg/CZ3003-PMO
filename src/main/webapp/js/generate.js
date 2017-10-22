@@ -8,46 +8,64 @@ var stompClient = null;
 var username = null;
 
 function connect(event) {
-	
-    username = $('#valueHolderId').html();
 
-    if(username) {
+	username = $('#valueHolderId').html();
 
-        var socket = new SockJS('http://localhost:8080/ws');
-        stompClient = Stomp.over(socket);
+	if (username) {
 
-        stompClient.connect({}, {}, onError);
-    }
-    event.preventDefault();
+		var socket = new SockJS('http://localhost:8080/ws');
+		stompClient = Stomp.over(socket);
+
+		stompClient.connect({}, {}, onError);
+	}
+	event.preventDefault();
 }
 
 function onError(error) {
-    connectingElement.textContent = 'Could not connect to WebSocket server (Generate Report). Please refresh this page to try again!';
-    connectingElement.style.color = 'red';
+	connectingElement.textContent = 'Could not connect to WebSocket server (Generate Report). Please refresh this page to try again!';
+	connectingElement.style.color = 'red';
 }
 
+$("#reportButton")
+		.click(
+				function() {
+					var reportContent = actionReportText.value.trim();
+					console.log(reportContent);
 
-$("#reportButton").click(function() {
-    var reportContent = actionReportText.value.trim();
-    console.log(reportContent);
+					if (reportContent && stompClient) {
+						var report = {
+							sender : username,
+							content : reportContent
+						};
 
-    if(reportContent && stompClient) {
-        var report = {
-            sender: username,
-            content: reportContent
-        };
+						stompClient.send("/app/report.generateReport", {}, JSON
+								.stringify(report));
+						reportContent = '';
+					}
+					event.preventDefault();
 
-        stompClient.send("/app/report.generateReport", {}, JSON.stringify(report));
-        reportContent = '';
-    }
-    event.preventDefault();
-})
+					if ($("#myAlert").find("div#myAlert2").length == 0) {
+						$("#myAlert")
+								.append(
+										"<div class='alert alert-success alert-dismissable' id='myAlert2'> <button type='button' class='close' data-dismiss='alert'  aria-hidden='true'>&times;</button> Success! Report Generated.</div>");
+					}
+					$("#myAlert").css("display", "");
 
-$("#sendButton").click(function() {
-    if(stompClient) {
-        stompClient.send("/app/report.sendReport", {}, {});
-    }
-    event.preventDefault();
-})
+				})
+
+$("#sendButton")
+		.click(
+				function() {
+					if (stompClient) {
+						stompClient.send("/app/report.sendReport", {}, {});
+					}
+					event.preventDefault();
+					if ($("#myAlert3").find("div#myAlert4").length == 0) {
+						$("#myAlert3")
+								.append(
+										"<div class='alert alert-success alert-dismissable' id='myAlert4'> <button type='button' class='close' data-dismiss='alert'  aria-hidden='true'>&times;</button> Success! Report Sent.</div>");
+					}
+					$("#myAlert3").css("display", "");
+				})
 
 window.addEventListener("load", connect, true);
