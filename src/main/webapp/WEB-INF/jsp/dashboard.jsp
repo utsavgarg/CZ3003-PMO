@@ -2,7 +2,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,6 +25,13 @@
 <!-- Chat page css -->
 <link rel="stylesheet" href="/css/main.css" />
 
+<style>
+   #map {
+    height: 400px;
+    width: 100%;
+   }
+</style>
+
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -41,7 +47,7 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion" style="">
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
 					title="Dashboard"><a class="nav-link" href="/dashboard"
 					method="post"> <i class="fa fa-fw fa-dashboard"></i> <span
@@ -174,9 +180,27 @@
 					</div>
 					<div class="card mb-3">
 						<div class="card-header">Live Map</div>
-						<a href="#"> <img class="card-img-top img-fluid w-100"
+						<!--a href="#"> <img class="card-img-top img-fluid w-100"
 							src="../images/map_screenshot.png" alt="">
-						</a>
+						</a-->
+						  <!-- iframe
+							  frameborder="0" style="border:0"
+							  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCLBVe_h54_umO82pUPNBgr2j5UTCfQvo0&q=Singapore">
+							</iframe-->
+							<div id="map"></div>
+							<script>
+						      function initMap() {
+						        var singapore = {lat: 1.3515563, lng: 103.800135};
+						        var map = new google.maps.Map(document.getElementById('map'), {
+						          zoom: 11,
+						          center: singapore,
+						          disableDefaultUI: true
+						        });
+						      }
+						    </script>
+						    	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLBVe_h54_umO82pUPNBgr2j5UTCfQvo0&callback=initMap">
+    </script>
 						<div class="card-footer small text-muted">Updated yesterday
 							at 11:59 PM</div>
 					</div>
@@ -220,7 +244,7 @@
 	<footer class="sticky-footer">
 		<div class="container">
 			<div class="text-center">
-				<small>Copyright © SSP2 PMO 2017</small>
+				<small>Copyright &copy; SSP2 PMO 2017</small>
 			</div>
 		</div>
 	</footer>
