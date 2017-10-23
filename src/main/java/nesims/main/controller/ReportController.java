@@ -23,7 +23,6 @@ import org.springframework.web.client.RestTemplate;
 
 import nesims.main.model.ActionReport;
 import nesims.main.model.ApprovalReport;
-import nesims.main.model.Report;
 
 @Controller
 public class ReportController {
@@ -53,6 +52,7 @@ public class ReportController {
 	public void generateReport(@Payload ActionReport reportContent) {
 
 		RestTemplate restTemplate = new RestTemplate();
+		@SuppressWarnings("unchecked")
 		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/proposal/",
 				List.class);
 		int i = 1;
@@ -127,6 +127,7 @@ public class ReportController {
 	@MessageMapping("/report.sendReport")
 	public void SendReport() {
 		RestTemplate restTemplate = new RestTemplate();
+		@SuppressWarnings("unchecked")
 		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/proposal/",
 				List.class);
 		int i = 1;

@@ -60,33 +60,34 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion" style="">
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Dashboard" id="dash"><a class="nav-link" href="/dashboard"> <i
-						class="fa fa-fw fa-dashboard"></i> <span class="nav-link-text">Dashboard</span>
+					title="Dashboard" id="dash"><a class="nav-link"
+					href="/dashboard"> <i class="fa fa-fw fa-dashboard"></i> <span
+						class="nav-link-text">Dashboard</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="PMO Chat" id="chat"><a class="nav-link" href="/chat"> <i
-						class="fa fa-fw fa-edit"></i> <span class="nav-link-text">PMO
+					title="PMO Chat" id="chat"><a class="nav-link" href="/chat">
+						<i class="fa fa-fw fa-edit"></i> <span class="nav-link-text">PMO
 							Chat</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Contacts" id="contact"><a class="nav-link" href="/contacts"> <i
-						class="fa fa-fw fa-address-book"></i> <span class="nav-link-text">Contacts</span>
+					title="Contacts" id="contact"><a class="nav-link"
+					href="/contacts"> <i class="fa fa-fw fa-address-book"></i> <span
+						class="nav-link-text">Contacts</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Generate Report" id="report"><a class="nav-link" href="/generate">
-						<i class="fa fa-fw fa-file-pdf-o"></i> <span class="nav-link-text">Generate
-							Report</span>
+					title="Generate Report" id="report"><a class="nav-link"
+					href="/generate"> <i class="fa fa-fw fa-file-pdf-o"></i> <span
+						class="nav-link-text">Generate Report</span>
 				</a></li>
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link" data-toggle="modal"
 					data-target="#logoutModal"> <i class="fa fa-fw fa-sign-out"></i>Logout
-						<b id="valueHolderId">
-							<c:out value="${pageContext.request.remoteUser}"></c:out>
-						</b>
-						<b id="getRole" style="display: none;">
-							<c:out value="${pageContext.request.userPrincipal}"></c:out>
-						</b>
+						<b id="valueHolderId"> <c:out
+								value="${pageContext.request.remoteUser}"></c:out>
+					</b> <b id="getRole" style="display: none;"> <c:out
+								value="${pageContext.request.userPrincipal}"></c:out>
+					</b>
 
 				</a></li>
 			</ul>

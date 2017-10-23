@@ -14,7 +14,8 @@ var colors = [
 ];
 
 function connect(event) {
-    username = $('#valueHolderId').html();
+	   username = $('#valueHolderId').html();
+	   username = username.replace(/[\n\t\r]/g,"");
 
     if(username) {
 

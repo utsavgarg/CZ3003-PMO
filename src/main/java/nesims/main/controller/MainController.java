@@ -7,8 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestTemplate;
@@ -44,6 +42,7 @@ public class MainController {
 		int i = 1;
 
 		RestTemplate restTemplate = new RestTemplate();
+		@SuppressWarnings("unchecked")
 		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/proposal/",
 				List.class);
 
@@ -80,6 +79,7 @@ public class MainController {
 		int i = 1;
 
 		RestTemplate restTemplate = new RestTemplate();
+		@SuppressWarnings("unchecked")
 		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/proposal/",
 				List.class);
 
@@ -115,6 +115,7 @@ public class MainController {
 		int i = 1;
 
 		RestTemplate restTemplate = new RestTemplate();
+		@SuppressWarnings("unchecked")
 		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/proposal/",
 				List.class);
 
@@ -143,6 +144,7 @@ public class MainController {
 		int i = 1;
 
 		RestTemplate restTemplate = new RestTemplate();
+		@SuppressWarnings("unchecked")
 		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/proposal/",
 				List.class);
 

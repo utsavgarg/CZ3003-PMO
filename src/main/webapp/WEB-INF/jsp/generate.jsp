@@ -43,33 +43,34 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion" style="">
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Dashboard" id="dash"><a class="nav-link" href="/dashboard"> <i
-						class="fa fa-fw fa-dashboard"></i> <span class="nav-link-text">Dashboard</span>
+					title="Dashboard" id="dash"><a class="nav-link"
+					href="/dashboard"> <i class="fa fa-fw fa-dashboard"></i> <span
+						class="nav-link-text">Dashboard</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="PMO Chat" id="chat"><a class="nav-link" href="/chat"> <i
-						class="fa fa-fw fa-edit"></i> <span class="nav-link-text">PMO
+					title="PMO Chat" id="chat"><a class="nav-link" href="/chat">
+						<i class="fa fa-fw fa-edit"></i> <span class="nav-link-text">PMO
 							Chat</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Contacts" id="contact"><a class="nav-link" href="/contacts"> <i
-						class="fa fa-fw fa-address-book"></i> <span class="nav-link-text">Contacts</span>
+					title="Contacts" id="contact"><a class="nav-link"
+					href="/contacts"> <i class="fa fa-fw fa-address-book"></i> <span
+						class="nav-link-text">Contacts</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Generate Report" id="report"><a class="nav-link" href="/generate">
-						<i class="fa fa-fw fa-file-pdf-o"></i> <span class="nav-link-text">Generate
-							Report</span>
+					title="Generate Report" id="report"><a class="nav-link"
+					href="/generate"> <i class="fa fa-fw fa-file-pdf-o"></i> <span
+						class="nav-link-text">Generate Report</span>
 				</a></li>
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link" data-toggle="modal"
 					data-target="#logoutModal"> <i class="fa fa-fw fa-sign-out"></i>Logout
-						<b id="valueHolderId">
-							<c:out value="${pageContext.request.remoteUser}"></c:out>
-						</b>
-						<b id="getRole" style="display: none;">
-							<c:out value="${pageContext.request.userPrincipal}"></c:out>
-						</b>
+						<b id="valueHolderId"> <c:out
+								value="${pageContext.request.remoteUser}"></c:out>
+					</b> <b id="getRole" style="display: none;"> <c:out
+								value="${pageContext.request.userPrincipal}"></c:out>
+					</b>
 
 				</a></li>
 			</ul>
@@ -81,7 +82,8 @@
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="card mb-3">
-						<div class="card-header font-weight-bold" id="informationDivTitle">Crisis Information</div>
+						<div class="card-header font-weight-bold" id="informationDivTitle">Crisis
+							Information</div>
 						<div class="card-body" id="informationDiv">
 							<div class="row">
 								<div class="col-sm-13">
@@ -119,7 +121,7 @@
 									<!--div>
 										<embed src="../../../../reports/4.pdf" width="400px" height="800px" type="application/pdf">
 									</div-->
-									
+
 									<div class="card bg-light mb-3">
 										<div class="card-body">
 											<div class="row row-in">
@@ -218,75 +220,76 @@
 						<i class="fa fa-fw fa-send"></i> <span class="nav-link-text">Send</span>
 					</button>
 
-					<br />
-					<br />
+					<br /> <br />
 					<div class="container" style="display: none;" id="myAlert">
 						<div class="alert alert-success alert-dismissable" id="myAlert2">
 							<button type="button" class="close" data-dismiss="alert"
 								aria-hidden="true">&times;</button>
 							Success! Report Generated.
 						</div>
-						
-						<div class="container" style="display: none;" id="myAlert3">
-						<div class="alert alert-success alert-dismissable" id="myAlert4">
-							<button type="button" class="close" data-dismiss="alert"
-								aria-hidden="true">&times;</button>
-							Success! Report Sent.
-						</div>
 
+						<div class="container" style="display: none;" id="myAlert3">
+							<div class="alert alert-success alert-dismissable" id="myAlert4">
+								<button type="button" class="close" data-dismiss="alert"
+									aria-hidden="true">&times;</button>
+								Success! Report Sent.
+							</div>
+
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- /.container-fluid-->
-	<!-- /.content-wrapper-->
-	<footer class="sticky-footer">
-		<div class="container">
-			<div class="text-center">
-				<small>Copyright &copy; SSP2 PMO 2017</small>
-			</div>
-		</div>
-	</footer>
-	<!-- Logout Modal-->
-	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-				</div>
-				<div class="modal-body">Select "Logout" below if you are ready
-					to end your current session.</div>
-				<div class="modal-footer">
-					<button class="btn btn-secondary" type="button"
-						data-dismiss="modal">Cancel</button>
-					<a class="btn btn-primary" href="/login">Logout</a>
+		<!-- /.container-fluid-->
+		<!-- /.content-wrapper-->
+		<footer class="sticky-footer">
+			<div class="container">
+				<div class="text-center">
+					<small>Copyright &copy; SSP2 PMO 2017</small>
 				</div>
 			</div>
+		</footer>
+		<!-- Logout Modal-->
+		<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Ready to
+							Leave?</h5>
+					</div>
+					<div class="modal-body">Select "Logout" below if you are
+						ready to end your current session.</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" type="button"
+							data-dismiss="modal">Cancel</button>
+						<a class="btn btn-primary" href="/login">Logout</a>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-	<!-- Bootstrap core JavaScript-->
-	<script src="../vendor/jquery/jquery.min.js" type="text/javascript"></script>
-	<script src="../vendor/popper/popper.min.js" type="text/javascript"></script>
-	<script src="../vendor/bootstrap/js/bootstrap.min.js"
-		type="text/javascript"></script>
-	<!-- Core plugin JavaScript-->
-	<script src="../vendor/jquery-easing/jquery.easing.min.js"
-		type="text/javascript"></script>
-	<script src="../vendor/jquery/jquery.min.js" type="text/javascript"></script>
-	<!-- Page level plugin JavaScript-->
-	<script src="../vendor/chart.js/Chart.min.js" type="text/javascript"></script>
-	<script src="../vendor/datatables/jquery.dataTables.js"
-		type="text/javascript"></script>
-	<script src="../vendor/datatables/dataTables.bootstrap4.js"
-		type="text/javascript"></script>
-	<!-- Chat JavaScript-->
-	<script src="/js/sockjs.min.js" type="text/javascript"></script>
-	<script src="/js/stomp.min.js" type="text/javascript"></script>
-	<script src="/js/generate.js" type="text/javascript"></script>
-	<b id="crisisValue" hidden><c:out value="${crisisID}"></c:out></b>
-	<script src="/js/access.js" type="text/javascript"></script>
+		<b id="crisisValue" style="display: none;"><c:out
+				value="${crisisID}"></c:out></b>
+		<!-- Bootstrap core JavaScript-->
+		<script src="../vendor/jquery/jquery.min.js" type="text/javascript"></script>
+		<script src="../vendor/popper/popper.min.js" type="text/javascript"></script>
+		<script src="../vendor/bootstrap/js/bootstrap.min.js"
+			type="text/javascript"></script>
+		<!-- Core plugin JavaScript-->
+		<script src="../vendor/jquery-easing/jquery.easing.min.js"
+			type="text/javascript"></script>
+		<script src="../vendor/jquery/jquery.min.js" type="text/javascript"></script>
+		<!-- Page level plugin JavaScript-->
+		<script src="../vendor/chart.js/Chart.min.js" type="text/javascript"></script>
+		<script src="../vendor/datatables/jquery.dataTables.js"
+			type="text/javascript"></script>
+		<script src="../vendor/datatables/dataTables.bootstrap4.js"
+			type="text/javascript"></script>
+		<!-- Chat JavaScript-->
+		<script src="/js/sockjs.min.js" type="text/javascript"></script>
+		<script src="/js/stomp.min.js" type="text/javascript"></script>
+		<script src="/js/generate.js" type="text/javascript"></script>
+		<script src="/js/access.js" type="text/javascript"></script>
 	</div>
 </body>
 

@@ -26,10 +26,10 @@
 <link rel="stylesheet" href="/css/main.css" />
 
 <style>
-   #map {
-    height: 400px;
-    width: 100%;
-   }
+#map {
+	height: 400px;
+	width: 100%;
+}
 </style>
 
 </head>
@@ -49,33 +49,33 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion" style="">
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Dashboard" id="dash"><a class="nav-link" href="/dashboard"> <i
-						class="fa fa-fw fa-dashboard"></i> <span class="nav-link-text">Dashboard</span>
+					title="Dashboard" id="dash"><a class="nav-link"
+					href="/dashboard"> <i class="fa fa-fw fa-dashboard"></i> <span
+						class="nav-link-text">Dashboard</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="PMO Chat" id="chat"><a class="nav-link" href="/chat"> <i
-						class="fa fa-fw fa-edit"></i> <span class="nav-link-text">PMO
+					title="PMO Chat" id="chat"><a class="nav-link" href="/chat">
+						<i class="fa fa-fw fa-edit"></i> <span class="nav-link-text">PMO
 							Chat</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Contacts" id="contact"><a class="nav-link" href="/contacts"> <i
-						class="fa fa-fw fa-address-book"></i> <span class="nav-link-text">Contacts</span>
+					title="Contacts" id="contact"><a class="nav-link"
+					href="/contacts"> <i class="fa fa-fw fa-address-book"></i> <span
+						class="nav-link-text">Contacts</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Generate Report" id="report"><a class="nav-link" href="/generate">
-						<i class="fa fa-fw fa-file-pdf-o"></i> <span class="nav-link-text">Generate
-							Report</span>
+					title="Generate Report" id="report"><a class="nav-link"
+					href="/generate"> <i class="fa fa-fw fa-file-pdf-o"></i> <span
+						class="nav-link-text">Generate Report</span>
 				</a></li>
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link" data-toggle="modal"
 					data-target="#logoutModal"> <i class="fa fa-fw fa-sign-out"></i>Logout
-						<b id="valueHolderId">
-							<c:out value="${pageContext.request.remoteUser}"></c:out>
-						</b>
-						<b id="getRole" style="display: none;">
-							<c:out value="${pageContext.request.userPrincipal}"></c:out>
-						</b>
+						<b id="valueHolderId"><c:out value="${pageContext.request.remoteUser}"></c:out>
+					</b> <b id="getRole" style="display: none;"> <c:out
+								value="${pageContext.request.userPrincipal}"></c:out>
+					</b>
 				</a></li>
 			</ul>
 		</div>
@@ -199,24 +199,29 @@
 						<!--a href="#"> <img class="card-img-top img-fluid w-100"
 							src="../images/map_screenshot.png" alt="">
 						</a-->
-						  <!-- iframe
+						<!-- iframe
 							  frameborder="0" style="border:0"
 							  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCLBVe_h54_umO82pUPNBgr2j5UTCfQvo0&q=Singapore">
 							</iframe-->
-							<div id="map"></div>
-							<script>
-						      function initMap() {
-						        var singapore = {lat: 1.3515563, lng: 103.800135};
-						        var map = new google.maps.Map(document.getElementById('map'), {
-						          zoom: 11,
-						          center: singapore,
-						          disableDefaultUI: true
-						        });
-						      }
-						    </script>
-						    	<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLBVe_h54_umO82pUPNBgr2j5UTCfQvo0&callback=initMap">
-    </script>
+						<div id="map"></div>
+						<script>
+							function initMap() {
+								var singapore = {
+									lat : 1.3515563,
+									lng : 103.800135
+								};
+								var map = new google.maps.Map(document
+										.getElementById('map'), {
+									zoom : 11,
+									center : singapore,
+									disableDefaultUI : true
+								});
+							}
+						</script>
+						<script async defer
+							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLBVe_h54_umO82pUPNBgr2j5UTCfQvo0&callback=initMap">
+							
+						</script>
 						<div class="card-footer small text-muted">Updated yesterday
 							at 11:59 PM</div>
 					</div>
@@ -225,26 +230,29 @@
 				<div class="col-lg-4">
 					<div class="card mb-3 " style="height: 500px;">
 						<div class="card-header">
-							<i class="fa fa-bell-o"></i> <p class= "same-line">CMO Live Feed</p>
-							<div id="online-status" class="online-status" ></div><p id="online-status-text" class= "same-line text-success small">Online</p>
+							<i class="fa fa-bell-o"></i>
+							<p class="same-line">CMO Live Feed</p>
+							<div id="online-status" class="online-status"></div>
+							<p id="online-status-text" class="same-line text-success small">Online</p>
 
 						</div>
 
 
-	<!--CHAT RECONNECT BUTTON-->
-				
-				<div class="connecting"></div>
-              
-                <div id="reconnect" class="center-div form-group">
-                    <button type="submit" onclick="reconnect()" class="accent username-submit btn btn-success">Reconnect</button>
-                </div>
+						<!--CHAT RECONNECT BUTTON-->
+
+						<div class="connecting"></div>
+
+						<div id="reconnect" class="center-div form-group">
+							<button type="submit" onclick="reconnect()"
+								class="accent username-submit btn btn-success">Reconnect</button>
+						</div>
 
 
 
 						<!--CHAT MESSAGE CONTAINER-->
 
 						<div id="chat-page" style="height: 580px;">
-							
+
 							<ul id="messageArea"
 								style="overflow-y: scroll; overflow-x: hidden;">
 							</ul>

@@ -32,7 +32,7 @@ public class RestApiController {
 	// -------------------Retrieve All
 	// Reports---------------------------------------------
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@RequestMapping(value = "/proposal/", method = RequestMethod.GET)
 	public ResponseEntity<List<Report>> listAllReports() {
 		List<Report> reports = reportRepository.findAllReports();
@@ -46,7 +46,6 @@ public class RestApiController {
 	// -------------------Retrieve Single
 	// Report------------------------------------------
 
-	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/proposal/{crisisID}", method = RequestMethod.GET)
 	public ResponseEntity<?> getReport(@PathVariable("crisisID") long crisisID) {
 		logger.info("Fetching Report with crisisID {}", crisisID);
@@ -61,7 +60,7 @@ public class RestApiController {
 
 	// -------------------Create a Report-------------------------------------------
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@RequestMapping(value = "/proposal/", method = RequestMethod.POST)
 	public ResponseEntity<?> createReport(@RequestBody Report report, UriComponentsBuilder ucBuilder) {
 		logger.info("Creating Report : {}", report);

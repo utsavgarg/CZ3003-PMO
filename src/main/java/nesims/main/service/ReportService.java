@@ -3,7 +3,6 @@ package nesims.main.service;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.stereotype.Service;
 
@@ -12,8 +11,6 @@ import nesims.main.repository.ReportRepository;
 
 @Service("ReportService")
 public class ReportService implements ReportRepository {
-
-	private static final AtomicLong counter = new AtomicLong();
 
 	private static List<Report> reports;
 
