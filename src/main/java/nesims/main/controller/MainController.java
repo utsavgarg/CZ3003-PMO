@@ -97,9 +97,29 @@ public class MainController {
 	}
 
 	@RequestMapping(value = { "contacts" }, method = RequestMethod.GET)
-	public ModelAndView contacts() {
+	public ModelAndView contacts(ModelMap model) {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("contacts");
+
+		int i = 1;
+
+		RestTemplate restTemplate = new RestTemplate();
+		List<LinkedHashMap<String, Object>> reportsMap = restTemplate.getForObject(REST_SERVICE_URI + "/proposal/",
+				List.class);
+
+		if (reportsMap != null) {
+			for (LinkedHashMap<String, Object> map : reportsMap) {
+				if (i++ == reportsMap.size()) {
+					// end
+					model.addAttribute("crisisID", map.get("crisisID"));
+					model.addAttribute("threatLevel", map.get("threatLevel"));
+					model.addAttribute("crisisType", map.get("crisisType"));
+					model.addAttribute("crisisDetails", map.get("crisisDetails"));
+				}
+			}
+		} else {
+			System.out.println("No report exist----------");
+		}
 		return mav;
 	}
 

@@ -194,3 +194,7 @@
   height: 100px;
   display: none;
 }
+
+#dash, #chat, #contact, #report {
+	display: None;
+}
