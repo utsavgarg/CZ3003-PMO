@@ -22,8 +22,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/CMOtoPMO/**").permitAll().anyRequest().authenticated().and().formLogin()
-				.loginPage("/login").defaultSuccessUrl("/dashboard").permitAll().and().logout().permitAll();
+		http.authorizeRequests().antMatchers("/CMOtoPMO/**").permitAll().antMatchers("/chat/**").hasAnyRole("PM","SECRETARY","MINISTERS").
+		antMatchers("/generate/**").hasRole("SECRETARY").anyRequest().authenticated().and().formLogin()
+		.loginPage("/login").defaultSuccessUrl("/dashboard").permitAll().and().logout().permitAll();
 		http.csrf().disable();
 
 	}

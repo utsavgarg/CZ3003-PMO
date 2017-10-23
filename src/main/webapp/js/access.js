@@ -15,19 +15,19 @@ function onLoad(event) {
 	role = getRole();
 	console.log(role);
 
-	if (role == "24-7") {
+	if (role == "ROLE_24-7") {
 		$("#dash").css("display", "none");
 		$("#chat").css("display", "none");
 		$("#contact").css("display", "block");
 		$("#report").css("display", "none");
 	}
-	else if (role == "ministers" || role == "pm") {
+	else if (role == "ROLE_MINISTERS" || role == "ROLE_PM") {
 		$("#dash").css("display", "block");
 		$("#chat").css("display", "block");
 		$("#contact").css("display", "block");
 		$("#report").css("display", "none");
 	}
-	else if (role == "secretary") {
+	else if (role == "ROLE_SECRETARY") {
 		$("#dash").css("display", "block");
 		$("#chat").css("display", "block");
 		$("#contact").css("display", "block");
