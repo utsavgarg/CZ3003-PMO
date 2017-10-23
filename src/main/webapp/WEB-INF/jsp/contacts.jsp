@@ -23,12 +23,32 @@
 <link href="/css/sb-admin.css" rel="stylesheet">
 <!-- Custom styles for this template-->
 <link href="/css/style.css" rel="stylesheet">
-<!-- Chat page css -->
-<link rel="stylesheet" href="/css/main.css" />
+<!-- contacts page css -->
+<link rel="stylesheet" href="/css/contacts.css" />
 
 </head>
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
+	<!-- Modal content -->
+	<div class="modal-content">
+		<div class="modal-body">
+			<h1 style="text-align: center;">New Crisis Report By CMO</h1>
+			<h6 style = "font-weight: bold;">Crisis ID :</h6><p>${crisisID}</p>
+			<h6 style = "font-weight: bold;">Threat Level :</h6><p>${threatLevel}</p>
+			<h6 style = "font-weight: bold;">Crisis Type :</h6><p>${crisisType}</p>
+			<h6 style = "font-weight: bold;">Crisis Details :</h6><p>${crisisDetails}</p>
+			<br>
+			<p style="float: right;">
+				Received on: <span id="datetime"></span>
+			</p>
+		</div>
+	</div>
+
+</div>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
+
 	<!-- Navigation-->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
 		id="mainNav">
@@ -43,8 +63,8 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Dashboard"><a class="nav-link" href="/dashboard">
-						<i class="fa fa-fw fa-dashboard"></i> <span class="nav-link-text">Dashboard</span>
+					title="Dashboard"><a class="nav-link" href="/dashboard"> <i
+						class="fa fa-fw fa-dashboard"></i> <span class="nav-link-text">Dashboard</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
 					title="PMO Chat"><a class="nav-link" href="/chat"> <i
@@ -71,6 +91,8 @@
 			</ul>
 		</div>
 	</nav>
+
+
 
 	<div class="content-wrapper">
 		<div class="container-fluid ">
@@ -287,7 +309,7 @@
 	<!-- Chat JavaScript-->
 	<script src="/js/sockjs.min.js" type="text/javascript"></script>
 	<script src="/js/stomp.min.js" type="text/javascript"></script>
-	<script src="/js/main.js" type="text/javascript"></script>
+	<script src="/js/contacts.js" type="text/javascript"></script>
 
 </body>
 
