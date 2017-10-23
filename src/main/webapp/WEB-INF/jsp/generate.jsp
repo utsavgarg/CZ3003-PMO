@@ -81,8 +81,8 @@
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="card mb-3">
-						<div class="card-header font-weight-bold">Crisis Information</div>
-						<div class="card-body">
+						<div class="card-header font-weight-bold" id="informationDivTitle">Crisis Information</div>
+						<div class="card-body" id="informationDiv">
 							<div class="row">
 								<div class="col-sm-13">
 									<div class="card bg-light mb-3">
@@ -285,7 +285,7 @@
 	<script src="/js/sockjs.min.js" type="text/javascript"></script>
 	<script src="/js/stomp.min.js" type="text/javascript"></script>
 	<script src="/js/generate.js" type="text/javascript"></script>
-	<b id="crisisValue"><c:out value="${crisisID}"></c:out></b>
+	<b id="crisisValue" hidden><c:out value="${crisisID}"></c:out></b>
 	<script src="/js/access.js" type="text/javascript"></script>
 	</div>
 </body>
