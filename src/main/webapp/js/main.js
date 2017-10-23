@@ -17,6 +17,7 @@ var colors = [
 
 function connect(event) {
 	  
+		
     username = $('#valueHolderId').html();
 
 
@@ -162,6 +163,34 @@ function reconnect() {
 	connect("load");
 }
 
+
+
+function getUsername(){
+	
+	var delimeter = ';';
+
+	var string = $('#getRole').html();
+
+	var splitted = string.split(delimeter);
+
+	var username = splitted[0].split('Username: ')[1];
+
+	return username;
+}
+
+function getRole(){
+	
+	var delimeter = ';';
+
+	var string = $('#getRole').html();
+
+	var splitted = string.split(delimeter);
+
+	var role = splitted[6].split(': ')[1];
+	
+	return role;
+	
+}
 
 window.addEventListener("load", connect, true)
 messageForm.addEventListener('submit', sendMessage, true)

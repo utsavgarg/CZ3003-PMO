@@ -73,6 +73,11 @@
 						<b id="valueHolderId"><c:out
 								value="${pageContext.request.remoteUser}"></c:out></b>
 
+<b id="getRole" style="display: none;">
+						
+<c:out value="${pageContext.request.userPrincipal}"></c:out>
+						
+</b>
 				</a></li>
 			</ul>
 		</div>
