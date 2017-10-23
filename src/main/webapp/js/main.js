@@ -116,7 +116,6 @@ function onMessageReceived(payload) {
     	//chat picture
         var avatarElement = document.createElement('i');
         var avatarText = document.createTextNode(message.sender[0]);
-        console.log("Texttttttttttttttttttttttttttttttttttttttttttttt: "+ message.sender[0]);
         avatarElement.appendChild(avatarText);
         avatarElement.style['background-color'] = getAvatarColor(message.sender);
 
