@@ -69,7 +69,7 @@ public class ReportController {
 			Document report = new Document(PageSize.A4, 36, 36, 150, 36);
 
 			try {
-				String fileName = "reports/" + crisisID + ".pdf";
+				String fileName = "src/main/webapp/reports/" + crisisID + ".pdf";
 				PdfWriter writer = PdfWriter.getInstance(report, new FileOutputStream(new File(fileName)));
 				report.open();
 
@@ -139,7 +139,7 @@ public class ReportController {
 			}
 
 			try {
-				String fileName = "reports/" + crisisID + ".pdf";
+				String fileName = "src/main/webapp/reports/" + crisisID + ".pdf";
 
 				ByteArrayOutputStream ba = loadPdf(fileName);
 				String pdfBase64String = Base64.encodeBase64String(ba.toByteArray());

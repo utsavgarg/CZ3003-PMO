@@ -76,8 +76,8 @@
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="card mb-3">
-						<div class="card-header font-weight-bold">Crisis Information</div>
-						<div class="card-body">
+						<div class="card-header font-weight-bold" id="informationDivTitle">Crisis Information</div>
+						<div class="card-body" id="informationDiv">
 							<div class="row">
 								<div class="col-sm-13">
 									<div class="card bg-light mb-3">
@@ -111,7 +111,10 @@
 										</div>
 									</div>
 
-
+									<!--div>
+										<embed src="../../../../reports/4.pdf" width="400px" height="800px" type="application/pdf">
+									</div-->
+									
 									<div class="card bg-light mb-3">
 										<div class="card-body">
 											<div class="row row-in">
@@ -236,7 +239,7 @@
 	<footer class="sticky-footer">
 		<div class="container">
 			<div class="text-center">
-				<small>Copyright © SSP2 PMO 2017</small>
+				<small>Copyright &copy; SSP2 PMO 2017</small>
 			</div>
 		</div>
 	</footer>
@@ -277,6 +280,7 @@
 	<script src="/js/sockjs.min.js" type="text/javascript"></script>
 	<script src="/js/stomp.min.js" type="text/javascript"></script>
 	<script src="/js/generate.js" type="text/javascript"></script>
+	<b id="crisisValue"><c:out value="${crisisID}"></c:out></b>
 	</div>
 </body>
 

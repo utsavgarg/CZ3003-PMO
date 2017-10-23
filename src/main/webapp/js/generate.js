@@ -26,6 +26,16 @@ function onError(error) {
 	connectingElement.style.color = 'red';
 }
 
+function replaceInformationDiv() {
+	var crisisID = $('#crisisValue').html();
+	var path = 'reports/' + crisisID + '.pdf';
+	console.log(path);
+	var tag = "<embed src='" + path + "' height='500' type='application/pdf'>";
+	console.log(tag);
+	$("#informationDiv").replaceWith(tag);
+	$("#informationDivTitle").text("Report");
+}
+
 $("#reportButton")
 		.click(
 				function() {
@@ -50,7 +60,7 @@ $("#reportButton")
 										"<div class='alert alert-success alert-dismissable' id='myAlert2'> <button type='button' class='close' data-dismiss='alert'  aria-hidden='true'>&times;</button> Success! Report Generated.</div>");
 					}
 					$("#myAlert").css("display", "");
-
+					replaceInformationDiv();
 				})
 
 $("#sendButton")
