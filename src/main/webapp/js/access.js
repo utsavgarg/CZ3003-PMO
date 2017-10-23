@@ -1,0 +1,39 @@
+'use strict';
+
+var role = null;
+
+function getRole(){
+	var delimeter = ';';
+	var string = $('#getRole').html();
+	var splitted = string.split(delimeter);
+	var role = splitted[6].split(': ')[1];
+	return role;	
+}
+
+function onLoad(event) {
+
+	role = getRole();
+	console.log(role);
+
+	if (role == "24-7") {
+		$("#dash").css("display", "none");
+		$("#chat").css("display", "none");
+		$("#contact").css("display", "block");
+		$("#report").css("display", "none");
+	}
+	else if (role == "ministers" || role == "pm") {
+		$("#dash").css("display", "block");
+		$("#chat").css("display", "block");
+		$("#contact").css("display", "block");
+		$("#report").css("display", "none");
+	}
+	else if (role == "secretary") {
+		$("#dash").css("display", "block");
+		$("#chat").css("display", "block");
+		$("#contact").css("display", "block");
+		$("#report").css("display", "block");
+	}
+	event.preventDefault();
+}
+
+window.addEventListener("load", onLoad, true);
