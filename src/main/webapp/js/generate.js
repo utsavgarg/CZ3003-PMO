@@ -60,7 +60,7 @@ $("#reportButton")
 										"<div class='alert alert-success alert-dismissable' id='myAlert2'> <button type='button' class='close' data-dismiss='alert'  aria-hidden='true'>&times;</button> Success! Report Generated.</div>");
 					}
 					$("#myAlert").css("display", "");
-					replaceInformationDiv();
+					setTimeout(function() { replaceInformationDiv(); }, 1500);
 				})
 
 $("#sendButton")
