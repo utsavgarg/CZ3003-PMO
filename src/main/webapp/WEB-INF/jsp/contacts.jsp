@@ -34,10 +34,6 @@
 	<div class="modal-content">
 		<div class="modal-body">
 			<h1 style="text-align: center;">New Crisis Report By CMO</h1>
-			<h6 style = "font-weight: bold;">Crisis ID :</h6><p>${crisisID}</p>
-			<h6 style = "font-weight: bold;">Threat Level :</h6><p>${threatLevel}</p>
-			<h6 style = "font-weight: bold;">Crisis Type :</h6><p>${crisisType}</p>
-			<h6 style = "font-weight: bold;">Crisis Details :</h6><p>${crisisDetails}</p>
 			<br>
 			<p style="float: right;">
 				Received on: <span id="datetime"></span>
