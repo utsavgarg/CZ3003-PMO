@@ -3,6 +3,8 @@ package nesims.main.controller;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,11 +27,20 @@ public class MainController {
 	}
 
 	@RequestMapping(value = { "/dashboard", "/" }, method = RequestMethod.GET)
-	public ModelAndView dashboard(ModelMap model) {
+	public ModelAndView dashboard(ModelMap model, HttpServletRequest request) {
 
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("dashboard");
+		ModelAndView mav = new ModelAndView();       
+				
+		if (request.isUserInRole("ROLE_24-7")) {
 
+			mav.setViewName("redirect:/contacts");
+	        }
+		else {
+			mav.setViewName("dashboard");
+	    }
+	
+		
+		
 		int i = 1;
 
 		RestTemplate restTemplate = new RestTemplate();
