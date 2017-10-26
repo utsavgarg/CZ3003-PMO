@@ -88,24 +88,23 @@
 			<br />
 
 
-			<div class="card mb-3 " style="height: 480px;">
+			<div class="card mb-3 " style="height: 400px;">
 				<div class="card-header">
 					<i class="fa fa-bell-o"></i> PMO Internal Chat
 				</div>
 
 				<!--CHAT MESSAGE CONTAINER-->
 
-				<div id="chat-page" style="height: 655px;">
+				<div id="chat-page" style="height: 350px;">
 					<div class="connecting"></div>
 					<ul id="internalmessageArea"
 						style="overflow-y: scroll; overflow-x: hidden;">
 					</ul>
 					<!--CHAT INPUT FORM -->
-					<form id="internalmessageForm" name="messageForm" action="">
+					
+					<form id="internalmessageForm" name="messageForm" action="" style="margin-top: 10%;">
 						<div class="input-group">
-							<input class="form-control" type="text"
-								placeholder="Send a message..." id="internalmessage" /> <span
-								class="input-group-btn">
+							<input class="form-control" type="text" placeholder="Send a message..." id="internalmessage"> <span class="input-group-btn">
 								<button class="btn btn-success" type="submit">
 									<i class="fa fa-send"></i>
 								</button>
