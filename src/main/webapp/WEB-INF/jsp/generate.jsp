@@ -84,7 +84,7 @@
 					<div class="card mb-3">
 						<div class="card-header font-weight-bold" id="informationDivTitle">Crisis
 							Information</div>
-						<div class="card-body" id="informationDiv">
+						<div class="card-body info">
 							<div class="row">
 								<div class="col-sm-13">
 									<div class="card bg-light mb-3">
@@ -117,10 +117,6 @@
 											</div>
 										</div>
 									</div>
-
-									<!--div>
-										<embed src="../../../../reports/4.pdf" width="400px" height="800px" type="application/pdf">
-									</div-->
 
 									<div class="card bg-light mb-3">
 										<div class="card-body">
@@ -221,22 +217,20 @@
 					</button>
 
 					<br /> <br />
-					<div class="container" style="display: none;" id="myAlert">
-						<div class="alert alert-success alert-dismissable" id="myAlert2">
-							<button type="button" class="close" data-dismiss="alert"
-								aria-hidden="true">&times;</button>
-							Success! Report Generated.
-						</div>
-
-						<div class="container" style="display: none;" id="myAlert3">
-							<div class="alert alert-success alert-dismissable" id="myAlert4">
-								<button type="button" class="close" data-dismiss="alert"
-									aria-hidden="true">&times;</button>
-								Success! Report Sent.
-							</div>
-
-						</div>
-					</div>
+					<div class="alert alert-success" id="generate-alert"
+         style="display: none; width: 80%; margin-left:20px;">
+         <div>
+            <button type="button" class="close" data-dismiss="alert">x</button>
+            <strong>Report generated successfully</strong>
+         </div>
+      </div>
+    <div class="alert alert-success" id="submit-alert"
+         style="display: none; width: 80%; margin-left:20px;">
+         <div>
+            <button type="button" class="close" data-dismiss="alert">x</button>
+            <strong>Report sent to CMO successfully</strong>
+         </div>
+      </div>
 				</div>
 			</div>
 		</div>

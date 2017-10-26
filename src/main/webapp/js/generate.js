@@ -9,6 +9,7 @@ var username = null;
 
 function connect(event) {
 
+	document.getElementById("sendButton").disabled = true;
 	username = $('#valueHolderId').html();
 
 	if (username) {
@@ -30,9 +31,9 @@ function replaceInformationDiv() {
 	var crisisID = $('#crisisValue').html();
 	var path = 'reports/' + crisisID + '.pdf';
 	console.log(path);
-	var tag = "<embed src='" + path + "' height='500' type='application/pdf'>";
+	var tag = "<embed src='" + path + "' height='500' width ='560' type='application/pdf'>";
 	console.log(tag);
-	$("#informationDiv").replaceWith(tag);
+	$(".info").html(tag);
 	$("#informationDivTitle").text("Report");
 }
 
@@ -54,14 +55,13 @@ $("#reportButton")
 					}
 					event.preventDefault();
 
-					if ($("#myAlert").find("div#myAlert2").length == 0) {
-						$("#myAlert")
-								.append(
-										"<div class='alert alert-success alert-dismissable' id='myAlert2'> <button type='button' class='close' data-dismiss='alert'  aria-hidden='true'>&times;</button> Success! Report Generated.</div>");
-					}
-					$("#myAlert").css("display", "");
-					setTimeout(function() { replaceInformationDiv(); }, 1500);
+				     $("#generate-alert").fadeTo(2000, 500).slideUp(500, function(){
+				     	$("#generate-alert").slideUp(500);
+				    	document.getElementById("sendButton").disabled = false;
+				     	setTimeout(function() { replaceInformationDiv(); }, 1500);
+				 });
 				})
+
 
 $("#sendButton")
 		.click(
@@ -70,12 +70,9 @@ $("#sendButton")
 						stompClient.send("/app/report.sendReport", {}, {});
 					}
 					event.preventDefault();
-					if ($("#myAlert3").find("div#myAlert4").length == 0) {
-						$("#myAlert3")
-								.append(
-										"<div class='alert alert-success alert-dismissable' id='myAlert4'> <button type='button' class='close' data-dismiss='alert'  aria-hidden='true'>&times;</button> Success! Report Sent.</div>");
-					}
-					$("#myAlert3").css("display", "");
+					$("#submit-alert").fadeTo(2000, 500).slideUp(500, function(){
+		                $("#submit-alert").slideUp(500);
+		});
 				})
 
 window.addEventListener("load", connect, true);
