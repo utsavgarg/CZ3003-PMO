@@ -70,7 +70,7 @@
 							Chat</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Contacts" id="contact"><a class="nav-link"
+					title="Contacts" id="contact"style = "background:rgba(255,255,255,.05);"><a class="nav-link"
 					href="/contacts"> <i class="fa fa-fw fa-address-book"></i> <span
 						class="nav-link-text">Contacts</span>
 				</a></li>

@@ -34,7 +34,7 @@
 
 </head>
 
-<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+<body class="fixed-nav sticky-footer" id="page-top">
 	<!-- Navigation-->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
 		id="mainNav">
@@ -47,9 +47,9 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion" style="">
+			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion" style="width: 15%;">
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Dashboard" id="dash"><a class="nav-link"
+					title="Dashboard" id="dash" style = "background:rgba(255,255,255,.05);"><a class="nav-link"
 					href="/dashboard"> <i class="fa fa-fw fa-dashboard"></i> <span
 						class="nav-link-text">Dashboard</span>
 				</a></li>

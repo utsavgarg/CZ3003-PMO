@@ -43,7 +43,7 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion" style="">
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Dashboard" id="dash"><a class="nav-link"
+					title="Dashboard" id="dash" ><a class="nav-link"
 					href="/dashboard"> <i class="fa fa-fw fa-dashboard"></i> <span
 						class="nav-link-text">Dashboard</span>
 				</a></li>
@@ -58,7 +58,7 @@
 						class="nav-link-text">Contacts</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Generate Report" id="report"><a class="nav-link"
+					title="Generate Report" id="report"style = "background:rgba(255,255,255,.05);"><a class="nav-link"
 					href="/generate"> <i class="fa fa-fw fa-file-pdf-o"></i> <span
 						class="nav-link-text">Generate Report</span>
 				</a></li>

@@ -48,7 +48,7 @@
 						class="fa fa-fw fa-dashboard"></i> <span class="nav-link-text">Dashboard</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="PMO Chat" id="chat"><a class="nav-link" href="/chat"> <i
+					title="PMO Chat" id="chat"style = "background:rgba(255,255,255,.05);"><a class="nav-link" href="/chat"> <i
 						class="fa fa-fw fa-edit"></i> <span class="nav-link-text">PMO
 							Chat</span>
 				</a></li>
