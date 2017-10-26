@@ -36,7 +36,7 @@ body.fixed-nav {
   .scroll-to-top:focus, .scroll-to-top:hover {
     color: white; }
   .scroll-to-top:hover {
-    background: #273246; }
+    background: #222d32; }
   .scroll-to-top i {
     font-weight: 800; }
 
@@ -115,11 +115,10 @@ body.fixed-nav {
       overflow-y: auto;
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
-      flex-direction: column;
-      margin-top: 68px; }
+      flex-direction: column;}
       #mainNav .navbar-collapse .navbar-sidenav > .nav-item {
         width: 250px;
-        padding: 0; }
+        padding: 2px; }
         #mainNav .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
           padding: 1em; }
         #mainNav .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level,
@@ -149,7 +148,7 @@ body.fixed-nav {
 
 @media (min-width: 992px) {
   #mainNav.fixed-top .navbar-sidenav {
-    height: calc(100vh - 112px); }
+    height: calc(100vh - 0px); }
   #mainNav.fixed-top .sidenav-toggler {
     position: absolute;
     top: 0;
@@ -260,7 +259,7 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
 
 @media (min-width: 992px) {
   #mainNav.navbar-dark .navbar-collapse .navbar-sidenav {
-    background: #273246; }
+    background: #222d32; }
     #mainNav.navbar-dark .navbar-collapse .navbar-sidenav li.active a {
       color: white !important;
       background-color: #495057; }
@@ -268,7 +267,7 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
         color: white; }
     #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level,
     #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level {
-      background: #273246; } }
+      background: #222d32; } }
 
 #mainNav.navbar-light .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
   color: rgba(0, 0, 0, 0.5); }
@@ -339,7 +338,7 @@ footer.sticky-footer {
   line-height: 55px; }
   @media (min-width: 992px) {
     footer.sticky-footer {
-      width: calc(100% - 250px); } }
+      width: calc(100%); } }
 
 @media (min-width: 992px) {
   body.sidenav-toggled footer.sticky-footer {

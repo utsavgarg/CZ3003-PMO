@@ -31,7 +31,7 @@ function replaceInformationDiv() {
 	var crisisID = $('#crisisValue').html();
 	var path = 'reports/' + crisisID + '.pdf';
 	console.log(path);
-	var tag = "<embed src='" + path + "' height='500' width ='560' type='application/pdf'>";
+	var tag = "<embed src='" + path + "' height='500' width ='580' type='application/pdf'>";
 	console.log(tag);
 	$(".info").html(tag);
 	$("#informationDivTitle").text("Report");
@@ -57,8 +57,8 @@ $("#reportButton")
 
 				     $("#generate-alert").fadeTo(2000, 500).slideUp(500, function(){
 				     	$("#generate-alert").slideUp(500);
+				     	setTimeout(function() { replaceInformationDiv(); }, 1000);
 				    	document.getElementById("sendButton").disabled = false;
-				     	setTimeout(function() { replaceInformationDiv(); }, 1500);
 				 });
 				})
 

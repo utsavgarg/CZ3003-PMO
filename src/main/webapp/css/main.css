@@ -24,7 +24,7 @@
     overflow: auto;
     overflow-y: hidden;
     padding: 0 0px 0px 0px;
-    height: calc(100% - 150px);
+    height: calc(100% - 155px);
 }
 
 #chat-page #messageForm {

@@ -19,12 +19,14 @@ function onLoad(event) {
 		$("#dash").css("display", "none");
 		$("#chat").css("display", "none");
 		$("#contact").css("display", "block");
+		$("#logo").css("display", "block");
 		$("#report").css("display", "none");
 	}
 	else if (role == "ROLE_MINISTERS" || role == "ROLE_PM") {
 		$("#dash").css("display", "block");
 		$("#chat").css("display", "block");
 		$("#contact").css("display", "block");
+		$("#logo").css("display", "block");
 		$("#report").css("display", "none");
 	}
 	else if (role == "ROLE_SECRETARY") {
@@ -32,6 +34,7 @@ function onLoad(event) {
 		$("#chat").css("display", "block");
 		$("#contact").css("display", "block");
 		$("#report").css("display", "block");
+		$("#logo").css("display", "block");
 	}
 	event.preventDefault();
 }

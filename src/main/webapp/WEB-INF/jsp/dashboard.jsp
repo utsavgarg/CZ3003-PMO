@@ -36,44 +36,51 @@
 
 <body class="fixed-nav sticky-footer" id="page-top">
 	<!-- Navigation-->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
-		id="mainNav">
-		<a class="navbar-brand" href="/dashboard"><img class="pmo_logo"
-			src="../images/pmo_logo.png" alt="">PMO</a>
-		<button class="navbar-toggler navbar-toggler-right" type="button"
-			data-toggle="collapse" data-target="#navbarResponsive"
-			aria-controls="navbarResponsive" aria-expanded="false"
-			aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav"
+		style="background-color: #e9ecef;">
 		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion" style="width: 15%;">
+			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion"
+				style="width: 16%;">
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Dashboard" id="dash" style = "background:rgba(255,255,255,.05);"><a class="nav-link"
-					href="/dashboard"> <i class="fa fa-fw fa-dashboard"></i> <span
-						class="nav-link-text">Dashboard</span>
+					title="Dashboard" id="logo"><a class="navbar-brand"
+					style="color: white;"><img class="pmo_logo"
+						src="../images/pmo_logo.png" alt="">PMO</a>
+					<button class="navbar-toggler navbar-toggler-right" type="button"
+						data-toggle="collapse" data-target="#navbarResponsive"
+						aria-controls="navbarResponsive" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button></li>
+				<li class="nav-item" data-toggle="tooltip" data-placement="right"
+					title="Dashboard1" id="dash"
+					style="background: rgba(255, 255, 255, .05);"><a
+					class="nav-link" href="/dashboard"> <i
+						class="fa fa-fw fa-dashboard"></i> <span class="nav-link-text"
+						style="font-size: 0.8rem;">Dashboard</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
 					title="PMO Chat" id="chat"><a class="nav-link" href="/chat">
-						<i class="fa fa-fw fa-edit"></i> <span class="nav-link-text">PMO
-							Chat</span>
+						<i class="fa fa-fw fa-edit"></i> <span class="nav-link-text"
+						style="font-size: 0.8rem;">PMO Chat</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
 					title="Contacts" id="contact"><a class="nav-link"
 					href="/contacts"> <i class="fa fa-fw fa-address-book"></i> <span
-						class="nav-link-text">Contacts</span>
+						class="nav-link-text" style="font-size: 0.8rem;">Contacts</span>
 				</a></li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
 					title="Generate Report" id="report"><a class="nav-link"
 					href="/generate"> <i class="fa fa-fw fa-file-pdf-o"></i> <span
-						class="nav-link-text">Generate Report</span>
+						class="nav-link-text" style="font-size: 0.8rem;">Generate
+							Report</span>
 				</a></li>
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link" data-toggle="modal"
-					data-target="#logoutModal"> <i class="fa fa-fw fa-sign-out"></i>Logout
-						<b id="valueHolderId"><c:out value="${pageContext.request.remoteUser}"></c:out>
-					</b> <b id="getRole" style="display: none;"> <c:out
+					data-target="#logoutModal" style="color: black;"> <i
+						class="fa fa-fw fa-sign-out"></i>Logout <b id="valueHolderId"><c:out
+								value="${pageContext.request.remoteUser}"></c:out> </b> <b
+						id="getRole" style="display: none;"> <c:out
 								value="${pageContext.request.userPrincipal}"></c:out>
 					</b>
 				</a></li>
