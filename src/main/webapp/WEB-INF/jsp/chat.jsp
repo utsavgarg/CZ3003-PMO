@@ -90,8 +90,21 @@
 
 			<div class="card mb-3 " style="height: 400px;">
 				<div class="card-header">
-					<i class="fa fa-bell-o"></i> PMO Internal Chat
+					<i class="fa fa-bell-o"></i> <p class="same-line">PMO Internal Chat</p>
+							<div id="internal-online-status" class="online-status"></div>
+							<p id="internal-online-status-text" class="same-line text-success small">Online</p>
 				</div>
+				
+				
+				<!--CHAT RECONNECT BUTTON-->
+
+						<div class="connecting"></div>
+
+						<div id="internal-reconnect" class="center-div form-group">
+							<button type="submit" onclick="internalreconnect()"
+								class="accent username-submit btn btn-success">Reconnect</button>
+						</div>
+						
 
 				<!--CHAT MESSAGE CONTAINER-->
 
@@ -100,6 +113,8 @@
 					<ul id="internalmessageArea"
 						style="overflow-y: scroll; overflow-x: hidden;">
 					</ul>
+					
+					
 					<!--CHAT INPUT FORM -->
 					
 					<form id="internalmessageForm" name="messageForm" action="" style="margin-top: 10%;">

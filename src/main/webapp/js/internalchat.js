@@ -38,12 +38,33 @@ function onConnected() {
     )
 
     connectingElement.classList.add('hidden');
+    
+    document.getElementById('internal-online-status').style.background = "#32CD32";
+    document.getElementById("internal-online-status-text").classList.remove('text-danger');
+    document.getElementById("internal-online-status-text").classList.add('text-success');
+    document.getElementById("internal-online-status-text").innerHTML = "Online";
+    
+    document.getElementById('internal-reconnect').style.display = "none";
+    document.getElementById('chat-page').style.display = "block";
+    connectingElement.style.display = "none";
 }
 
 
 function onError(error) {
     connectingElement.textContent = 'Could not connect to WebSocket server (Internal Chat). Please refresh this page to try again!';
     connectingElement.style.color = 'red';
+    connectingElement.style.marginTop  = '20px';
+
+    
+    document.getElementById('internal-online-status').style.background = "#f00";
+    document.getElementById("internal-online-status-text").classList.remove('text-success');
+    document.getElementById("internal-online-status-text").classList.add('text-danger');
+    document.getElementById("internal-online-status-text").innerHTML = "Offline";
+    
+    document.getElementById('internal-reconnect').style.display = "block";
+    document.getElementById('chat-page').style.display = "none";
+    connectingElement.style.display = "block";
+
 }
 
 
@@ -127,5 +148,11 @@ function getAvatarColor(messageSender) {
     var index = Math.abs(hash % colors.length);
     return colors[index];
 }
+
+function internalreconnect() {
+	
+	connect("load");
+}
+
 window.addEventListener("load", connect, true)
 messageForm.addEventListener('submit', sendMessage, true)
