@@ -19,7 +19,7 @@ function connect(event) {
 
     if(username) {
 
-        var socket = new SockJS('http://10.27.199.49:8080/ws');
+        var socket = new SockJS('http://10.27.125.55:8080/ws');
         stompClient = Stomp.over(socket);
 
         stompClient.connect({}, onConnected, onError);
