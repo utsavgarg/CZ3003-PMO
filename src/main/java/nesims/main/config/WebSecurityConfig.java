@@ -1,5 +1,11 @@
 package nesims.main.config;
 
+import java.util.Arrays;
+
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +18,12 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.OncePerRequestFilter;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 @Configuration
 @EnableWebSecurity
@@ -22,10 +34,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/CMOtoPMO/**").permitAll().antMatchers("/chat/**").hasAnyRole("PM","SECRETARY","MINISTERS").
+		
+		
+		http.authorizeRequests().antMatchers("/ws/**").permitAll().antMatchers("/CMOtoPMO/**").permitAll().antMatchers("/chat/**").hasAnyRole("PM","SECRETARY","MINISTERS").
 		antMatchers("/generate/**").hasRole("SECRETARY").anyRequest().authenticated().and().formLogin()
 		.loginPage("/login").defaultSuccessUrl("/dashboard").permitAll().and().logout().permitAll();
 		http.csrf().disable();
+		
+	
 
 	}
 
@@ -45,7 +61,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	/*
 	 * Ignore any request that starts with “/css/”. This is similar to configuring
 	 * http@security=none when using the XML namespace configuration.
-	 */ @Override
+	 */ 
+	@Override
 	public void configure(WebSecurity web) throws Exception {
 		web.ignoring().antMatchers("/css/**");
 		web.ignoring().antMatchers("/images/**");
@@ -53,4 +70,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		web.ignoring().antMatchers("/vendor/**");
 
 	}
+	
 }
