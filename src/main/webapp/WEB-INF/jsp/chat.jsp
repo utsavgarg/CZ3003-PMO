@@ -87,7 +87,7 @@
 			<br />
 
 
-			<div class="card mb-3 " style="height: 400px;">
+			<div class="card mb-3 " style="height: 500px;">
 				<div class="card-header">
 					<i class="fa fa-bell-o"></i> <p class="same-line">PMO Internal Chat</p>
 							<div id="internal-online-status" class="online-status"></div>
@@ -116,7 +116,7 @@
 					
 					<!--CHAT INPUT FORM -->
 					
-					<form id="internalmessageForm" name="messageForm" action="" style="margin-top: 10%;">
+					<form id="internalmessageForm" name="messageForm" action="">
 						<div class="input-group">
 							<input class="form-control" type="text" placeholder="Send a message..." id="internalmessage"> <span class="input-group-btn">
 								<button class="btn btn-success" type="submit">
