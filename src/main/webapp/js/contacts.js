@@ -21,7 +21,7 @@ function checkForNotifications(){
 
 	
     $.ajax({
-        url: "http://localhost:8080/CMOtoPMO/proposal/", 
+        url: "http://10.27.199.49:8080/CMOtoPMO/proposal/", 
         type: "GET",
         success: function(notification) {
             //Check if any notifications are returned - if so then display alert
@@ -42,7 +42,7 @@ function checkForNotifications(){
 
 function connect(event) {
 	$.ajax({
-        url: "http://localhost:8080/CMOtoPMO/proposal/", 
+        url: "http://10.27.199.49:8080/CMOtoPMO/proposal/", 
         type: "GET",
         success: function(notification) {
             //Check if any notifications are returned - if so then display alert

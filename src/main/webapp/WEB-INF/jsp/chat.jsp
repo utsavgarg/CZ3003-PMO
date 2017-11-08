@@ -34,8 +34,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark  fixed-top"
 		style="background-color: #e9ecef;" id="mainNav">
 		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion"
-				style="width: 16%;">
+			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
 					title="Dashboard" id="logo"><a class="navbar-brand"
 					style="color: white;"><img class="pmo_logo"
@@ -128,7 +127,7 @@
 					</form>
 				</div>
 			</div>
-			<div class="card mb-3">
+			<div class="card mb-3" id="chatCrisis">
 				<div class="card-header font-weight-bold" data-toggle="collapse"
 					href="#collapseExample" aria-expanded="false">Crisis
 					Information</div>

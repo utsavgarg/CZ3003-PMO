@@ -29,7 +29,7 @@ public class ReportController {
 
 	private static final String HEADER_IMAGE = "src/main/webapp/images/header.jpg";
 	private static final String SIGN_IMAGE = "src/main/webapp/images/signature.png";
-	public static final String REST_SERVICE_URI = "http://localhost:8080/CMOtoPMO";
+	public static final String REST_SERVICE_URI = "http://10.27.199.49:8080/CMOtoPMO";
 	public static final String CMO_SERVICE_URI = "http://10.27.114.25:8080/PMOtoCMO";
 
 	private ByteArrayOutputStream loadPdf(String fileName) throws FileNotFoundException {
