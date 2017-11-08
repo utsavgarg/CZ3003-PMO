@@ -39,8 +39,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav"
 		style="background-color: #e9ecef;">
 		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion"
-				style="width: 16%;">
+			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 				<li class="nav-item" data-toggle="tooltip" data-placement="right"
 					title="Dashboard" id="logo"><a class="navbar-brand"
 					style="color: white;"><img class="pmo_logo"
