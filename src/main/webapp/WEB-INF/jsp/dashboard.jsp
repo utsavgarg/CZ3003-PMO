@@ -205,29 +205,11 @@
 						<!--a href="#"> <img class="card-img-top img-fluid w-100"
 							src="../images/map_screenshot.png" alt="">
 						</a-->
-						<!-- iframe
-							  frameborder="0" style="border:0"
-							  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCLBVe_h54_umO82pUPNBgr2j5UTCfQvo0&q=Singapore">
-							</iframe-->
-						<div id="map"></div>
-						<script>
-							function initMap() {
-								var singapore = {
-									lat : 1.3515563,
-									lng : 103.800135
-								};
-								var map = new google.maps.Map(document
-										.getElementById('map'), {
-									zoom : 11,
-									center : singapore,
-									disableDefaultUI : true
-								});
-							}
-						</script>
-						<script async defer
-							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLBVe_h54_umO82pUPNBgr2j5UTCfQvo0&callback=initMap">
-							
-						</script>
+						<iframe
+							  frameborder="0" style="border:0;height:410px;"
+							  src="http://10.27.15.194:8080/map">
+						</iframe>
+						
 						<div class="card-footer small text-muted">Updated yesterday
 							at 11:59 PM</div>
 					</div>

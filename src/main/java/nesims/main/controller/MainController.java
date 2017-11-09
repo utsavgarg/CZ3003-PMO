@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class MainController {
 
-	public static final String REST_SERVICE_URI = "http://localhost:8080/CMOtoPMO";
+	public static final String REST_SERVICE_URI = "http://10.27.199.49:8080/CMOtoPMO";
 
 	@RequestMapping(value = { "/login" }, method = RequestMethod.GET)
 	public ModelAndView login() {
