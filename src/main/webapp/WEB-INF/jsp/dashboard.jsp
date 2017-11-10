@@ -207,7 +207,8 @@
 						</a-->
 						<iframe
 							  frameborder="0" style="border:0;height:410px;"
-							  src="http://10.27.15.194:8080/map">
+							  src="http://10.27.113.59:8080/map">
+							  <!--  src="http://10.27.15.194:8080/map" -->
 						</iframe>
 						
 						<div class="card-footer small text-muted">Updated yesterday
