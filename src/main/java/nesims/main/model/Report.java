@@ -1,5 +1,6 @@
 package nesims.main.model;
 
+//Model class to store values of the Crisis report received from CMO
 public class Report {
 
 	private long crisisID;

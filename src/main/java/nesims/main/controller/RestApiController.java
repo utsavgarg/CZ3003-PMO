@@ -1,4 +1,3 @@
-//This is for CMO to call our API POST method
 package nesims.main.controller;
 
 import java.util.List;
@@ -20,6 +19,8 @@ import nesims.main.model.Report;
 import nesims.main.repository.ReportRepository;
 import nesims.main.config.CustomErrorType;
 
+//This is PMO API Controller hosted by PMO Server. It consists of GET and POST HTTP requests
+//to create and retrieve crisis report information in the PMO Server API
 @RestController
 @RequestMapping("/CMOtoPMO")
 public class RestApiController {

@@ -12,9 +12,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
+//Main controller for PMO subsystem which retrieves the report sent by CMO as indicated
+//by the REST_SERVICE_URI from the PMO server and display the information on the client side
 @Controller
 public class MainController {
 
+	//Change this IP Address to the PMO Server IP Address
 	public static final String REST_SERVICE_URI = "http://10.27.199.49:8080/CMOtoPMO";
 
 	@RequestMapping(value = { "/login" }, method = RequestMethod.GET)
@@ -24,6 +27,7 @@ public class MainController {
 		return mav;
 	}
 
+	
 	@RequestMapping(value = { "/dashboard", "/" }, method = RequestMethod.GET)
 	public ModelAndView dashboard(ModelMap model, HttpServletRequest request) {
 

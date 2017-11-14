@@ -1,5 +1,6 @@
 package nesims.main.model;
 
+//Message payload that will be exchanged between the clients and the server. 
 public class ChatMessage {
 	private MessageType type;
 	private String content;

@@ -1,3 +1,6 @@
+//Creation of PDF report
+//Ensures that the user is still connected to the chat websocket
+//Change socket ip address to PMO server's ip address
 'use strict';
 
 var connectingElement = document.querySelector('.connecting');

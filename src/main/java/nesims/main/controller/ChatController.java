@@ -8,15 +8,19 @@ import org.springframework.stereotype.Controller;
 
 import nesims.main.model.ChatMessage;
 
+//Message handling methods in our controller. These methods will be responsible for
+//receiving messages from one client and then broadcasting it to others.
 @Controller
 public class ChatController {
 
+	//CMO-PMO Chat
 	@MessageMapping("/chat.sendMessage")
 	@SendTo("/channel/cmopmochat")
 	public ChatMessage sendMessage(@Payload ChatMessage chatMessage) {
 		return chatMessage;
 	}
-
+	
+	//Subscribe user to the CMO-PMO chat
 	@MessageMapping("/chat.addUser")
 	@SendTo("/channel/cmopmochat")
 	public ChatMessage addUser(@Payload ChatMessage chatMessage, SimpMessageHeaderAccessor headerAccessor) {
@@ -27,12 +31,14 @@ public class ChatController {
 		return chatMessage;
 	}
 
+	//PMO internal Chat
 	@MessageMapping("/chat.sendInternalMessage")
 	@SendTo("/channel/private")
 	public ChatMessage sendInternalMessage(@Payload ChatMessage chatMessage) {
 		return chatMessage;
 	}
 
+	//Subscribe user to the PMO internal chat
 	@MessageMapping("/chat.addInternalUser")
 	@SendTo("/channel/private")
 	public ChatMessage addInternalUser(@Payload ChatMessage chatMessage, SimpMessageHeaderAccessor headerAccessor) {

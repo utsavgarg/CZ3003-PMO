@@ -1,3 +1,4 @@
+//Access Control to display side panel links based on the logged in user's role
 'use strict';
 
 var role = null;

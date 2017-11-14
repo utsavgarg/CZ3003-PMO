@@ -1,5 +1,6 @@
 package nesims.main.config;
 
+//Configuration class file to have custom error messages when doing a HTTP request call.
 public class CustomErrorType {
 
 	private String errorMessage;

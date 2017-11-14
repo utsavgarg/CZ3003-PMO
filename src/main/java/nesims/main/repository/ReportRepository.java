@@ -4,6 +4,7 @@ import java.util.List;
 
 import nesims.main.model.Report;
 
+//Interface class which contains all the database calling methods
 public interface ReportRepository {
 
 	Report findById(long id);

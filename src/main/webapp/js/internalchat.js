@@ -1,3 +1,5 @@
+//PMO Internal chat system connection and layout
+//Change socket ip address to PMO server's ip address
 'use strict';
 
 var messageForm = document.querySelector('#internalmessageForm');

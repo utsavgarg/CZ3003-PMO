@@ -25,6 +25,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.OncePerRequestFilter;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
+//Security configuration file using SpringBoot framework security components.
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -32,6 +33,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	DataSource dataSource;
 
+	//HTTP Security Access Control for PMO System using antmatchers
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		
@@ -44,7 +46,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 
 	}
-
+	//SpringBoot internal security component to authenticate user with hashed password
 	@Autowired
 	public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
 		auth.jdbcAuthentication().dataSource(dataSource).passwordEncoder(passwordEncoder())
@@ -52,16 +54,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.authoritiesByUsernameQuery("select username, role from user_roles where username=?");
 	}
 
+	//Retrieve the encoded password
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		PasswordEncoder encoder = new BCryptPasswordEncoder();
 		return encoder;
 	}
 
-	/*
-	 * Ignore any request that starts with “/css/”. This is similar to configuring
-	 * http@security=none when using the XML namespace configuration.
-	 */ 
+	
+	 //Ignore any request that starts with “/foldername”. This is similar to configuring
+	 //http@security=none when using the XML namespace configuration.
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 		web.ignoring().antMatchers("/css/**");

@@ -1,5 +1,6 @@
 package nesims.main.model;
 
+//Model class to store values of the Action report (PDF) sent to CMO
 public class ApprovalReport {
 
 	private long crisisID;

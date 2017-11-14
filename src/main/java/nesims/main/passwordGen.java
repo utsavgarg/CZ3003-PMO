@@ -2,6 +2,8 @@ package nesims.main;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+//StandAlone Application to generate a hashed password for the users accounts using SpringBoot
+//internal encoder(BCrypt)
 public class passwordGen {
 
 	public static void main(String[] args) {

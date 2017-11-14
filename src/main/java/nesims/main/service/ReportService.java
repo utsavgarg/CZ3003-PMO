@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import nesims.main.model.Report;
 import nesims.main.repository.ReportRepository;
 
+//Database Class which contains methods to interact with the database and API controller
 @Service("ReportService")
 public class ReportService implements ReportRepository {
 

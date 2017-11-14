@@ -24,12 +24,15 @@ import org.springframework.web.client.RestTemplate;
 import nesims.main.model.ActionReport;
 import nesims.main.model.ApprovalReport;
 
+//Report controller for PMO subsystem which sends the generated PDF report back to CMO.
 @Controller
 public class ReportController {
 
 	private static final String HEADER_IMAGE = "src/main/webapp/images/header.jpg";
 	private static final String SIGN_IMAGE = "src/main/webapp/images/signature.png";
+	//Change this IP Address to the PMO Server IP Address
 	public static final String REST_SERVICE_URI = "http://10.27.199.49:8080/CMOtoPMO";
+	//Change this IP Address to the CMO Server IP Address
 	public static final String CMO_SERVICE_URI = "http://10.27.113.59:8080/PMOtoCMO";
 
 	private ByteArrayOutputStream loadPdf(String fileName) throws FileNotFoundException {
@@ -48,6 +51,7 @@ public class ReportController {
 		return bos;
 	}
 
+	//Automated generation of report based on the retrieved values from PMO Server API.
 	@MessageMapping("/report.generateReport")
 	public void generateReport(@Payload ActionReport reportContent) {
 
@@ -124,6 +128,7 @@ public class ReportController {
 		}
 	}
 
+	//Sending of PDF report to CMO Server API as indicated by CMO_SERVICE_URI.
 	@MessageMapping("/report.sendReport")
 	public void SendReport() {
 		RestTemplate restTemplate = new RestTemplate();

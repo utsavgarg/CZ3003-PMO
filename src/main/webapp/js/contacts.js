@@ -1,3 +1,5 @@
+//Live notification system which checks for any newly received report from CMO
+//Change ip addresses to PMO server's ip address
 'use strict';
 
 

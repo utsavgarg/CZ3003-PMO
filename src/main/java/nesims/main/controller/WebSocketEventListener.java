@@ -12,6 +12,8 @@ import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 
 import nesims.main.model.ChatMessage;
 
+//Event listeners to listen for socket connect and disconnect events so that we can log
+//these events and also broadcast them when a user joins or leaves the chat room 
 @Component
 public class WebSocketEventListener {
 

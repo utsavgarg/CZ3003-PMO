@@ -1,5 +1,6 @@
 package nesims.main.model;
 
+//Model class to store values of the Action report sent to CMO
 public class ActionReport {
 	private String content;
 	private String sender;
