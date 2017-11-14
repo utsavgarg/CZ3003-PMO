@@ -3,15 +3,15 @@
 ## NATIONAL EMERGENCY SITUATION MANAGEMENT SYSTEM (NESIMS) PROJECT
 
 
-###Instructions to setup PMO subsystem
+#### Instructions to setup PMO subsystem
 
-####Software Required
+#### Software Required
 1. Eclipse JEE Oxygen  
 2. MySQL Workbench 6.3CE with MySQL server installed  
 3. Chrome Web Browser
 
 
-####Setup of MYSQL Database 
+#### Setup of MYSQL Database 
 Database Name: account  
   
 CREATE  TABLE account.users (username VARCHAR(255) NOT NULL ,   password VARCHAR(255) NOT NULL ,   enabled TINYINT NOT NULL DEFAULT 1 ,   PRIMARY KEY (username))  
@@ -35,7 +35,7 @@ INSERT INTO account.user_roles (username, role) VALUES ('defenseMin', 'ROLE_MINI
 INSERT INTO account.user_roles (username, role) VALUES ('Secretary', 'ROLE_SECRETARY')  
   
   
-####Changes to the code of the project file:  
+#### Changes to the code of the project file:  
 
 UNDER RESOURCES FOLDER  
 application.properties:
@@ -76,7 +76,7 @@ main.js:
   
   
   
-####Running the application on eclipse (with mysql running):  
+#### Running the application on eclipse (with mysql running):  
 1. Right click the project folder  
 2. Choose the 'run as' option  
 3. Choose 'java application'  
