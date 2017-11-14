@@ -83,3 +83,21 @@ main.js:
 4. Go to google chrome web browser  
 5. Enter <ip address of localhost with port number 8080>/login (e.g.http://10.27.199.49:8080/login)  
 6. Login to any account you desire  
+
+
+#### Accounts
+1. 24-7:  
+Username: 24-7  
+Password:  1234  
+  
+2. Ministers:  
+Username: defenseMin  
+Password:  1234      
+  
+1. Prime Minister:  
+Username: pm  
+Password:  1234      
+  
+1. secretary:  
+Username: secretary 
+Password:  1234  
