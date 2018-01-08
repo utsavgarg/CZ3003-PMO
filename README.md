@@ -14,6 +14,7 @@
 #### Setup of MYSQL Database 
 Database Name: account  
   
+```
 CREATE  TABLE account.users (username VARCHAR(255) NOT NULL ,   password VARCHAR(255) NOT NULL ,   enabled TINYINT NOT NULL DEFAULT 1 ,   PRIMARY KEY (username))  
 
 CREATE TABLE account.user_roles (user_role_id int(30) NOT NULL AUTO_INCREMENT,   username varchar(255) NOT NULL,   role varchar(255) NOT NULL,   PRIMARY KEY (user_role_id),   UNIQUE KEY uni_username_role (role,username),   KEY fk_username_idx (username),   CONSTRAINT fk_username FOREIGN KEY (username) REFERENCES account.users (username))  
@@ -33,7 +34,7 @@ INSERT INTO account.user_roles (username, role) VALUES ('24/7', 'ROLE_24-7')
 INSERT INTO account.user_roles (username, role) VALUES ('defenseMin', 'ROLE_MINISTERS')  
 
 INSERT INTO account.user_roles (username, role) VALUES ('Secretary', 'ROLE_SECRETARY')  
-  
+```
   
 #### Changes to the code of the project file:  
 
@@ -54,23 +55,23 @@ ReportController:
   
   
 UNDER WEBAPP/WEB-INF/JSP  
-dashboard.jsp:  
+`dashboard.jsp`:  
 1. Line 210, change ip address to CMO's ip address with port 8080   
   
   
   
 UNDER WEBAPP/JS  
-contacts.js:  
+`contacts.js`:  
 1. Line 26, change ip address to localhost ip address with port 8080   
 2. Line 47, change ip address to localhost ip address with port 8080   
   
-generate.js:  
+`generate.js`:  
 1. Line 20, change ip address to localhost ip address with port 8080   
   
-internal.js:  
+`internal.js`:  
 1. Line 24, change ip address to localhost ip address with port 8080   
   
-main.js:  
+`main.js`:  
 1. Line 30, change ip address to localhost ip address with port 8080   
   
   
@@ -81,7 +82,7 @@ main.js:
 2. Choose the 'run as' option  
 3. Choose 'java application'  
 4. Go to google chrome web browser  
-5. Enter <ip address of localhost with port number 8080>/login (e.g.http://10.27.199.49:8080/login)  
+5. Enter <ip address of localhost with port number 8080>/login (e.g.http://10.10.10.10:8080/login)  
 6. Login to any account you desire  
 
 
